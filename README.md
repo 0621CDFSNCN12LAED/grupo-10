@@ -9,6 +9,7 @@ Categoria de productos: muebles, iluminacion, plantas y decoracion.
 
 Integrantes
 Fede García: 25 años, vivo en Córdoba Capital.
+Cristian Tunut: 31 años, Buenos Aires.
 
 Público objetivo: este proyecto esta pensado para las peronas/familias que buscan confort y comodidad. 
 
