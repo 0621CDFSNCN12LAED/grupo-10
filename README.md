@@ -7,6 +7,8 @@ En base a la investigacion del mercado y teniendo en cuenta la situacion mundial
 
 Categoria de productos: muebles, iluminacion, plantas y decoracion.
 
+Integrantes
+Fede García: 25 años, vivo en Córdoba Capital.
 
 Público objetivo: este proyecto esta pensado para las peronas/familias que buscan confort y comodidad. 
 
