@@ -2,7 +2,7 @@
     box-sizing: border-box;
     padding:0;
     margin:0;
-    
+    background-color: rgba(114, 7, 73, 0.568);
 }
 
 .header-flex {
