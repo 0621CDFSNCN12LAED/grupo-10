@@ -28,4 +28,6 @@ Vanina Baldassarre: 31 años, Buenos Aires.
 5-Fue elegida por tener una página principal muy completa, al igual que las anteriores los productos están separados por categoría. https://www.dellacasaonline.com/
 
 
+Acceso a tablero de trabajo --> https://trello.com/invite/b/7v2ug0b2/232f730454963ff98cf658ab4949a5f8/grupo-10
+
 
