@@ -2,20 +2,25 @@
     box-sizing: border-box;
     padding:0;
     margin:0;
-    background-color: rgba(114, 7, 73, 0.568);
-}
+    background-color:rgba(24, 24, 24, 0.76);
 
+}
+/* class del encabezado dentro del body para flexbox*/
 .header-flex {
     display:flex;
     flex-wrap: wrap;
 
 }
-
+/*logo de la pagina*/
 .logo{
     width: 25%;
 
 }
-
+/*class para los link login y carrito*/
 .lista-header{
     list-style: none;
+}
+
+.Icono-Footer{
+    color: white;
 }
