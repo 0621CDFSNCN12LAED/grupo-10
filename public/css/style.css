@@ -1,8 +1,9 @@
-*{
+*{ /*estilos de la pagina en general*/
     box-sizing: border-box;
     padding:0;
     margin:0;
     background-color:rgba(24, 24, 24, 0.76);
+    color: antiquewhite;
 
 }
 /* class del encabezado dentro del body para flexbox*/
@@ -20,7 +21,53 @@
 .lista-header{
     list-style: none;
 }
-
+/*son todos los iconos del footer osea los iconos de la lista*/
 .Icono-Footer{
     color: white;
+}
+/* esta img hace referencia a todas las imagenes de muestras
+de los mubles sillones etc*/
+img {
+    width: 90%;
+    height: 90%;
+    padding: 5%;
+    margin: 0;
+}
+/*todo estas clases que empiezan con .footer son 
+todas clsaes y subclases del footer*/
+.footer-pie-pagina {
+    padding: auto;
+    margin-top: 50px;
+
+}
+
+/*clase creada para la navegacion del footer*/
+.navbar-footer,ul {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   
+
+}
+
+.navbar-footer li {
+    padding: 0;
+    margin-right: 15px;
+
+}
+/*media query para la version de tablet en adelante*/
+@media (min-width: 479px) {
+
+    .section-menu{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .section-menu li{
+        flex-direction: row;
+        margin: 0;
+        padding: auto;
+        width: 45%;
+
+    }
+
 }
