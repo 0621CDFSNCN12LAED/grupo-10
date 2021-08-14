@@ -24,3 +24,9 @@ app.get("/Muebles", function (req, res) {
 app.get("/Carrito", function (req, res) {
     res.sendFile(path.join(__dirname, "/views/carrito.html"));
 });
+app.get('/Iluminacion', function (req, res) {
+    res.sendFile(path.join(__dirname,"/views/productosIluminacion.html"))
+    })
+app.get('/Muebles', function (req, res) {
+    res.sendFile(path.join(__dirname,"/views/productosMuebles.html"))
+    })
