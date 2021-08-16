@@ -6,16 +6,78 @@
     color: antiquewhite;
 
 }
+/*form es la caja del boton de menu fijo desplegable*/
+form{
+    position: fixed;
+    right:5px;
+    top: 25px;
+    margin:2px 2px;
+    background:rgba(255, 255, 255, 0.01)
+}
+/*es es el icono del boton del menu fijo desplegable*/
+.fa-elementor {
+    padding:0;
+    margin: 2px 2px;
+    font-size: 60px;
+    background:rgba(255, 255, 255, 0.01);
+    color:gray;
+    width:100%;
+    
+}
+.flex-boton-fijo {
+    display: flex;
+    flex-direction:column;
+    
+}
+select{
+    display: none;
+}
+
+
+/*recuadro para el header del body*/
+header{
+    border:1px solid rgba(180, 180, 180, 0.3);
+    padding: 20px;
+    margin: 0;
+}
+
 /* class del encabezado dentro del body para flexbox*/
 .header-flex {
     display:flex;
     flex-wrap: wrap;
-
+    
+    
 }
+
 /*logo de la pagina*/
 .logo{
-    width: 25%;
+    padding: 0px;
+    padding-bottom: 5px;
+    width:30%;
 }
+
+/* clase creada para el nav del header*/
+.linea {
+    font-size: 20px;
+    width:30%;
+    height: auto;
+    display: flex;
+    
+}
+
+.lista-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+/*clase creada para el imput de busqueda*/
+.barra{
+    width:90%;
+    background-color:whitesmoke;
+}
+
 /*class para los link login y carrito*/
 .lista-header{
     list-style: none;
@@ -41,7 +103,8 @@ todas clsaes y subclases del footer*/
 }
 
 /*clase creada para la navegacion del footer*/
-.navbar-footer,ul {
+.navbar-footer ul {
+    font-size: 12px;
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
@@ -57,16 +120,25 @@ todas clsaes y subclases del footer*/
 /*media query para la version de tablet en adelante*/
 @media (min-width: 479px) {
 
-    .section-menu{
+    .section-main{
         display: flex;
         flex-wrap: wrap;
     }
-    .section-menu li{
+    .section-main ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .section-main li{
         flex-direction: row;
         margin: 0;
         padding: auto;
         width: 45%;
 
+    }
+
+    .navbar-footer ul {
+        font-size: 16px;
     }
 
 }
