@@ -30,3 +30,9 @@ app.get('/Iluminacion', function (req, res) {
 app.get('/Muebles', function (req, res) {
     res.sendFile(path.join(__dirname,"/views/productosMuebles.html"))
     })
+app.get('/login', function (req, res) {
+    res.sendFile(path.join(__dirname,"/views/login.html"))
+    })
+app.get('/registro', function (req, res) {
+    res.sendFile(path.join(__dirname,"/views/registro.html"))
+    })

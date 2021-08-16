@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Registro</title>
     <link rel="stylesheet" href="/css/styleforms.css">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
@@ -23,26 +23,40 @@
             </ul>
         </nav>
     </div>
-
 </header>
 <body>
     <main>
         <section class="section-style">
-            <h2>¡Bienvenido!</h2>
+            <h3>Completá tus datos</h3>
             <form method="POST">
                 <div class="div-style">
+                    <label for="Nombre"></label>
+                    <input name="Nombre" type="text" id="Nombre" placeholder="Nombres">
+                </div>
+                <div class="div-style">
+                    <label for="apellido"></label>
+                    <input name="apellido" type="text" id="apellido" placeholder="Apellido">
+                </div>
+                <div class="div-style">
+                    <label for="Dirección"></label>
+                    <input name="Dirección" type="text" id="Dirección" placeholder="Dirección">
+                </div>
+                <div class="div-style">
+                    <label for="Edad"></label>
+                    <input name="Edad" type="number" id="Edad" placeholder="Edad">
+                </div>
+                <div class="div-style">
                     <label for="email"></label>
-                    <input name="email" type="text" id="email" placeholder="Email">
+                    <input name="email" type="email" id="email" placeholder="Email">
+                </div>
+                <div class="terminosYCondiciones">
+                    <input type="checkbox" name="term" id="term" class="label-term">
+                    <label for="term" class="label-term"><a href="#">Acepto terminos y condiciones</a></label>
                 </div>
                 <div class="div-style">
-                    <label for="contraseña"></label>
-                    <input name="contraseña" type="password" id="contraseña" placeholder="Contraseña">
-                </div>
-                <div class="div-style">
-                    <button class="button-style">Ingresá</button>
+                    <button class="button-style">Registrate</button>
                 </div>
             </form>
-            <h5><a href="#">¿Olvidaste tu usuario o contraseña?</a></h5>
         </section>
     </main>  
     
