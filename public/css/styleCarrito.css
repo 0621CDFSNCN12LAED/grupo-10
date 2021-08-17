@@ -26,6 +26,7 @@
     text-align: left;
 }
 .subtitle {
+    margin-top: 10px;
     margin-left: 15px;
     text-decoration-style: double;
     text-align: left;
@@ -63,4 +64,16 @@
 .flex {
     display: flex !important;
     flex-wrap: wrap;
+}
+.section-menu {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.section-menu-div {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 33%;
+    justify-content: content;
 }
