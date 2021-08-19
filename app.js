@@ -29,4 +29,18 @@ app.get("/Muebles", function (req, res) {
     res.sendFile(path.join(__dirname, "/views/productosMuebles.html"));
 });
 
-
+app.get("/Carrito", function (req, res) {
+    res.sendFile(path.join(__dirname, "/views/carrito.html"));
+});
+app.get('/Iluminacion', function (req, res) {
+    res.sendFile(path.join(__dirname,"/views/productosIluminacion.html"))
+    })
+app.get('/Muebles', function (req, res) {
+    res.sendFile(path.join(__dirname,"/views/productosMuebles.html"))
+    })
+app.get('/login', function (req, res) {
+    res.sendFile(path.join(__dirname,"/views/login.html"))
+    })
+app.get('/registro', function (req, res) {
+    res.sendFile(path.join(__dirname,"/views/registro.html"))
+    })

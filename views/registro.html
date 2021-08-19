@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="/css/styleforms.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"rel="stylesheet">
+</head> 
+<header>
+    <div class= "header-flex"> 
+        <img class="logo" src="/img/logo.png" alt="Logo">
+        <nav class= "linea">
+            <ul class="lista-header">
+                <li><i class="fas fa-user-check"></i><a href="/views/login.html">Login</a></li>
+                <li><i class="fas fa-shopping-cart"></i><a href="/views/carrito">Carrito</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<body>
+    <main>
+        <section class="section-style">
+            <h3>Completá tus datos</h3>
+            <form method="POST">
+                <div class="div-style">
+                    <label for="Nombre"></label>
+                    <input name="Nombre" type="text" id="Nombre" placeholder="Nombres">
+                </div>
+                <div class="div-style">
+                    <label for="apellido"></label>
+                    <input name="apellido" type="text" id="apellido" placeholder="Apellido">
+                </div>
+                <div class="div-style">
+                    <label for="Dirección"></label>
+                    <input name="Dirección" type="text" id="Dirección" placeholder="Dirección">
+                </div>
+                <div class="div-style">
+                    <label for="Edad"></label>
+                    <input name="Edad" type="number" id="Edad" placeholder="Edad">
+                </div>
+                <div class="div-style">
+                    <label for="email"></label>
+                    <input name="email" type="email" id="email" placeholder="Email">
+                </div>
+                <div class="terminosYCondiciones">
+                    <input type="checkbox" name="term" id="term" class="label-term">
+                    <label for="term" class="label-term"><a href="#">Acepto terminos y condiciones</a></label>
+                </div>
+                <div class="div-style">
+                    <button class="button-style">Registrate</button>
+                </div>
+            </form>
+        </section>
+    </main>  
+    
+    <footer class="footer-pie-pagina">
+        <nav class="navbar-footer">
+            <ul>
+                <li><a class="Icono-Footer"><i class="fas fa-home"></i>Home</a></li>
+                <li><a class="Icono-Footer"><i class="fas fa-search"></i>Busqueda</a></li>
+                <li><a class="Icono-Footer"><i class="fas fa-plus-square"></i>Noticias</li>
+                <li><a class="Icono-Footer"><i class="fas fa-heart"></i>Likes</a></li>
+                <li><a class="Icono-Footer"><i class="fas fa-user-circle"></i>Perfil</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
