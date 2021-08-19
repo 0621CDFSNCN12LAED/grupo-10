@@ -10,14 +10,22 @@ app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "/views/index.html"));
 });
 
-app.get("/Plantas", function (req, res) {
+app.get("/Login.html", function (req, res) {
+    res.sendFile(path.join(__dirname, "/views/login.html"));
+});
+
+app.get("/Carrito.html", function (req, res) {
+    res.sendFile(path.join(__dirname, "/views/carrito.html"));
+});
+
+app.get("/Plantas.html", function (req, res) {
     res.sendFile(path.join(__dirname, "/views/productosPlantas.html"));
 });
 
-app.get("/Iluminacion", function (req, res) {
+app.get("/Iluminacion.html", function (req, res) {
     res.sendFile(path.join(__dirname, "/views/productosIluminacion.html"));
 });
-app.get("/Muebles", function (req, res) {
+app.get("/Muebles.html", function (req, res) {
     res.sendFile(path.join(__dirname, "/views/productosMuebles.html"));
 });
 
