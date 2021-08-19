@@ -14,6 +14,55 @@ form{
     margin:2px 2px;
     background:rgba(255, 255, 255, 0.01)
 }
+
+.carrusel{
+    height:150px;
+    width: 100%;
+    margin:auto;
+    overflow:hidden;
+}
+.ofertas{
+    color: black;
+    background-color: transparent;
+    position:absolute;
+    margin:0;
+    padding:0;
+}
+.slide-menu{
+    display: flex;
+    padding:0;
+    width: 300%;
+
+    animation:cambio 12s infinite;
+}
+
+.items{
+    width: 100%;
+    list-style: none;
+}
+
+.imag {
+    
+    width: 360px;
+    height: 150px;
+    
+    
+    
+    
+}
+@keyframes cambio {
+    0% {margin-left: 0;}
+    30% {margin-left: 0;}
+
+    35% {margin-left: -100%;}
+    70% {margin-left: -100%;}
+
+    75% {margin-left: -200%;}
+    100% {margin-left: -200%;}
+}
+
+
+
 /*es es el icono del boton del menu fijo desplegable*/
 .fa-elementor {
     padding:0;
@@ -88,7 +137,7 @@ header{
 }
 /* esta img hace referencia a todas las imagenes de muestras
 de los mubles sillones etc*/
-img {
+.imagen {
     width: 90%;
     height: 90%;
     padding: 5%;
