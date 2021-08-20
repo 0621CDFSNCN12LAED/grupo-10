@@ -5,32 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/styleforms.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"rel="stylesheet">
 </head> 
-<header>
-    <img src="wireframes/Logo2.png" alt="Logo">
-    <nav>
-        <ul>
-            <li>Barra de navegación</li>
-            <li>2Barra de navegación</li>
-        </ul>
-    </nav>
-</header>
-<body>  
-    <section>
-        <h2>¡Bienvenido!</h2>
-        <h3 class="accesos">Email</h3>
-        <p>Ingresá tu dirección de email</p>
-        <h3 class="accesos">Contraseña</h3>
-        <p>ingresá tu conraseña</p>
-        <h2>Ingresá</h3>
-        <h5>¿Olvidaste tu contraseña?</h5>
-    </section>
-<footer>
-    <p><a href="link sección 1">sección 1</a></p>
-    <p>sección 2</p>
-    <p>sección 3</p>
-    <p>sección 4</p>
-</footer>
+
+<body>
+    <header>
+        <div class= "header-flex"> 
+            <img class="logo" src="/img/logo.png" alt="Logo">
+            <nav class= "linea">
+                <ul class="lista-header">
+                    <li><i class="fas fa-user-check"></i><a href="/views/login.html">Login</a></li>
+                    <li><i class="fas fa-shopping-cart"></i><a href="/views/carrito">Carrito</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="section-style">
+            <h2>¡Bienvenido!</h2>
+            <form method="POST">
+                <div class="div-style">
+                    <label for="email"></label>
+                    <input name="email" type="text" id="email" placeholder="Email">
+                </div>
+                <div class="div-style">
+                    <label for="contraseña"></label>
+                    <input name="contraseña" type="password" id="contraseña" placeholder="Contraseña">
+                </div>
+                <div class="div-style">
+                    <button class="button-style">Ingresá</button>
+                </div>
+            </form>
+            <h5><a href="#">¿Olvidaste tu usuario o contraseña?</a></h5>
+        </section>
+    </main>  
+    <footer class="footer-pie-pagina">
+        <nav class="navbar-footer">
+            <ul>
+                <li><a class="Icono-Footer"><i class="fas fa-home"></i>Home</a></li>
+                <li><a class="Icono-Footer"><i class="fas fa-search"></i>Busqueda</a></li>
+                <li><a class="Icono-Footer"><i class="fas fa-plus-square"></i>Noticias</li>
+                <li><a class="Icono-Footer"><i class="fas fa-heart"></i>Likes</a></li>
+                <li><a class="Icono-Footer"><i class="fas fa-user-circle"></i>Perfil</a></li>
+            </ul>
+        </nav>
+    </footer>
 </body>
 </html>

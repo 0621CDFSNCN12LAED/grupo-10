@@ -1,81 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css"> 
-    <title>Login</title>
+    <link rel="stylesheet" href="/css/styleProductos.css"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+    <title>MUEBLES</title>
 </head>
 <body>  
     <header>
-        <div class= "header-flex">
-            <img class="logo" src="/img/logodecoar.jpg" alt="Logo">
+        <div class= "header-flex"> 
             <nav class= "linea">
                 <ul class="lista-header">
-                    <li><i class="fas fa-user-check"></i><a href="/views/login.html">Login</a></li>
-                    <li><i class="fas fa-shopping-cart"></i><a href="/views/carrito">Carrito</a></li>
+                    <li><i class="fas fa-user-check"></i><a href="/Login">Login</a></li>
+                    <li><i class="fas fa-shopping-cart"></i><a href="/Carrito">Carrito</a></li>
                 </ul>
             </nav>
+            <img class="logo" src= "/img/logodecoar.jpg" alt="Logo">
         </div>
-        <input class="barra" type="text" name="busqueda"></input>
         <a class="barra" href="#"><i class="fab fa-searchengin"></i></a>
+        <input class="barra" type="text" name="busqueda"></input>
+        
+ 
     </header>
     <main id="main-content">
-        <section>
-            <h2>Plantas</h2>
-            <div>
-                <article>
-                    <img
-                        src="/img/planta1.jpeg"
-                        alt=""
-                        width="100%"
-                    />
-                    <div>
-                        <p>$1.200</p>
-                        <p>10% OFF</p>
-                        <p>Helecho + Macetero</p>
+        <section class="style-section">
+            <h2 class ="title">PLANTAS</h2>
+                <article class="product-wrapper">
+                    <div class ="image-container"> 
+                        <img
+                            class="style-img"
+                            src="/img/planta1.jpeg"
+                            alt=""
+                        />
+                    </div>
+                    
+                    <div class ="description-container"> 
+                        <div> 
+                            <p class="style-title">MACETERO HIERRO + PLANTA</p>
+                            <p class="style-description"> DESCRIPCION: <br>
+                                Macetero de hierro, medida: 60 cm alto. Planta: Helecho.
+                            </p>
+                            <p class= "style-price">$ 3.000</p>
+                        </div>
+                        <div class= "style-button">
+                            <a href= "/carrito.html">COMPRAR</a>
+                        </div>
                     </div>
                 </article>
-                <article>
-                    <img
-                        src="/img/planta2.jpeg"
-                        alt=""
-                        width="100%"
-                    />
-                    <div>
-                        <p>$2.500</p>
-                        <p>10% OFF</p>
-                        <p>Suculenta + Maceta</p>
+    
+                <article class="product-wrapper">
+                    <div class ="image-container"> 
+                        <img
+                            class="style-img"
+                            src="/img/planta2.jpeg"
+                            alt=""
+                        />
+                    </div>
+                    
+                    <div class ="description-container"> 
+                         <div>
+                            <p class="style-title">MACETEROS MINI + PLANTAS</p>
+                            <p class="style-description"> DESCRIPCION: <br>
+                               Macetero de hierro, medida: 30 cm de alto. Planta: Secuculentas.
+                            </p>
+                            <p class= "style-price">$ 4.000</p>
+                        </div>
+                        <div class= "style-button">
+                            <a href= "/carrito.html">COMPRAR</a>
+                        </div>
                     </div>
                 </article>
-            </div>
-            <article>
-                <img
-                    src="/img/suculenta1.jpeg"
-                    alt=""
-                    width="100%"
-                />
-                <div>
-                    <p>$3.000</p>
-                    <p>10% OFF</p>
-                    <p>Combo - 3 Suculentas + Macetas</p>
-                </div>
-            </article>
-            <article>
-                <img
-                    src="/img/suculenta2.jpeg"
-                    alt=""
-                    width="100%"
-                />
-                <div>
-                    <p>$3.000</p>
-                    <p>10% OFF</p>
-                    <p>Suculentas + Macetas</p>
-                </div>
-            </article>
-        </section>
+    
+                <article class="product-wrapper">
+                    <div class ="image-container"> 
+                        <img
+                            class="style-img"
+                            src="/img/suculenta1.jpeg"
+                            alt=""
+                        />
+                    </div>
+
+                    <div class ="description-container"> 
+                        <div>
+                            <p class="style-title">SET MACETEROS DE ESCRITORIO</p>
+                            <p class="style-description"> DESCRIPCION: <br>
+                                Set de tres maceteros de escritorio. Viene con suculentas a eleccion.
+                            </p>
+                            <p class= "style-price">$ 4.000</p>
+                         </div>
+                         <div class= "style-button">
+                            <a href= "/carrito.html">COMPRAR</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-wrapper">
+                    <div class ="image-container"> 
+                        <img
+                            class="style-img"
+                            src="/img/seculenta2.jpeg"
+                            alt=""
+                        />
+                    </div>
+
+                    <div class ="description-container"> 
+                        <div>
+                            <p class="style-title">MACETERO DE ESCRITORIO</p>
+                            <p class="style-description"> DESCRIPCION: <br>
+                                Macetero individual de escritorio. Viene con suculenta a eleccion.
+                            </p>
+                            <p class= "style-price">$ 1.500</p>
+                         </div>
+                         <div class= "style-button">
+                            <a href= "/carrito.html">COMPRAR</a>
+                        </div>
+                    </div>
+                </article>
+            </section>
     </main>
+    <footer class="footer-pie-pagina">
+        <nav class="navbar-footer">
+            <ul>
+                <li><a class="Icono-Footer"><i class="fas fa-home"></i>Home</a></li>
+                <li><a class="Icono-Footer"><i class="fas fa-search"></i>Busqueda</a></li>
+                <li><a class="Icono-Footer"><i class="fas fa-plus-square"></i>Noticias</li>
+                <li><a class="Icono-Footer"><i class="fas fa-heart"></i>Likes</a></li>
+                <li><a class="Icono-Footer"><i class="fas fa-user-circle"></i>Perfil</a></li>
+            </ul>
+        </nav>
+    </footer>
 </body>
 </html>

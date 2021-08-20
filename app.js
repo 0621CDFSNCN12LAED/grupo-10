@@ -10,23 +10,37 @@ app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "/views/index.html"));
 });
 
-app.get("/Login.html", function (req, res) {
+app.get("/Login", function (req, res) {
     res.sendFile(path.join(__dirname, "/views/login.html"));
 });
 
-app.get("/Carrito.html", function (req, res) {
+app.get("/Carrito", function (req, res) {
     res.sendFile(path.join(__dirname, "/views/carrito.html"));
 });
 
-app.get("/Plantas.html", function (req, res) {
+app.get("/Plantas", function (req, res) {
     res.sendFile(path.join(__dirname, "/views/productosPlantas.html"));
 });
 
-app.get("/Iluminacion.html", function (req, res) {
+app.get("/Iluminacion", function (req, res) {
     res.sendFile(path.join(__dirname, "/views/productosIluminacion.html"));
 });
-app.get("/Muebles.html", function (req, res) {
+app.get("/Muebles", function (req, res) {
     res.sendFile(path.join(__dirname, "/views/productosMuebles.html"));
 });
 
-
+app.get("/Carrito", function (req, res) {
+    res.sendFile(path.join(__dirname, "/views/carrito.html"));
+});
+app.get('/Iluminacion', function (req, res) {
+    res.sendFile(path.join(__dirname,"/views/productosIluminacion.html"))
+    })
+app.get('/Muebles', function (req, res) {
+    res.sendFile(path.join(__dirname,"/views/productosMuebles.html"))
+    })
+app.get('/login', function (req, res) {
+    res.sendFile(path.join(__dirname,"/views/login.html"))
+    })
+app.get('/registro', function (req, res) {
+    res.sendFile(path.join(__dirname,"/views/registro.html"))
+    })
