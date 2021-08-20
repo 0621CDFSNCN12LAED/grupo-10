@@ -1,5 +1,6 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
+<head>
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,40 +12,32 @@
     <title>Carrito de Compras</title>
   </head>
   <form method="post" action="" class="form-index">
+</head>
+<body class="background-page">
+      <form method="post" action="">
         <button type="button"> <i class="fab fa-elementor"></i> 
-        <div class="flex-boton-fijo">
+         <div class="flex-boton-fijo">
             <select>
                 <option value=""></option>
                 <option value="">carrito</option>
                 <option value="">tarjeta</option>
                 <option value="">efectivo</option>
             </select>
-        </div></button>
-    </form>
-  <body>
-        <header>
-          <h1>Carrito</h1>
-        <div class= "header-flex"> 
-            <nav class= "linea">
-                <ul class="lista-header">
-                    <li></li>
-                    <li></li>
-                </ul>
-            </nav>
-            
-            <img class="logo" src= "/img/logodecoar.jpg" alt="Logo">
-        </div>
-        <a class="barra" href="#"><i class="fab fa-searchengin"></i></a>
-        <input class="barra" type="text" name="busqueda"></input>
-        
- 
-    </header>
+         </div>
+       </button>
+      </form>
+           <header>
+             <h1 class="style-title">Carrito</h1>
+              <div class= "header-flex logo-carrito"> 
+              <img class="logo" src="/img/logodecoar.jpg" alt="Logo">
+              </div>
+           </header>
        <main id="main-content">
-           <section class="section-menu section-menu li">
-              <h2 class="subtitle">Lista detalle de compra</h2>
-              <article class="product">
+           <section>
+                <h2 class="subtitle">Lista detalle de compra</h2>
+               <article class="product section-main">
                     <div class="product-wrapper"> 
-                      <img class="style-img-carr" src="/img/Sillon.jpg" alt="" widht="100%"/>
+                      <img class="style-img-carr" src="/img/Sillon.jpg" alt=""/>
                       <div><p>SILLON</p>
                           <p> Sillon de diseño. Tamaño: 3 cuerpos. Hecho en pana.</p>
                           <p>$ 60.000</p>
@@ -55,28 +48,37 @@
                       </div>
                       <div class="style-button-delete">
                         <button> <i class="far fa-trash-alt">Eliminar</i></button>
-                      </div>
-                       <button class="style-button">FINALIZAR COMPRA</button>
+                        <button class="style-button">FINALIZAR COMPRA</button>
                       <div class="flex">
                            <p>Detalle de envío</p>
-                           <i class="fas fa-shipping-fast"></i>   
-                       </div>
-                    </div> 
-                </article>
-           </section>
+                           <i class="fas fa-shipping-fast"></i> 
+                    </div>
+               </article>
+            </section>
            <section>
-               <h3 class="subtitle">Productos complementarios</h3>
-
-                <ul  type="none" class="section-menu">
-                
-                <li><img src="/img/Decor-Andhra-Apagavela-01.jpg" alt="" width="100%"></li>
-                <li><img src="/img/accesorio-velas.jpg" alt="" width="100%"></li>
-                <li><img src="/img/SquareYuteNatural.jpg" alt="" width="100%"></li>
+                <h3 class="subtitle">Productos complementarios</h3>
+                <div class="section-carrito style-seccion">
+                  <article>
+                    <div>
+                   <img  src="/img/Decor-Andhra-Apagavela-01.jpg" alt="" width="90%">
+                    </div>
+                   </article>
+                   <article>
+                     <div>
+                    <img  src="/img/accesorio-velas.jpg" alt="" width="90%">
+                    </div>
+                    </article>
+                    <article>
+                    <div>
+                    <img  src="/img/SquareYuteNatural.jpg" alt="" width="90%">
+                    </div>
+                    </article>
                
-               </ul>
-             </section>
-        
-        </main>
+               </div>
+          </section>
+      </main>
+    
+</body>
             <footer class="footer-pie-pagina">
                <nav class="navbar-footer">
                <ul>

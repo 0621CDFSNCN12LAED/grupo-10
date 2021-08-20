@@ -15,15 +15,14 @@
 </head> 
 
 <body>
-    <header>
+    <header class="background-page">
         <div class= "header-flex"> 
-            <img class="logo" src="/img/logo.png" alt="Logo">
             <nav class= "linea">
                 <ul class="lista-header">
-                    <li><i class="fas fa-user-check"></i><a href="/views/login.html">Login</a></li>
-                    <li><i class="fas fa-shopping-cart"></i><a href="/views/carrito">Carrito</a></li>
+                    <li><i class="fas fa-shopping-cart"></i><a href="/Carrito">Carrito</a></li>
                 </ul>
             </nav>
+            <img class="logo" src= "/img/logodecoar.jpg" alt="Logo">
         </div>
     </header>
     <main>
@@ -38,14 +37,19 @@
                     <label for="contraseña"></label>
                     <input name="contraseña" type="password" id="contraseña" placeholder="Contraseña">
                 </div>
+                <div class="terminosYCondiciones">
+                    <input type="checkbox" name="term" id="term" class="label-term">
+                    <label for="term" class="label-term"><a href="#">Recordar usuario y contraseña</a></label>
+                </div>
                 <div class="div-style">
                     <button class="button-style">Ingresá</button>
                 </div>
             </form>
             <h5><a href="#">¿Olvidaste tu usuario o contraseña?</a></h5>
+            <h4><a href="/registro">REGISTRATE</a></h4>
         </section>
     </main>  
-    <footer class="footer-pie-pagina">
+    <footer class="footer-pie-pagina background-page">
         <nav class="navbar-footer">
             <ul>
                 <li><a class="Icono-Footer"><i class="fas fa-home"></i>Home</a></li>

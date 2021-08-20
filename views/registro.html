@@ -5,29 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
-    <link rel="stylesheet" href="/css/styleforms.css">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="/css/styleforms.css">
 </head> 
-<header>
-    <div class= "header-flex"> 
-        <img class="logo" src="/img/logo.png" alt="Logo">
-        <nav class= "linea">
-            <ul class="lista-header">
-                <li><i class="fas fa-user-check"></i><a href="/views/login.html">Login</a></li>
-                <li><i class="fas fa-shopping-cart"></i><a href="/views/carrito">Carrito</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+
 <body>
+    <header class="background-page">
+        <div class= "header-flex"> 
+            <nav class= "linea">
+                <ul class="lista-header">
+                    <li><i class="fas fa-shopping-cart"></i><a href="/Carrito">Carrito</a></li>
+                </ul>
+            </nav>
+            <img class="logo" src= "/img/logodecoar.jpg" alt="Logo">
+        </div>
+    </header>
     <main>
         <section class="section-style">
-            <h3>Completá tus datos</h3>
+            <h2>Completá tus datos</h2>
             <form method="POST">
                 <div class="div-style">
                     <label for="Nombre"></label>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="terminosYCondiciones">
                     <input type="checkbox" name="term" id="term" class="label-term">
-                    <label for="term" class="label-term"><a href="#">Acepto terminos y condiciones</a></label>
+                    <label for="term" class="label-term"><a href="#">Acepto términos y condiciones</a></label>
                 </div>
                 <div class="div-style">
                     <button class="button-style">Registrate</button>
@@ -60,7 +60,7 @@
         </section>
     </main>  
     
-    <footer class="footer-pie-pagina">
+    <footer class="footer-pie-pagina background-page">
         <nav class="navbar-footer">
             <ul>
                 <li><a class="Icono-Footer"><i class="fas fa-home"></i>Home</a></li>

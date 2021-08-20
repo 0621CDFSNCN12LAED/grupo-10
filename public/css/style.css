@@ -1,138 +1,142 @@
-*{ /*estilos de la pagina en general*/
+* {
+    /*estilos de la pagina en general*/
     box-sizing: border-box;
-    padding:0;
+    padding: 0;
     margin: 0;
-    background-color:rgba(24, 24, 24, 0.76);
     color: antiquewhite;
-
 }
 /*form es la caja del boton de menu fijo desplegable*/
 .form-index{
     position: fixed;
-    right:5px;
+    right: 5px;
     top: 25px;
-    margin:2px 2px;
-    background:rgba(255, 255, 255, 0.01)
+    margin: 2px 2px;
+    background: rgba(255, 255, 255, 0.01);
+}
+
+.background-page{
+    background-color: rgba(24, 24, 24, 0.76);
 }
 
 .carrusel{
-    height:150px;
-    width: 100%;
     margin:auto;
     overflow:hidden;
 }
-.ofertas{
+
+.ofertas {
     color: black;
     background-color: transparent;
-    position:absolute;
-    margin:0;
-    padding:0;
+    position: absolute;
+    margin: 0;
+    padding: 0;
 }
-.slide-menu{
+.slide-menu {
     display: flex;
-    padding:0;
+    padding: 0;
     width: 300%;
 
+    height:100%;
     animation:cambio 12s infinite;
 }
 
 .items{
-    width: 100%;
+    list-style: none;
+}
+.categorias{
+    margin-left: 15px;
+}
+
+li{
     list-style: none;
 }
 
-.imag {
-    
-    width: 360px;
-    height: 150px;
-    
-    
-    
-    
-}
+
 @keyframes cambio {
-    0% {margin-left: 0;}
-    30% {margin-left: 0;}
+    0% {
+        margin-left: 0;
+    }
+    30% {
+        margin-left: 0;
+    }
 
-    35% {margin-left: -100%;}
-    70% {margin-left: -100%;}
+    35% {
+        margin-left: -100%;
+    }
+    70% {
+        margin-left: -100%;
+    }
 
-    75% {margin-left: -200%;}
-    100% {margin-left: -200%;}
+    75% {
+        margin-left: -200%;
+    }
+    100% {
+        margin-left: -200%;
+    }
 }
-
-
 
 /*es es el icono del boton del menu fijo desplegable*/
 .fa-elementor {
-    padding:0;
+    padding: 0;
     margin: 2px 2px;
     font-size: 60px;
-    background:rgba(255, 255, 255, 0.01);
-    color:gray;
-    width:100%;
-    
+    background: rgba(255, 255, 255, 0.01);
+    color: gray;
+    width: 100%;
 }
 .flex-boton-fijo {
     display: flex;
-    flex-direction:column;
-    
+    flex-direction: column;
 }
-select{
+select {
     display: none;
 }
 
-
 /*recuadro para el header del body*/
-header{
-    border:1px solid rgba(180, 180, 180, 0.3);
+header {
+    border: 1px solid rgba(180, 180, 180, 0.3);
     padding: 20px;
     margin: 0;
 }
 
 /* class del encabezado dentro del body para flexbox*/
 .header-flex {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
-    
-    
 }
 
 /*logo de la pagina*/
-.logo{
+.logo {
     padding: 0px;
     padding-bottom: 5px;
-    width:30%;
+    width: 30%;
 }
 
 /* clase creada para el nav del header*/
 .linea {
     font-size: 20px;
-    width:30%;
+    width: 30%;
     height: auto;
     display: flex;
-    
 }
 
 .lista-header {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-
 }
 
 /*clase creada para el imput de busqueda*/
-.barra{
-    width:90%;
-    background-color:whitesmoke;
+.barra {
+    width: 90%;
+    background-color: whitesmoke;
 }
 
 /*class para los link login y carrito*/
-.lista-header{
+.lista-header {
     list-style: none;
 }
 /*son todos los iconos del footer osea los iconos de la lista*/
-.Icono-Footer{
+.Icono-Footer {
     color: white;
 }
 /* esta img hace referencia a todas las imagenes de muestras
@@ -147,47 +151,49 @@ de los mubles sillones etc*/
 todas clsaes y subclases del footer*/
 .footer-pie-pagina {
     padding: auto;
-    margin-top: 50px;
-
 }
 
 /*clase creada para la navegacion del footer*/
 .navbar-footer ul {
     font-size: 12px;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .navbar-footer li {
     padding: 0;
-    margin-right: 15px;
-
+    margin-right: 12px;
+    list-style: none;
 }
 /*media query para la version de tablet en adelante*/
 @media (min-width: 479px) {
-
-    .section-main{
+    .section-main {
         display: flex;
         flex-wrap: wrap;
     }
-    .section-main ul{
+    .section-main ul {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-    .section-main li{
+    .section-main li {
         flex-direction: row;
         margin: 0;
         padding: auto;
         width: 45%;
-
     }
 
     .navbar-footer ul {
         font-size: 16px;
     }
-
+    .section-carrito {
+        display: flex;
+        flex-direction: row;
+    }
+}
+@media (min-width: 768px){
+    *{
+        font-size: xx-large;
+    }
 }
