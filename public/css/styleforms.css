@@ -1,5 +1,6 @@
 *{
     font-family: sans-serif;
+    background-color: transparent;
 }
 
 main{
@@ -41,6 +42,10 @@ input{
 
 h4{
     padding: 10px;
+}
+
+.background{
+    background-image: url("/public/img/fondo.forms.jpg");
 }
 
 

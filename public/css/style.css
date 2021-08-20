@@ -7,7 +7,7 @@
     color: antiquewhite;
 }
 /*form es la caja del boton de menu fijo desplegable*/
-form {
+.form-index{
     position: fixed;
     right: 5px;
     top: 25px;
