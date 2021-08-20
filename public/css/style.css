@@ -16,8 +16,6 @@
 }
 
 .carrusel{
-    height:150px;
-    width: 100%;
     margin:auto;
     overflow:hidden;
 }
@@ -32,24 +30,15 @@
     display: flex;
     padding:0;
     width: 300%;
-
+    height:100%;
     animation:cambio 12s infinite;
 }
 
 .items{
-    width: 100%;
     list-style: none;
 }
 
-.imag {
-    
-    width: 360px;
-    height: 150px;
-    
-    
-    
-    
-}
+
 @keyframes cambio {
     0% {margin-left: 0;}
     30% {margin-left: 0;}
