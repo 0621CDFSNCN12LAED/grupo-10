@@ -3,7 +3,6 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-color: rgba(24, 24, 24, 0.76);
     color: antiquewhite;
 }
 /*form es la caja del boton de menu fijo desplegable*/
@@ -15,6 +14,9 @@
     background: rgba(255, 255, 255, 0.01);
 }
 
+.background-page{
+    background-color: rgba(24, 24, 24, 0.76);
+}
 
 .carrusel{
     margin:auto;
@@ -38,6 +40,13 @@
 }
 
 .items{
+    list-style: none;
+}
+.categorias{
+    margin-left: 15px;
+}
+
+li{
     list-style: none;
 }
 
@@ -142,7 +151,6 @@ de los mubles sillones etc*/
 todas clsaes y subclases del footer*/
 .footer-pie-pagina {
     padding: auto;
-    margin-top: 50px;
 }
 
 /*clase creada para la navegacion del footer*/
@@ -155,7 +163,8 @@ todas clsaes y subclases del footer*/
 
 .navbar-footer li {
     padding: 0;
-    margin-right: 15px;
+    margin-right: 12px;
+    list-style: none;
 }
 /*media query para la version de tablet en adelante*/
 @media (min-width: 479px) {
@@ -181,5 +190,10 @@ todas clsaes y subclases del footer*/
     .section-carrito {
         display: flex;
         flex-direction: row;
+    }
+}
+@media (min-width: 768px){
+    *{
+        font-size: xx-large;
     }
 }

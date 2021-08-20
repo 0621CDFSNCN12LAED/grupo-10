@@ -1,11 +1,19 @@
 *{
     font-family: sans-serif;
-    background-color: transparent;
+}
+header{
+    background-color: rgba(24, 24, 24, 0.76);
+}
+footer{
+    background-color: rgba(24, 24, 24, 0.76);
 }
 
 main{
     height: 100%;
     padding: 10px;
+    background-image: url(/img/carrucel-jardin.jpg);
+    background-size: cover;
+    color: rgb(24, 24, 24);
 }
 
 .section-style{
@@ -25,7 +33,7 @@ label{
 }
 
 .label-term{
-    font-size: 12px;
+    font-size: medium;
     display: inline;
     text-align: center;
 }
@@ -44,17 +52,11 @@ h4{
     padding: 10px;
 }
 
-.background{
-    background-image: url("/public/img/fondo.forms.jpg");
-}
-
 
 
 @media (min-width: 479px) {
 
     *{
-        font-size: 20px;
+        font-size:x-large;
     }
-
-
 }
