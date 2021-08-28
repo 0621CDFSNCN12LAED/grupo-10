@@ -11,7 +11,23 @@
 
     <title>MUEBLES</title>
 </head>
+<<<<<<< Updated upstream:src/views/productosMuebles.ejs
 <body class="background-page">  
+=======
+<body>  
+    <form method="post" action="">
+        <button type="button"> <i class="fab fa-elementor"></i> 
+        <div class="flex-boton-fijo">
+            <select name="menu">
+                
+                <option value="">carrito</option>
+                <option value="">tarjeta</option>
+                <option value="">efectivo</option>
+            </select>
+        </div>
+        </button>
+    </form>
+>>>>>>> Stashed changes:views/productosMuebles.html
     <header>
         <div class= "header-flex"> 
             <nav class= "linea">
@@ -24,12 +40,17 @@
         </div>
         <a class="barra" href="#"><i class="fab fa-searchengin"></i></a>
         <input class="barra" type="text" name="busqueda"></input>
+<<<<<<< Updated upstream:src/views/productosMuebles.ejs
         
  
+=======
+>>>>>>> Stashed changes:views/productosMuebles.html
     </header>
+
     <main id="main-content">
         <section class="style-section">
             <h2 class ="title">MUEBLES</h2>
+<<<<<<< Updated upstream:src/views/productosMuebles.ejs
             <article class="product-wrapper" <%= for (let i =0; i < productos.length; i++) { %> >
                 <div class ="image-container"> 
                     <img
@@ -46,15 +67,32 @@
                             <%= producto.desc %> 
                         </p>
                         <p class= "style-price"> <%= producto.precio %> </p>
+=======
+                <div class="product-wapper">
+                <article>
+                    <div class ="image-container"> 
+                        <img
+                            class="style-img"
+                            src="/img/Sillon.jpg"
+                            alt=""
+                        />
+>>>>>>> Stashed changes:views/productosMuebles.html
                     </div>
                     <div class= "style-button">
                         <a href= "/carrito.html">COMPRAR</a>
                     </div>
+<<<<<<< Updated upstream:src/views/productosMuebles.ejs
                 </div>
             </article>
         <%= } %>
     
                 <article class="product-wrapper">
+=======
+                </article>
+            </div>
+            <div class="product-wrapper">
+                <article>
+>>>>>>> Stashed changes:views/productosMuebles.html
                     <div class ="image-container"> 
                         <img
                             class="style-img"
@@ -76,7 +114,7 @@
                         </div>
                     </div>
                 </article>
-    
+            </div>
                 <article class="product-wrapper">
                     <div class ="image-container"> 
                         <img
@@ -98,6 +136,7 @@
                             <a href= "/carrito.html">COMPRAR</a>
                         </div>
                     </div>
+            </article>
             </section>
     </main>
     <footer class="footer-pie-pagina">
