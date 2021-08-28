@@ -30,28 +30,29 @@
     <main id="main-content">
         <section class="style-section">
             <h2 class ="title">MUEBLES</h2>
-                <article class="product-wrapper">
-                    <div class ="image-container"> 
-                        <img
-                            class="style-img"
-                            src="/img/Sillon.jpg"
-                            alt=""
-                        />
+            <article class="product-wrapper" <%= for (let i =0; i < productos.length; i++) { %> >
+                <div class ="image-container"> 
+                    <img
+                        class="style-img"
+                        src= <%= producto.img %> 
+                        alt=""
+                    />
+                </div>
+                
+                <div class ="description-container"> 
+                    <div> 
+                        <p class="style-title"> <%= producto.nombre %></p>
+                        <p class="style-description"> DESCRIPCION <br>
+                            <%= producto.desc %> 
+                        </p>
+                        <p class= "style-price"> <%= producto.precio %> </p>
                     </div>
-                    
-                    <div class ="description-container"> 
-                        <div> 
-                            <p class="style-title">SILLON</p>
-                            <p class="style-description"> DESCRIPCION: <br>
-                                Sillon de diseño. Tamaño: 3 cuerpos. Hecho en pana.
-                            </p>
-                            <p class= "style-price">$ 60.000</p>
-                        </div>
-                        <div class= "style-button">
-                            <a href= "/carrito.html">COMPRAR</a>
-                        </div>
+                    <div class= "style-button">
+                        <a href= "/carrito.html">COMPRAR</a>
                     </div>
-                </article>
+                </div>
+            </article>
+        <%= } %>
     
                 <article class="product-wrapper">
                     <div class ="image-container"> 
