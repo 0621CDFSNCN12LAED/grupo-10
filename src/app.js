@@ -9,9 +9,9 @@ app.set("view engine", "ejs");
 
 app.listen(3001, console.log("Servidor Funcionando"));
 
-app.use(express.static(path.join(__dirname, "../public")));
+app.use(express.static("../public"));
 
-app.use("/", routerIndex.index);
+app.use("/index", routerIndex.index);
 
 app.get("/Login", function (req, res) {
     res.sendFile(path.join(__dirname, "/views/login.html"));
