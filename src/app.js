@@ -3,7 +3,7 @@ const app = express();
 const path = require("path");
 const productosController = require("./controller/productosController");
 const routerIndex = require("./controller/indexController");
-const carritoController = require("./controller/carritoController");
+const routerCarrito = require("./controller/carritoController");
 
 app.set("view engine", "ejs");
 
@@ -21,7 +21,7 @@ app.get("/registro", function (req, res) {
     res.sendFile(path.join(__dirname, "/views/registro.html"));
 });
 
-app.use("/Carrito", carritoController.carrito);
+app.use("/Carrito", routerCarrito.carrito);
 
 app.get("/Plantas", function (req, res) {
     res.sendFile(path.join(__dirname, "/views/productosPlantas.html"));
