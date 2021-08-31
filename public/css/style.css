@@ -216,3 +216,11 @@ de los mubles sillones etc*/
         font-size: xx-large;
     }
 }
+
+@media (min-width: 1280px){
+    body{
+    margin: 0 25%;
+    border: 1px solid black
+}
+
+}
