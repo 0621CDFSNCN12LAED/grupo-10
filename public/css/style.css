@@ -9,7 +9,7 @@
 .form-index{
     position: fixed;
     right: 5px;
-    top: 25px;
+    top: 50px;
     margin: 2px 2px;
     background: rgba(255, 255, 255, 0.01);
 }
@@ -103,19 +103,25 @@ header {
 .header-flex {
     display: flex;
     flex-wrap: wrap;
+
 }
 
 /*logo de la pagina*/
 .logo {
     padding: 0px;
     padding-bottom: 5px;
-    width: 40%;
+    width: 60%;
 }
+.barraBusqueda{
+    width: 100%;
+    height: 100%;
+}
+
 
 /* clase creada para el nav del header*/
 .linea {
     font-size: 20px;
-    width: 60%;
+    width: 100%;
     height: auto;
     padding: 0 0 0 7%;
     display: flex;
@@ -123,23 +129,24 @@ header {
 
 .lista-header {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    flex-direction: row;
     font-size:  16px;
     width: 100%;
+    padding-top: 15px;
 }
 .liconos{
+    width: 40%;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-between;
     
-
-}
-.icono-header{
-    width: 100%;
-    
 }
 
+
+.iconHeader{
+    margin-left:10px ;
+}
 .fa-whatsapp-square{
     margin-left: 15px
 }
@@ -149,10 +156,17 @@ header {
 .fa-envelope{
     margin-left: 15px;
 }
-
+.fa-instagram-square{
+    margin-left: 15px;
+}
+.fa-facebook-square{
+    margin-left: 15px;
+}
 /*clase creada para el imput de busqueda*/
 .barra {
-    width: 90%;
+    width: 50%;
+    height:100%;
+    
     background-color: whitesmoke;
 }
 
@@ -160,10 +174,8 @@ header {
 .lista-header {
     list-style: none;
 }
-/*son todos los iconos del footer osea los iconos de la lista*/
-.Icono-Footer {
-    color: white;
-}
+
+
 /* esta img hace referencia a todas las imagenes de muestras
 de los mubles sillones etc*/
 .imagen {
