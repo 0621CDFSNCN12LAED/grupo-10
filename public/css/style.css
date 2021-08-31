@@ -14,9 +14,14 @@
     background: rgba(255, 255, 255, 0.01);
 }
 
-.background-page{
-    background: rgb(130,79,52);
-    background: linear-gradient(135deg, rgba(130,79,52,1) 30%, rgba(255,152,74,1) 100%);
+header{
+    background-image: linear-gradient(to right top, #f0e3d8, #f0cfb5, #eebb92, #eba772, #e79252);
+}
+main{
+    background-image: linear-gradient(to right top, #f0e3d8, #f0cfb5, #eebb92, #eba772, #e79252);
+}
+footer{
+    background-image: linear-gradient(to right top, #f0e3d8, #f0cfb5, #eebb92, #eba772, #e79252);
 }
 
 .carrusel{
@@ -148,19 +153,24 @@ header {
     margin-left:10px ;
 }
 .fa-whatsapp-square{
-    margin-left: 15px
+    margin-left: 15px;
+    color:green;
 }
 .fa-twitter-square{
     margin-left: 15px;
+    color: lightskyblue
 }
 .fa-envelope{
     margin-left: 15px;
+    color: white;
 }
 .fa-instagram-square{
     margin-left: 15px;
+    color: palevioletred
 }
 .fa-facebook-square{
     margin-left: 15px;
+    color: blue
 }
 /*clase creada para el imput de busqueda*/
 .barra {
@@ -217,10 +227,36 @@ de los mubles sillones etc*/
     }
 }
 
-@media (min-width: 1280px){
+@media (min-width: 1023px){
+    img.logo{
+        width:20%;
+        height: 20%;
+    }
+    .liconos{
+        width: 65%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    li.items {
+        width: 100%;
+
+    }
     body{
-    margin: 0 25%;
-    border: 1px solid black
+        background-image: linear-gradient(to right top, #f0e3d8, #f0cfb5, #eebb92, #eba772, #e79252);
+    margin: 0 15%;
+    border: 1px solid black}
+    header{
+        background-image: linear-gradient(to right top, #f0e3d8, #f0cfb5, #eebb92, #eba772, #e79252);
+    }
+    main{
+        background-image: linear-gradient(to right top, #f0e3d8, #f0cfb5, #eebb92, #eba772, #e79252);
+    }
+    footer{
+        background-image: linear-gradient(to right top, #f0e3d8, #f0cfb5, #eebb92, #eba772, #e79252);
+    }
 }
 
-}
