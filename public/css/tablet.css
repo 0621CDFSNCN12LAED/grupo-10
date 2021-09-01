@@ -1,0 +1,25 @@
+@media (min-width: 479px) {
+    .section-main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .section-main ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .section-main li {
+        flex-direction: row;
+        margin: 0;
+        padding: auto;
+        width: 45%;
+    }
+
+    .navbar-footer ul {
+        font-size: 16px;
+    }
+    .section-carrito {
+        display: flex;
+        flex-direction: row;
+    }
+}

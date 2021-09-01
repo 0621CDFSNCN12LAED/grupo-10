@@ -3,20 +3,20 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    color: antiquewhite;
+    color: black;
+}
+body{
+    font-size:20px
 }
 /*form es la caja del boton de menu fijo desplegable*/
 .form-index{
     position: fixed;
-    right: 5px;
-    top: 25px;
+    right: 15px;
+    top: 50px;
     margin: 2px 2px;
     background: rgba(255, 255, 255, 0.01);
 }
 
-.background-page{
-    background-color: rgba(24, 24, 24, 0.76);
-}
 
 .carrusel{
     margin:auto;
@@ -102,32 +102,82 @@ header {
 .header-flex {
     display: flex;
     flex-wrap: wrap;
+
 }
 
 /*logo de la pagina*/
 .logo {
     padding: 0px;
     padding-bottom: 5px;
-    width: 30%;
+    width: 60%;
 }
+.barraBusqueda{
+    width: 100%;
+    height: 100%;
+}
+
 
 /* clase creada para el nav del header*/
 .linea {
     font-size: 20px;
-    width: 30%;
+    width: 100%;
     height: auto;
+    padding: 0 0 0 7%;
     display: flex;
 }
 
 .lista-header {
     display: flex;
+    flex-direction: row;
+    font-size:  16px;
+    width: 100%;
+    padding-top: 15px;
+}
+.liconos{
+    
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    
+}
+li.liconos{
+    visibility: hidden;
 }
 
+.section-main .imagen{
+    box-shadow: 5px 5px 5px 5px #e79252;
+}
+
+.iconHeader{
+    margin-left:10px ;
+}
+.fa-whatsapp-square{
+    margin-left: 15px;
+    color:green;
+}
+.fa-twitter-square{
+    margin-left: 15px;
+    color: lightskyblue
+}
+.fa-envelope{
+    margin-left: 15px;
+    color: white;
+}
+.fa-instagram-square{
+    margin-left: 15px;
+    color: palevioletred
+}
+.fa-facebook-square{
+    margin-left: 15px;
+    color: blue
+}
 /*clase creada para el imput de busqueda*/
 .barra {
-    width: 90%;
+    width: 50%;
+    height:100%;
+    
     background-color: whitesmoke;
 }
 
@@ -135,10 +185,8 @@ header {
 .lista-header {
     list-style: none;
 }
-/*son todos los iconos del footer osea los iconos de la lista*/
-.Icono-Footer {
-    color: white;
-}
+
+
 /* esta img hace referencia a todas las imagenes de muestras
 de los mubles sillones etc*/
 .imagen {
@@ -147,25 +195,11 @@ de los mubles sillones etc*/
     padding: 5%;
     margin: 0;
 }
-/*todo estas clases que empiezan con .footer son 
-todas clsaes y subclases del footer*/
-.footer-pie-pagina {
-    padding: auto;
+
+.Desmostracion{
+    display: none;
 }
 
-/*clase creada para la navegacion del footer*/
-.navbar-footer ul {
-    font-size: 12px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.navbar-footer li {
-    padding: 0;
-    margin-right: 12px;
-    list-style: none;
-}
 /*media query para la version de tablet en adelante*/
 @media (min-width: 479px) {
     .section-main {
@@ -191,9 +225,93 @@ todas clsaes y subclases del footer*/
         display: flex;
         flex-direction: row;
     }
-}
-@media (min-width: 768px){
-    *{
-        font-size: xx-large;
+    .form-index{
+        position: fixed;
+        right: 25px;
+        top: 55px;
+        margin: 2px 2px;
+        background: rgba(255, 255, 255, 0.01);
+    }
+
+    .lista-header{
+        margin: 0 15px;
+        justify-content:space-between;
     }
 }
+@media (min-width: 768px){
+    .lista-header{
+        margin: 0 40px;
+        justify-content:space-between;
+        font-size: larger;
+    }
+
+    li.liconos{
+        visibility:visible;
+    }
+    .iconFooter{
+        visibility:hidden;
+    }
+    .Desmostracion{
+        display: block;
+        border-top: #e79252 solid 7px;
+       
+    }
+    .tituloDemostracio{
+        font-size:10px;
+        
+    }
+    .listaDemostracion {
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0;
+        border-bottom: #e79252 solid 7px;
+        justify-content: center;
+    }
+    .itemDemostracion{
+        margin-left: 40px;
+    }
+
+    .form-index{
+        position: fixed;
+        right: 30px;
+        top: 60px;
+        margin: 2px 2px;
+        background: rgba(255, 255, 255, 0.01);
+    }
+}
+
+
+@media (min-width: 1024px){
+    body {
+        font-size:30px;
+    }
+    img.logo{
+        width:20%;
+        height: 20%;
+    }
+    .liconos{
+        width: 65%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    li.items {
+        width: 100%;
+
+    }
+    body{
+        background-image: linear-gradient(to right top, #f0e3d8, #f0cfb5, #eebb92, #eba772, #e79252);
+    margin: 0 15%;
+    }
+    
+    }
+    .section-main .imagen{
+        box-shadow: 10px 10px 10px 10px #e79252;}
+
+    .form-index{
+        display:none;
+    }
+
