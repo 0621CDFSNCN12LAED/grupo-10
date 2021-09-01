@@ -17,15 +17,6 @@ body{
     background: rgba(255, 255, 255, 0.01);
 }
 
-header{
-    background-image: linear-gradient(to right top, #f0e3d8, #f0cfb5, #eebb92, #eba772, #e79252);
-}
-main{
-    background-image: linear-gradient(to right top, #f0e3d8, #f0cfb5, #eebb92, #eba772, #e79252);
-}
-footer{
-    background-image: linear-gradient(to right top, #f0e3d8, #f0cfb5, #eebb92, #eba772, #e79252);
-}
 
 .carrusel{
     margin:auto;
@@ -314,15 +305,8 @@ de los mubles sillones etc*/
     body{
         background-image: linear-gradient(to right top, #f0e3d8, #f0cfb5, #eebb92, #eba772, #e79252);
     margin: 0 15%;
-    border: 1px solid black}
-    header{
-        background-image: linear-gradient(to right top, #f0e3d8, #f0cfb5, #eebb92, #eba772, #e79252);
     }
-    main{
-        background-image: linear-gradient(to right top, #f0e3d8, #f0cfb5, #eebb92, #eba772, #e79252);
-    }
-    footer{
-        background-image: linear-gradient(to right top, #f0e3d8, #f0cfb5, #eebb92, #eba772, #e79252);
+    
     }
     .section-main .imagen{
         box-shadow: 10px 10px 10px 10px #e79252;}
@@ -330,4 +314,4 @@ de los mubles sillones etc*/
     .form-index{
         display:none;
     }
-}
+
