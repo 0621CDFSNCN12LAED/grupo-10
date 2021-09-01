@@ -5,10 +5,13 @@
     margin: 0;
     color: black;
 }
+body{
+    font-size:20px
+}
 /*form es la caja del boton de menu fijo desplegable*/
 .form-index{
     position: fixed;
-    right: 5px;
+    right: 15px;
     top: 50px;
     margin: 2px 2px;
     background: rgba(255, 255, 255, 0.01);
@@ -140,6 +143,7 @@ header {
     padding-top: 15px;
 }
 .liconos{
+    
     width: 40%;
     display: flex;
     flex-wrap: wrap;
@@ -147,7 +151,13 @@ header {
     justify-content: space-between;
     
 }
+li.liconos{
+    visibility: hidden;
+}
 
+.section-main .imagen{
+    box-shadow: 5px 5px 5px 5px #e79252;
+}
 
 .iconHeader{
     margin-left:10px ;
@@ -195,6 +205,10 @@ de los mubles sillones etc*/
     margin: 0;
 }
 
+.Desmostracion{
+    display: none;
+}
+
 /*media query para la version de tablet en adelante*/
 @media (min-width: 479px) {
     .section-main {
@@ -220,14 +234,66 @@ de los mubles sillones etc*/
         display: flex;
         flex-direction: row;
     }
+    .form-index{
+        position: fixed;
+        right: 25px;
+        top: 55px;
+        margin: 2px 2px;
+        background: rgba(255, 255, 255, 0.01);
+    }
+
+    .lista-header{
+        margin: 0 15px;
+        justify-content:space-between;
+    }
 }
 @media (min-width: 768px){
-    *{
-        font-size: xx-large;
+    .lista-header{
+        margin: 0 40px;
+        justify-content:space-between;
+        font-size: larger;
+    }
+
+    li.liconos{
+        visibility:visible;
+    }
+    .iconFooter{
+        visibility:hidden;
+    }
+    .Desmostracion{
+        display: block;
+        border-top: #e79252 solid 7px;
+       
+    }
+    .tituloDemostracio{
+        font-size:10px;
+        
+    }
+    .listaDemostracion {
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0;
+        border-bottom: #e79252 solid 7px;
+        justify-content: center;
+    }
+    .itemDemostracion{
+        margin-left: 40px;
+    }
+
+    .form-index{
+        position: fixed;
+        right: 30px;
+        top: 60px;
+        margin: 2px 2px;
+        background: rgba(255, 255, 255, 0.01);
     }
 }
 
-@media (min-width: 1023px){
+
+@media (min-width: 1024px){
+    body {
+        font-size:30px;
+    }
     img.logo{
         width:20%;
         height: 20%;
@@ -258,5 +324,10 @@ de los mubles sillones etc*/
     footer{
         background-image: linear-gradient(to right top, #f0e3d8, #f0cfb5, #eebb92, #eba772, #e79252);
     }
-}
+    .section-main .imagen{
+        box-shadow: 10px 10px 10px 10px #e79252;}
 
+    .form-index{
+        display:none;
+    }
+}
