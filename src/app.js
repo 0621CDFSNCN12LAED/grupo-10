@@ -16,7 +16,7 @@ app.use("/index", routerIndex.index);
 app.get("/Login", function (req, res) {
     res.sendFile(path.join(__dirname, "/views/login.html"));
 });
-
+ 
 app.get("/registro", function (req, res) {
     res.sendFile(path.join(__dirname, "/views/registro.html"));
 });
