@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/normalize.css">
@@ -9,32 +9,32 @@
     <link rel="stylesheet" href="/css/styleProductos.css"> 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 
-    <title>MUEBLES</title>
+    <title>Iluminacion</title>
 </head>
 <body class="background-page">  
    
     <%- include("./partials/header.ejs") %> 
 
-    <main id="main-content">
-        <section class="style-section"></section>
-            <h2 class ="title">MUEBLES</h2>
-                <% for (let i =0; i < muebles.length; i++) { %>
-                <article class="product-wrapper">
+<main id="main-content">
+    <section class="style-section">
+        <h2 class ="title">ILUMINACION</h2>
+        <% for (let i =0; i < luminaria.length; i++) { %>
+            <article class="product-wrapper">
                 <div class ="image-container"> 
                     <img
                         class="style-img"
-                        src= <%= muebles[i].img %> 
+                        src= <%= luminaria[i].img %> 
                         alt=""
                     />
                 </div>
                 
                 <div class ="description-container"> 
                     <div> 
-                        <p class="style-title"> <%= muebles[i].nombre %></p>
-                        <p class="style-description"> DESCRIPCION <br>
-                            <%= muebles[i].desc %> 
+                        <p class="style-title"><%= luminaria[i].nombre %></p>
+                        <p class="style-description"> DESCRIPCION: <br>
+                            <%= luminaria[i].desc %> 
                         </p>
-                        <p class= "style-price"> <%= muebles[i].precio %> </p>
+                        <p class= "style-price"><%= luminaria[i].precio %> </p>
                     </div>
                     <div class= "style-button">
                         <a href= "/carrito.html">COMPRAR</a>
@@ -42,9 +42,8 @@
                 </div>
             </article>
             <% } %>
-            </section>
+        </section>
     </main>
     <%- include("./partials/footer.ejs") %> 
-
 </body>
 </html>

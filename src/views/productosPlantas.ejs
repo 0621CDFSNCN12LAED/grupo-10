@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css"> 
+    <link rel="stylesheet" href="/css/styleProductos.css"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+    <title>PLANTAS</title>
+</head>
+<body class="background-page">  
+    
+    <%- include("./partials/header.ejs") %> 
+
+    <main id="main-content">
+        <section class="style-section">
+            <h2 class ="title">PLANTAS</h2>
+            <% for (let i =0; i < plantas.length; i++) { %>
+            <article class="product-wrapper">
+                    <div class ="image-container"> 
+                        <img
+                            class="style-img"
+                            src=<%= plantas[i].img %> 
+                            alt=""
+                        />
+                    </div>
+                    
+                    <div class ="description-container"> 
+                        <div> 
+                            <p class="style-title"><%= plantas[i].nombre %></p>
+                            <p class="style-description"> DESCRIPCION: <br>
+                                <%= plantas[i].desc %> 
+                            </p>
+                            <p class= "style-price"><%= plantas[i].precio %> </p>
+                        </div>
+                        <div class= "style-button">
+                            <a href= "/carrito.html">COMPRAR</a>
+                        </div>
+                    </div>
+                </article>
+                <% } %>
+            </section>
+    </main>
+
+    <%- include("./partials/footer.ejs") %> 
+
+</body>
+</html>

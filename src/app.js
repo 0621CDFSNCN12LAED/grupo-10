@@ -23,11 +23,8 @@ app.get("/registro", function (req, res) {
 
 app.use("/Carrito", routerCarrito.carrito);
 
-app.get("/Plantas", function (req, res) {
-    res.sendFile(path.join(__dirname, "/views/productosPlantas.html"));
-});
+app.use("/Plantas", productosController.listadoPlantas);
 
-app.get("/Iluminacion", function (req, res) {
-    res.sendFile(path.join(__dirname, "/views/productosIluminacion.html"));
-});
-app.use("/Muebles", productosController.listadoProductos);
+app.use("/Iluminacion", productosController.listadoIluminacion);
+
+app.use("/Muebles", productosController.listadoMuebles);

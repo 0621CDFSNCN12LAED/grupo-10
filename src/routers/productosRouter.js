@@ -6,4 +6,8 @@ const router = express.Router ();
 
 router.get ("/productosMuebles", productosController.listadoMuebles)
 
+router.get ("/productosPlantas", productosController.listadoPlantas)
+
+router.get ("/productosIluminacion", productosController.listadoIluminacion)
+
 module.exports = router
