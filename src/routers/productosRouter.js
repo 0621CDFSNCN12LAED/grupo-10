@@ -4,6 +4,6 @@ const productosController = require ("../controller/productosController")
 
 const router = express.Router ();
 
-router.get ("/productosMuebles", productosController.listadoProductos)
+router.get ("/productosMuebles", productosController.listadoMuebles)
 
 module.exports = router
