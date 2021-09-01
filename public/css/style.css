@@ -6,6 +6,7 @@
     color: black;
 }
 body{
+    background-image: linear-gradient(to right top, #f0e3d8, #f0cfb5, #eebb92, #eba772, #e79252);
     font-size:20px
 }
 /*form es la caja del boton de menu fijo desplegable*/
