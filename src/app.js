@@ -4,6 +4,7 @@ const path = require("path");
 const productosController = require("./controller/productosController");
 const routerIndex = require("./controller/indexController");
 const routerCarrito = require("./controller/carritoController");
+const routerForms = require("./controller/formsController")
 
 app.set("view engine", "ejs");
 
@@ -13,13 +14,13 @@ app.use(express.static("../public"));
 
 app.use("/index", routerIndex.index);
 
-app.get("/Login", function (req, res) {
-    res.sendFile(path.join(__dirname, "/views/login.html"));
-});
+app.get("/login", routerForms.login);
  
-app.get("/registro", function (req, res) {
-    res.sendFile(path.join(__dirname, "/views/registro.html"));
-});
+app.get("/registro", routerForms.registro);
+
+app.get("/nuevo-producto", routerForms.nuevoProducto);
+
+app.get("/editar-producto", routerForms.edicionProductos);
 
 app.use("/Carrito", routerCarrito.carrito);
 
