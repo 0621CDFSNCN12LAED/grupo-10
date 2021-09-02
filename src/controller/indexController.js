@@ -3,6 +3,10 @@ const indexController = {
         res.render("index.ejs")
 
     },
+    demoDecoracion: function (req, res) {
+        res.render("demoDecoracion.ejs")
+
+    },
 };
 
 module.exports = indexController;

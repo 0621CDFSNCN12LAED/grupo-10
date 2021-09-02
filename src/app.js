@@ -14,6 +14,8 @@ app.use(express.static("../public"));
 
 app.use("/index", routerIndex.index);
 
+app.use("/demoDecoracion", routerIndex.demoDecoracion);
+
 app.get("/login", routerForms.login);
  
 app.get("/registro", routerForms.registro);
