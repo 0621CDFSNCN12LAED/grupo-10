@@ -202,6 +202,33 @@ de los mubles sillones etc*/
     display: none;
 }
 
+.tituloDestacado{
+    margin: 2% 0;
+}
+
+.productosDestacados{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0 2%;
+    justify-content: space-evenly;
+    
+
+}
+
+.producArticle {
+    width: 25%;
+    box-shadow: 3px 3px 3px 3px #e79252;
+
+}
+.producDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly
+    
+
+}
+
 .iconFooter {
     display: flex;
     margin-top: 6%;
