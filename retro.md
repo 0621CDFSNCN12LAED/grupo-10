@@ -1,3 +1,18 @@
+SPRINT 3
+
+1) Creemos que es importante comenzar a alinearnos y encontrar la manera para estar de acuerdo con el estilo de la página. 
+
+2) Continuar promoviendo en el grupo los encuentros o reuniones. 
+
+3) El compromiso y responsabilidad que asume cada integrante con las tareas asignadas. Esto alienta a la confianza y nos permite avanzar con más tranquilidad en los puntos que nos corresponden a cada uno. 
+
+4) Tal vez puede ser una oportunidad tomar entre dos integrantes cada tarea a fines de compartir prácticas y formas de pensar. Es decir, podríamos individualizar menos cada tarea. 
+
+5) Creemos que las prácticas que venimos implementando nos permiten avanzar con el proyecto, entonces no creemos que exista un punto para dejar de hacer, pero si algunos cambios que mencionamos anteriormente. 
+
+
+SPRINT 2
+
 1) Comenzar a hacer: 
     El desafío que tenemos desde el segundo sprint es interiorizar trello, que fue la herramienta seleccionada, cómo la guía que nos ayuará y acompañará en la orgnización de la teras asignadas a cada uno. 
 
