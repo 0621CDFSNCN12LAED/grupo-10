@@ -2,10 +2,10 @@
     font-family: sans-serif;
 }
 header{
-    background-color: rgba(24, 24, 24, 0.76);
+    background-color: #f0dbcb;
 }
 footer{
-    background-color: rgba(24, 24, 24, 0.76);
+    background-color: #f0dbcb;
 }
 
 main{
@@ -14,6 +14,7 @@ main{
     background-image: url(/img/carrucel-jardin.jpg);
     background-size: cover;
     color: rgb(24, 24, 24);
+    background-color: #f0dbcb;
 }
 
 .section-style{
@@ -45,7 +46,7 @@ input{
 }
 
 .button-style{
-    width: 100px;
+    width: 40%;
 }
 
 h4{

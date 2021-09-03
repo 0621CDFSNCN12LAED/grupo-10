@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <title>Editar Producto</title>
     <link rel="stylesheet" href="/css/editProductos.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,33 +13,45 @@
 </head> 
 
 <body>
+    <header>
+        <div class="logo-div"> 
+            <img class="logo" src= "/img/logodecoar.jpg" alt="Logo">
+        </div>     
+    </header>
     <main>
-        <section class=>
-            <h2>Crear nuevo producto</h2>
+        <section>
+            <h1>Editar producto</h1>
             <form method="POST">
                 <div class="bloque">
-                    <label for="Categoría">Categoría</label>
-                    <input name="Iluminación" type="checkbox" id="Categoría"><label>Iluminación</label>
-                    <input name="Muebles" type="checkbox" id="Categoría"><label>Muebles</label>
-                    <input name="Plantas" type="checkbox" id="Categoría"><label>Plantas</label>
-                </div>
-                <div class="bloque">
-                    <label for="Nombre del producto"></label>
+                    <label for="Nombre del producto" class="label-edit">¿Qué producto qerés modificar?</label>
                     <input name="Nombre del producto" type="text" id="Nombre del producto" placeholder="Nombre del producto">
                 </div>
+                <div>
+                    <h3>Categoría</h3>
+                    <div class="bloque-cat">
+                        <input name="Iluminación" type="checkbox" id="Categoría"><label>Iluminaria</label>
+                    </div>
+                    <div class="bloque-cat">
+                        <input name="Muebles" type="checkbox" id="Categoría"><label>Muebles</label>
+                    </div>
+                    <div class="bloque-cat">
+                        <input name="Plantas" type="checkbox" id="Categoría"><label>Plantas</label>
+                    </div>
+                </div>
                 <div class="bloque">
-                    <label for="Descripción"></label>
+                    <label for="Descripción" class="label-edit">Completá la nueva descripción</label>
                     <input name="Descripción" type="text" id="Descripción" placeholder="Descripción">
                 </div>
                 <div class="bloque">
-                    <label for="Precio"></label>
+                    <label for="Precio" class="label-edit">¿Cuál es el precio?</label>
                     <input name="Precio" type="number" id="Precio" placeholder="Precio">
                 </div>
                 <div class="bloque">
-                    <label for="Imagen">Adjuntar imágenes del producto</label>
+                    <label class="label-boton"for="Imagen">Imágenes del producto</label>
                     <input name="Imagen" type="file" id="Imagen" accept="image/png, image/jpeg">
                 </div>
             </form>
+            <button class="boton"><a href="nuevoProducto">CARGAR</a></button>
         </section>
     </main>  
     
