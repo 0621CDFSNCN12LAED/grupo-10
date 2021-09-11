@@ -1,0 +1,19 @@
+[{
+    "id": 1,
+    "Nombre": "Carlos" ,
+    "Apellido": "Alvarez",
+    "Email": "carlos@gmail.com",
+    "Contraseña": ,
+    "Categoria":  ,
+    "Imagen":     
+},
+ {
+    "id": 2,
+    "Nombre": "María" ,
+    "Apellido": "Perez",
+    "Email": "maria@gmail.com",
+    "Contraseña": ,
+    "Categoria":  ,
+    "Imagen":     
+}
+]
