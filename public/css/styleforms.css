@@ -1,11 +1,12 @@
 *{
     font-family: sans-serif;
 }
+
 header{
-    background-color: #f0dbcb;
+    background-image: linear-gradient(to right top, #f0e3d8, #f0cfb5, #eebb92, #eba772, #e79252);
 }
 footer{
-    background-color: #f0dbcb;
+    background-image: linear-gradient(to right top, #f0e3d8, #f0cfb5, #eebb92, #eba772, #e79252);
 }
 
 main{

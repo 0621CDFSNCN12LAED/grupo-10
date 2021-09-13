@@ -16,31 +16,10 @@
     <%- include("./partials/header.ejs") %> 
 
     <main id="main-content">
-        <section class="style-section"></section>
+        <section class="style-section">
             <h2 class ="title">MUEBLES</h2>
-                <% for (let i =0; i < muebles.length; i++) { %>
-                <article class="product-wrapper">
-                <div class ="image-container"> 
-                    <img
-                        class="style-img"
-                        src= <%= muebles[i].img %> 
-                        alt=""
-                    />
-                </div>
-                
-                <div class ="description-container"> 
-                    <div> 
-                        <p class="style-title"> <%= muebles[i].nombre %></p>
-                        <p class="style-description"> DESCRIPCION <br>
-                            <%= muebles[i].desc %> 
-                        </p>
-                        <p class= "style-price"> <%= muebles[i].precio %> </p>
-                    </div>
-                    <div class= "style-button">
-                        <a href= "/carrito.html">COMPRAR</a>
-                    </div>
-                </div>
-            </article>
+                <% for (let productoIndividual of products) { %>
+                <%- include("./partials/listarProductos.ejs", {productoIndividual: productoIndividual}) %>
             <% } %>
             </section>
     </main>

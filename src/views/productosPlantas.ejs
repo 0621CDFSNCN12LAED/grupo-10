@@ -18,30 +18,9 @@
     <main id="main-content">
         <section class="style-section">
             <h2 class ="title">PLANTAS</h2>
-            <% for (let i =0; i < plantas.length; i++) { %>
-            <article class="product-wrapper">
-                    <div class ="image-container"> 
-                        <img
-                            class="style-img"
-                            src=<%= plantas[i].img %> 
-                            alt=""
-                        />
-                    </div>
-                    
-                    <div class ="description-container"> 
-                        <div> 
-                            <p class="style-title"><%= plantas[i].nombre %></p>
-                            <p class="style-description"> DESCRIPCION: <br>
-                                <%= plantas[i].desc %> 
-                            </p>
-                            <p class= "style-price"><%= plantas[i].precio %> </p>
-                        </div>
-                        <div class= "style-button">
-                            <a href= "/carrito.html">COMPRAR</a>
-                        </div>
-                    </div>
-                </article>
-                <% } %>
+            <% for (let productoIndividual of products) { %>
+                <%- include("./partials/listarProductos.ejs", {productoIndividual: productoIndividual}) %>
+            <% } %>
             </section>
     </main>
 

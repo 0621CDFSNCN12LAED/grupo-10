@@ -16,13 +16,13 @@ app.use("/index", routerIndex.index);
 
 app.use("/demoDecoracion", routerIndex.demoDecoracion);
 
-app.get("/login", routerForms.login);
+app.use("/login", routerForms.login);
  
-app.get("/registro", routerForms.registro);
+app.use("/registro", routerForms.registro);
 
-app.get("/nuevo-producto", routerForms.nuevoProducto);
+app.use("/nuevo-producto", routerForms.nuevoProducto);
 
-app.get("/editar-producto", routerForms.edicionProductos);
+app.use("/editar-producto", routerForms.edicionProductos);
 
 app.use("/Carrito", routerCarrito.carrito);
 
@@ -31,3 +31,5 @@ app.use("/Plantas", productosController.listadoPlantas);
 app.use("/Iluminacion", productosController.listadoIluminacion);
 
 app.use("/Muebles", productosController.listadoMuebles);
+
+app.use("/detalle", productosController.detalle);

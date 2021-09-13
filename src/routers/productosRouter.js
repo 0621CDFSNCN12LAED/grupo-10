@@ -10,4 +10,6 @@ router.get ("/productosPlantas", productosController.listadoPlantas)
 
 router.get ("/productosIluminacion", productosController.listadoIluminacion)
 
+router.get ("/detalle", productosController.detalle)
+
 module.exports = router

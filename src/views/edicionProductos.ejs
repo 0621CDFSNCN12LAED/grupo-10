@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Producto</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/editProductos.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,9 +16,7 @@
 
 <body>
     <header>
-        <div class="logo-div"> 
-            <img class="logo" src= "/img/logodecoar.jpg" alt="Logo">
-        </div>     
+        <%- include("./partials/header.ejs") %> 
     </header>
     <main>
         <section>
@@ -55,7 +55,9 @@
         </section>
     </main>  
     
-    <footer class="footer-pie-pagina background-page">
+    <footer>
+        <%- include("./partials/footer.ejs") %>
+
     </footer>
 </body>
 </html>

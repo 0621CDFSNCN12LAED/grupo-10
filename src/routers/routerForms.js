@@ -10,6 +10,6 @@ router.get('/registro', formsController.registro)
 
 router.get('/nuevoProducto', formsController.nuevoProducto)
 
-router.get('/nuevoProducto', formsController.edicionProductos)
+router.get('/edicionProductos', formsController.edicionProductos)
 
-module.exports = router;
+module.exports = router; 

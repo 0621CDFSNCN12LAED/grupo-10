@@ -1,3 +1,5 @@
+const functionService = require ("../services/functionService.js")
+
 const indexController = {
     index: function (req, res) {
         res.render("index.ejs")

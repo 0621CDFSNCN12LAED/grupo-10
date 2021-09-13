@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="/css/styleforms.css">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/styleforms.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,18 @@
 </head> 
 
 <body>
-    <%- include('./partials/headerForms') %>
+    <header>
+        <div class= "header-flex"> 
+            <img class="logo" src= "/img/logodecoar.jpg" alt="Logo">
+       
+            <ul>
+                <li>QUIENES SOMOS</li>
+                <li>TERMINOS Y CONDICIONES</li>
+            </ul>
+        </div>
+            <input class="barra" type="text" name="busqueda"><i class="fas fa-search"></i></input>
+            
+    </header>
     <main>
         <section class="section-style">
             <h2>¡Bienvenido!</h2>
@@ -40,16 +51,8 @@
             <h4><a href="/registro">REGISTRATE</a></h4>
         </section>
     </main>  
-    <footer class="footer-pie-pagina background-page">
-        <nav class="navbar-footer">
-            <ul>
-                <li><a class="Icono-Footer"><i class="fas fa-home"></i>Home</a></li>
-                <li><a class="Icono-Footer"><i class="fas fa-search"></i>Busqueda</a></li>
-                <li><a class="Icono-Footer"><i class="fas fa-plus-square"></i>Noticias</li>
-                <li><a class="Icono-Footer"><i class="fas fa-heart"></i>Likes</a></li>
-                <li><a class="Icono-Footer"><i class="fas fa-user-circle"></i>Perfil</a></li>
-            </ul>
-        </nav>
+    <footer>
+        <%- include("./partials/footer.ejs") %>
     </footer>
 </body>
 </html>
