@@ -1,5 +1,4 @@
-const fs = require("fs");   
-const path = require("path");
+
 const functionService = require ("../services/functionService.js")
  
 const productosController = {
