@@ -1,14 +1,19 @@
+const fs = require("fs");   
+const path = require("path");
 const functionService = require ("../services/functionService.js")
 
 const indexController = {
     index: function (req, res) {
-        res.render("index.ejs")
+        res.render("index")
 
     },
-    demoDecoracion: function (req, res) {
-        res.render("demoDecoracion.ejs")
-
+    login:function (req, res) {
+        res.render("login")
     },
+    registro:function (req, res) {
+        res.render("registro")
+    },
+  
 };
 
 module.exports = indexController;

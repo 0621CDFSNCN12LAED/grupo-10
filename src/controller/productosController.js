@@ -20,9 +20,25 @@ listadoIluminacion: function (req, res) {
 
 detalle: function (req, res) {
     const detalleProducto = functionService.buscarProductoid(req.params.id);
-    res.render("detalle", {products: detalleProducto})
+    res.render("detalle", {productoIndividual: detalleProducto})
 },
+
+nuevoProducto: function (req, res) {
+    res.render("nuevoProducto")
+},
+
+editarProdcuto: function (req, res) {
+    res.render("edicionProductos")
+},
+
+decoracion: function (req, res) {
+    res.render("Decoracion")
+},
+carrito: function (req, res) {
+    res.render("carrito")
     
+},
+
 }
 
 module.exports = productosController

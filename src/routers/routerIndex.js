@@ -6,7 +6,9 @@ const router = express.Router();
 
 router.get("/index", indexController.index);
 
-router.get('/demoDecoracion', indexController.demoDecoracion);
+router.get("/login", indexController.login);
+ 
+router.get("/registro", indexController.registro);
 
 
 module.exports = router;

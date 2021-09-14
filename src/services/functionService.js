@@ -22,7 +22,7 @@ const functionService = {
             return productoIndividual.category == "iluminacion"
         });
         return filtrarProductos
-    },
+    }, 
 
     filtrarPlantas(){
         const filtrarProductos = products.filter(function(productoIndividual)
