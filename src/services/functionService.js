@@ -54,6 +54,14 @@ const functionService = {
 
     },
 
+    modificiar(){
+
+    },
+
+    eliminar(){
+
+    },
+
 
 };
 

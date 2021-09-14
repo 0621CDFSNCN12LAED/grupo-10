@@ -35,12 +35,12 @@ editarProdcuto: function (req, res) {
     res.render("edicionProductos") 
 },
 
-modificar(){
+modificarProducto(){
 
 },
 
 
-eliminar(){
+eliminarProducto(){
 
 },
 
