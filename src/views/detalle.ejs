@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <title>Decoar</title>
-</head>
-<body>
-    <header>
-        <%- include("./partials/header.ejs") %> 
-    </header>
-    <main>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/normalize.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            rel="stylesheet"
+        />
+        <title>Decoar</title>
+    </head>
+    <body>
+        <header><%- include("./partials/header.ejs") %></header>
+        <main>
+            <%- include("./partials/listarProductos.ejs",
+            {productoIndividual})%>
+            <div class="style-button">
+                <a href="/edicionProductos/<%=productoIndividual.id%>"
+                    >EDITAR</a
+                >
+            </div>
+            <div class="style-button">
+                <a href="/index">ELIMINAR</a>
+            </div>
+        </main>
 
-       
-            <%- include("./partials/listarProductos.ejs", {productoIndividual}) %>
-       
-    </main>
-
-    <footer>
-        <%- include("./partials/footer.ejs") %> 
-    </footer>
-
-</body>
+        <footer><%- include("./partials/footer.ejs") %></footer>
+    </body>
 </html>

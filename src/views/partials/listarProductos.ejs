@@ -1,23 +1,20 @@
 <article class="product-wrapper">
     <a href="/productos/detalle/ <%= productoIndividual.id %>">
-    <div class ="image-container"> 
-        <img
-            class="style-img"
-            src= <%= productoIndividual.img %> 
-            alt=""
-        />
-    </div>
-    </a>
-    <div class ="description-container"> 
-        <div> 
-            <p class="style-title"> <%= productoIndividual.nombre %></p>
-            <p class="style-description"> DESCRIPCION <br>
-                <%= productoIndividual.desc %> 
-            </p>
-            <p class= "style-price"> <%= productoIndividual.precio %> </p>
+        <div class="image-container">
+            <img class="style-img" src="<%= productoIndividual.img %>" alt="" />
         </div>
-        <div class= "style-button">
-            <a href= "/productos/carrito">COMPRAR</a>
+    </a>
+    <div class="description-container">
+        <div>
+            <p class="style-title"><%= productoIndividual.nombre %></p>
+            <p class="style-description">
+                DESCRIPCION <br />
+                <%= productoIndividual.desc %>
+            </p>
+            <p class="style-price"><%= productoIndividual.precio %></p>
+        </div>
+        <div class="style-button">
+            <a href="/productos/carrito">COMPRAR</a>
         </div>
     </div>
 </article>

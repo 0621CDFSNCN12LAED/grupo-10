@@ -97,6 +97,12 @@
         "precio": 4500,
         "img": "/img/LamparaHierro.jpg",
         "color": ""
+    },
+    {
+        "id": 12,
+        "category": "on",
+        "nombre": "",
+        "desc": "",
+        "precio": 0
     }
-   
 ]

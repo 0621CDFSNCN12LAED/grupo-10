@@ -1,59 +1,56 @@
+const functionService = require("../services/functionService.js");
 
-const functionService = require ("../services/functionService.js")
- 
 const productosController = {
+    listadoMuebles: function (req, res) {
+        const filtrarMuebles = functionService.filtrarMuebles();
+        res.render("productosMuebles", { products: filtrarMuebles });
+    },
 
-listadoMuebles : function (req, res) { 
-    const filtrarMuebles = functionService.filtrarMuebles()
-    res.render("productosMuebles", {products: filtrarMuebles})},
+    listadoPlantas: function (req, res) {
+        const filtrarPlantas = functionService.filtrarPlantas();
+        res.render("productosPlantas", { products: filtrarPlantas });
+    },
 
+    listadoIluminacion: function (req, res) {
+        const filtrarIluminacion = functionService.filtrarIluminacion();
+        res.render("productosIluminacion", { products: filtrarIluminacion });
+    },
 
-listadoPlantas: function (req, res) {
-    const filtrarPlantas = functionService.filtrarPlantas()
-    res.render("productosPlantas", {products: filtrarPlantas})},
+    detalle: function (req, res) {
+        const detalleProducto = functionService.buscarProductoid(req.params.id);
+        res.render("detalle", { productoIndividual: detalleProducto });
+    },
 
+    nuevoProducto: function (req, res) {
+        res.render("nuevoProducto");
+    },
 
-listadoIluminacion: function (req, res) {
-    const filtrarIluminacion = functionService.filtrarIluminacion()
-    res.render("productosIluminacion", {products: filtrarIluminacion})},
+    guardarProducto: function (req, res) {
+        functionService.crear(req.body);
+        res.redirect("/index");
+    },
 
-detalle: function (req, res) {
-    const detalleProducto = functionService.buscarProductoid(req.params.id);
-    res.render("detalle", {productoIndividual: detalleProducto})
-},
+    editarProducto: function (req, res) {
+        const product = functionService.buscarProductoid(req.params.id);
+        res.render("edicionProductos", { product });
+    },
 
-nuevoProducto: function (req, res) {
-res.render("nuevoProducto")
-},
+    modificarProducto: function (req, res) {
+        functionService.modificar(req.params.id, req.body, req.file);
+        res.redirect("/index");
+    },
 
-guardarProducto:function (req, res) {
-    functionService.crear(req.body);
-    res.render("nuevoProducto");
-},
+    eliminarProducto: function (req, res) {
+        functionService.eliminar(req.params.id);
+        res.redirect("/index");
+    },
 
-editarProdcuto: function (req, res) {
-    res.render("edicionProductos") 
-},
+    decoracion: function (req, res) {
+        res.render("Decoracion");
+    },
+    carrito: function (req, res) {
+        res.render("carrito");
+    },
+};
 
-modificarProducto(){
-
-},
-
-
-eliminarProducto(){
-
-},
-
-
-
-decoracion: function (req, res) {
-    res.render("Decoracion")
-},
-carrito: function (req, res) {
-    res.render("carrito")
-    
-},
-
-}
-
-module.exports = productosController
+module.exports = productosController;

@@ -1,63 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Producto</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/editProductos.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"rel="stylesheet">
-</head> 
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Editar Producto</title>
+        <link rel="stylesheet" href="/css/normalize.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/editProductos.css" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+            rel="stylesheet"
+        />
+    </head>
 
-<body>
-    <header>
-        <%- include("./partials/header.ejs") %> 
-    </header>
-    <main>
-        <section> 
-            <h1>Editar producto</h1>
-            <form method="POST" >
-                <div class="bloque">
-                    <label for="nombre" class="label-edit">¿Qué producto qerés modificar?</label>
-                    <input name="nombre" type="text" id="nombre" placeholder="Nombre del producto">
-                </div>
-                <div>
-                    <h3>Categoría</h3>
-                    <div class="bloque-cat">
-                        <input name="category" type="radio" id="Iluminación" ><label>Iluminaria</label>
+    <body>
+        <header><%- include("./partials/header.ejs") %></header>
+        <main>
+            <section>
+                <h1>Editar producto</h1>
+                <form
+                    action="/productos/<%= product.id %>?_method=PUT"
+                    method="POST"
+                >
+                    <div class="bloque">
+                        <label for="nombre" class="label-edit"
+                            >¿Qué producto qerés modificar?</label
+                        >
+                        <input
+                            name="nombre"
+                            type="text"
+                            id="nombre"
+                            placeholder="Nombre del producto"
+                        />
                     </div>
-                    <div class="bloque-cat">
-                        <input name="category" type="radio" id="Muebles"><label>Muebles</label>
+                    <div>
+                        <h3>Categoría</h3>
+                        <div class="bloque-cat">
+                            <input
+                                name="category"
+                                type="radio"
+                                id="Iluminación"
+                            /><label>Iluminaria</label>
+                        </div>
+                        <div class="bloque-cat">
+                            <input
+                                name="category"
+                                type="radio"
+                                id="Muebles"
+                            /><label>Muebles</label>
+                        </div>
+                        <div class="bloque-cat">
+                            <input
+                                name="category"
+                                type="radio"
+                                id="Plantas"
+                            /><label>Plantas</label>
+                        </div>
                     </div>
-                    <div class="bloque-cat">
-                        <input name="category" type="radio" id="Plantas"><label>Plantas</label>
+                    <div class="bloque">
+                        <label for="desc" class="label-edit"
+                            >Completá la nueva descripción</label
+                        >
+                        <input
+                            name="desc"
+                            type="text"
+                            id="desc"
+                            placeholder="Descripción"
+                        />
                     </div>
-                </div>
-                <div class="bloque">
-                    <label for="desc" class="label-edit">Completá la nueva descripción</label>
-                    <input name="desc" type="text" id="desc" placeholder="Descripción">
-                </div>
-                <div class="bloque">
-                    <label for="precio" class="label-edit">¿Cuál es el precio?</label>
-                    <input name="precio" type="number" id="precio" placeholder="Precio">
-                </div>
-                <div class="bloque">
-                    <label class="label-boton"for="img">Imágenes del producto</label>
-                    <input name="img" type="file" id="img" accept="image/png, image/jpeg">
-                </div>
-            </form>
-            <button type = "submit" class="boton">CARGAR</button>
-        </section>
-    </main>  
-    
-    <footer>
-        <%- include("./partials/footer.ejs") %>
+                    <div class="bloque">
+                        <label for="precio" class="label-edit"
+                            >¿Cuál es el precio?</label
+                        >
+                        <input
+                            name="precio"
+                            type="number"
+                            id="precio"
+                            placeholder="Precio"
+                        />
+                    </div>
+                    <div class="bloque">
+                        <label class="label-boton" for="img"
+                            >Imágenes del producto</label
+                        >
+                        <input
+                            name="img"
+                            type="file"
+                            id="img"
+                            accept="image/png, image/jpeg"
+                        />
+                    </div>
+                </form>
+                <button type="submit" class="boton">CARGAR</button>
+            </section>
+        </main>
 
-    </footer>
-</body>
+        <footer><%- include("./partials/footer.ejs") %></footer>
+    </body>
 </html>

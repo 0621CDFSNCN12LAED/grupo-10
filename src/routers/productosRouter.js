@@ -1,5 +1,5 @@
-const express = require ("express")
- 
+const express = require("express");
+
 const router = express.Router();
 
 const path = require("path");
@@ -12,42 +12,37 @@ const storage = multer.diskStorage({
     },
 });
 
-const uploader = multer({ 
+const uploader = multer({
     storage,
 });
 
-const productosController = require ("../controller/productosController")
+const productosController = require("../controller/productosController");
 
-router.get("/productosMuebles", productosController.listadoMuebles)
+router.get("/productosMuebles", productosController.listadoMuebles);
 
+router.get("/productosPlantas", productosController.listadoPlantas);
 
-router.get("/productosPlantas", productosController.listadoPlantas)
+router.get("/productosIluminacion", productosController.listadoIluminacion);
 
+router.get("/detalle/:id", productosController.detalle);
+/***Creación de un producto ***/
+router.get("/nuevoProducto", productosController.nuevoProducto);
 
-router.get("/productosIluminacion", productosController.listadoIluminacion)
+router.post(
+    "/nuevoProducto",
+    uploader.single("img"),
+    productosController.guardarProducto
+);
+/*** Editar un producto ***/
+router.get("/edicionProductos/:id", productosController.editarProducto);
 
+router.put("/:id", productosController.modificarProducto);
 
-router.get("/detalle/:id", productosController.detalle)
+/***Eliminar un producto ***/
+router.delete("/:id", productosController.eliminarProducto);
 
+router.get("/Decoracion", productosController.decoracion);
 
-router.get("/nuevoProducto", productosController.nuevoProducto)
+router.get("/carrito", productosController.carrito);
 
-router.post("/nuevoProducto", uploader.single("img"), productosController.guardarProducto)
-
-
-router.get("/edicionProductos", productosController.editarProdcuto)
-
-router.put("/edicionProductos", productosController.modificar)
-
-router.delete("/edicionProductos", productosController.eliminar)
-
-
-
-
-router.get("/Decoracion", productosController.decoracion)
-
-
-router.get("/carrito", productosController.carrito)
-
-
-module.exports = router
+module.exports = router;
