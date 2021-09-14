@@ -1,7 +1,7 @@
 const fs = require("fs");   
 const path = require("path");
 const functionService = require ("../services/functionService.js")
-
+ 
 const productosController = {
 
 listadoMuebles : function (req, res) { 
@@ -28,7 +28,7 @@ nuevoProducto: function (req, res) {
 },
 
 editarProdcuto: function (req, res) {
-    res.render("edicionProductos")
+    res.render("edicionProductos") 
 },
 
 decoracion: function (req, res) {

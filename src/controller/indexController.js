@@ -13,6 +13,9 @@ const indexController = {
     registro:function (req, res) {
         res.render("registro")
     },
+    carrito:function (req, res) {
+        res.render("carrito")
+    },
   
 };
 

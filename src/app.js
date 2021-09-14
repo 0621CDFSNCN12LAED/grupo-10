@@ -12,4 +12,4 @@ app.use(express.static("../public"));
 
 app.use("/", routerIndex);
 
-app.use("/products", productosRouter)
+app.use("/productos", productosRouter)

@@ -10,5 +10,7 @@ router.get("/login", indexController.login);
  
 router.get("/registro", indexController.registro);
 
+router.get("/carrito", indexController.carrito);
+
 
 module.exports = router;
