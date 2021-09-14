@@ -3,7 +3,10 @@ const app = express();
 const path = require("path");
 const productosRouter = require ("./routers/productosRouter");
 const routerIndex = require ("./routers/routerIndex");
+const methodOverride =  require('method-override');
 
+app.use(methodOverride('_method'))
+ 
 app.set("view engine", "ejs");
 
 app.listen(3001, console.log("Servidor Funcionando"));

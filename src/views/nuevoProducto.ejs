@@ -18,40 +18,41 @@
     <header>
         <%- include("./partials/header.ejs") %> 
     </header>
-    <main>
+    <main> 
         <section>
             <h1>Crear nuevo producto</h1> 
-            <form method="POST">
+            <form action ="" method="POST" enctype="multipart/form-data" >
                 <div>
                     <h3>Categoría</h3>
                     <div class="bloque-cat">
-                        <input name="Iluminación" type="checkbox" id="Categoría"><label>Iluminación</label>
+                        <input name="category" type="radio" id="Iluminación"><label>Iluminación</label>
                     </div>
                     <div class="bloque-cat">
-                        <input name="Muebles" type="checkbox" id="Categoría"><label>Muebles</label>
+                        <input name="category" type="radio" id="Muebles"><label>Muebles</label>
                     </div>
                     <div class="bloque-cat">
-                        <input name="Plantas" type="checkbox" id="Categoría"><label>Plantas</label>
+                        <input name="category" type="radio" id="Plantas"><label>Plantas</label>
                     </div>
                 </div>
                 <div class="bloque">
-                    <label for="Nombre del producto"></label>
-                    <input name="Nombre del producto" type="text" id="Nombre del producto" placeholder="Nombre del producto">
+                    <label for="nombre"></label>
+                    <input name="nombre" type="text" id="nombre" placeholder="Nombre del producto" >
                 </div>
                 <div class="bloque">
-                    <label for="Descripción"></label>
-                    <input name="Descripción" type="text" id="Descripción" placeholder="Descripción">
+                    <label for="desc"></label>
+                    <input name="desc" type="text" id="desc" placeholder="Descripción" >
                 </div>
                 <div class="bloque">
-                    <label for="Precio"></label>
-                    <input name="Precio" type="number" id="Precio" placeholder="Precio">
+                    <label for="precio"></label>
+                    <input name="precio" type="number" id="precio" placeholder="Precio">
                 </div>
                 <div class="bloque">
-                    <label class="label-boton"for="Imagen">Imágenes del producto</label>
-                    <input name="Imagen" type="file" id="Imagen" accept="image/png, image/jpeg">
+                    <label class="label-boton"for="Img">Imágenes del producto</label>
+                    <input name="img" type="file" id="img" accept="image/png, image/jpeg">
                 </div>
+                <div><button type = "submit" class="boton">CARGAR</button></div>
             </form>
-            <button class="boton"><a href="nuevoProducto">CARGAR</a></button>
+            
         </section>
     </main>  
     

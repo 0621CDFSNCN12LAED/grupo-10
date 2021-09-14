@@ -19,39 +19,39 @@
         <%- include("./partials/header.ejs") %> 
     </header>
     <main>
-        <section>
+        <section> 
             <h1>Editar producto</h1>
-            <form method="POST">
+            <form method="POST" >
                 <div class="bloque">
-                    <label for="Nombre del producto" class="label-edit">¿Qué producto qerés modificar?</label>
-                    <input name="Nombre del producto" type="text" id="Nombre del producto" placeholder="Nombre del producto">
+                    <label for="nombre" class="label-edit">¿Qué producto qerés modificar?</label>
+                    <input name="nombre" type="text" id="nombre" placeholder="Nombre del producto">
                 </div>
                 <div>
                     <h3>Categoría</h3>
                     <div class="bloque-cat">
-                        <input name="Iluminación" type="checkbox" id="Categoría"><label>Iluminaria</label>
+                        <input name="category" type="radio" id="Iluminación" ><label>Iluminaria</label>
                     </div>
                     <div class="bloque-cat">
-                        <input name="Muebles" type="checkbox" id="Categoría"><label>Muebles</label>
+                        <input name="category" type="radio" id="Muebles"><label>Muebles</label>
                     </div>
                     <div class="bloque-cat">
-                        <input name="Plantas" type="checkbox" id="Categoría"><label>Plantas</label>
+                        <input name="category" type="radio" id="Plantas"><label>Plantas</label>
                     </div>
                 </div>
                 <div class="bloque">
-                    <label for="Descripción" class="label-edit">Completá la nueva descripción</label>
-                    <input name="Descripción" type="text" id="Descripción" placeholder="Descripción">
+                    <label for="desc" class="label-edit">Completá la nueva descripción</label>
+                    <input name="desc" type="text" id="desc" placeholder="Descripción">
                 </div>
                 <div class="bloque">
-                    <label for="Precio" class="label-edit">¿Cuál es el precio?</label>
-                    <input name="Precio" type="number" id="Precio" placeholder="Precio">
+                    <label for="precio" class="label-edit">¿Cuál es el precio?</label>
+                    <input name="precio" type="number" id="precio" placeholder="Precio">
                 </div>
                 <div class="bloque">
-                    <label class="label-boton"for="Imagen">Imágenes del producto</label>
-                    <input name="Imagen" type="file" id="Imagen" accept="image/png, image/jpeg">
+                    <label class="label-boton"for="img">Imágenes del producto</label>
+                    <input name="img" type="file" id="img" accept="image/png, image/jpeg">
                 </div>
             </form>
-            <button class="boton"><a href="nuevoProducto">CARGAR</a></button>
+            <button type = "submit" class="boton">CARGAR</button>
         </section>
     </main>  
     

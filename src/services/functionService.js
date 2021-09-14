@@ -39,6 +39,25 @@ const functionService = {
         return buscarProducto
     },
 
+    crear(cargarPrecio) {
+        const lastProduct = products[products.length - 1];
+        const biggestProductId = products.length > 0 ? lastProduct.id : 1;
+        const product = {
+            id: biggestProductId + 1,
+            ...cargarPrecio,
+            precio: Number(cargarPrecio.precio),
+            
+        };
+        products.push(product);
+        const jsonString = JSON.stringify(products, null, 4);
+        fs.writeFileSync(productsFilePath, jsonString);
+
+    },
+
+    guardar(){
+
+    },
+
 
 };
 

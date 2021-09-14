@@ -23,8 +23,18 @@ detalle: function (req, res) {
 },
 
 nuevoProducto: function (req, res) {
-    res.render("nuevoProducto")
+res.render("nuevoProducto")
 },
+
+
+guardarProducto:function (req, res) {
+    functionService.crear(req.body);
+    res.render("nuevoProducto");
+},
+
+
+
+
 
 editarProdcuto: function (req, res) {
     res.render("edicionProductos") 

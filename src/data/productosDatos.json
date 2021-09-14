@@ -1,5 +1,5 @@
- [
-    { 
+[
+    {
         "id": 1,
         "category": "muebles",
         "nombre": "sillon",
@@ -8,8 +8,7 @@
         "img": "/img/Sillon.jpg",
         "color": "verde"
     },
-
-    { 
+    {
         "id": 2,
         "category": "muebles",
         "nombre": "sillon individual",
@@ -18,8 +17,7 @@
         "img": "/img/SillonIndividual.jpg",
         "color": "amarrilo"
     },
-
-    { 
+    {
         "id": 3,
         "category": "muebles",
         "nombre": "Set de mesas ratonas",
@@ -28,9 +26,7 @@
         "img": "/img/mesaRatona.jpg",
         "color": "marmol blanco"
     },
-
-    
-    { 
+    {
         "id": 4,
         "category": "plantas",
         "nombre": "MACETERO HIERRO + PLANTA",
@@ -38,13 +34,8 @@
         "precio": 3000,
         "img": "/img/planta1.jpeg",
         "color": ""
-        
-       
     },
-
-       
-    { 
-        
+    {
         "id": 5,
         "category": "plantas",
         "nombre": "MACETEROS MINI + PLANTAS",
@@ -52,12 +43,8 @@
         "precio": 4000,
         "img": "/img/planta2.jpeg",
         "color": ""
-       
-        
     },
-
-    { 
-        
+    {
         "id": 6,
         "category": "plantas",
         "nombre": "SET MACETEROS DE ESCRITORIO",
@@ -65,10 +52,8 @@
         "precio": 4000,
         "img": "/img/suculenta1.jpeg",
         "color": ""
-        
     },
-       
-    { 
+    {
         "id": 7,
         "category": "plantas",
         "nombre": "MACETERO DE ESCRITORIO",
@@ -77,10 +62,7 @@
         "img": "/img/seculenta2.jpeg",
         "color": ""
     },
-
-  
-    {  
-
+    {
         "id": 8,
         "category": "iluminacion",
         "nombre": "Velador Mimbre",
@@ -88,10 +70,8 @@
         "precio": 2500,
         "img": "/img/veladorMimbre.jpeg",
         "color": ""
-
     },
-
-    { 
+    {
         "id": 9,
         "category": "iluminacion",
         "nombre": "Lampara de Mimbre",
@@ -99,10 +79,8 @@
         "precio": 4500,
         "img": "/img/lamparamimbre.jpeg",
         "color": ""
-
     },
-
-    { 
+    {
         "id": 10,
         "category": "iluminacion",
         "nombre": "Velador de Hierro",
@@ -111,9 +89,7 @@
         "img": "/img/veladorhierro.jpeg",
         "color": ""
     },
-
-
-    { 
+    {
         "id": 11,
         "category": "iluminacion",
         "nombre": "Lampara de Hierro",
@@ -121,9 +97,6 @@
         "precio": 4500,
         "img": "/img/LamparaHierro.jpg",
         "color": ""
-
     }
-        
-
-    
+   
 ]
