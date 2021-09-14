@@ -36,8 +36,12 @@ router.post("/nuevoProducto", uploader.single("img"), productosController.guarda
 
 
 router.get("/edicionProductos", productosController.editarProdcuto)
-router.put("/edicionProductos", productosController.editarProdcuto)
-router.delete("/edicionProductos", productosController.editarProdcuto)
+
+router.put("/edicionProductos", productosController.modificar)
+
+router.delete("/edicionProductos", productosController.eliminar)
+
+
 
 
 router.get("/Decoracion", productosController.decoracion)

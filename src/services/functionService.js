@@ -54,10 +54,6 @@ const functionService = {
 
     },
 
-    guardar(){
-
-    },
-
 
 };
 
