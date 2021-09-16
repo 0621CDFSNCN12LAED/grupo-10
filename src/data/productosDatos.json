@@ -10,12 +10,12 @@
     },
     {
         "id": 2,
-        "category": "muebles",
-        "nombre": "sillon individual",
-        "desc": "Sillon individual de diseño. Hecho en pana",
-        "precio": 35000,
+        "nombre": "SillonIndividual",
+        "desc": "Hecho en pana",
+        "precio": 2500,
         "img": "/img/SillonIndividual.jpg",
-        "color": "amarrilo"
+        "color": "amarrilo",
+        "category": "muebles"
     },
     {
         "id": 3,
@@ -100,16 +100,11 @@
     },
     {
         "id": 12,
-        "category": "on",
-        "nombre": "",
-        "desc": "",
-        "precio": 0
-    },
-    {
-        "id": 13,
-        "category": "on",
-        "nombre": "sadsadsasagdsg",
-        "desc": "dgfdhgfjtykujliuliu",
-        "precio": 50000000
+        "category": "muebles",
+        "nombre": "sillon",
+        "desc": "Sillon de diseño. Tamaño: 3 cuerpos. Hecho en pana",
+        "precio": 60000,
+        "img": "/img/sillon-gris.jpg",
+        "color": "verde"
     }
 ]

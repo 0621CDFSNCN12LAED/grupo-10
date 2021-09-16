@@ -26,7 +26,7 @@ const productosController = {
     },
 
     guardarProducto: function (req, res) {
-        functionService.crear(req.body);
+        functionService.crear(req.body, req.file);
         res.redirect("/index");
     },
 

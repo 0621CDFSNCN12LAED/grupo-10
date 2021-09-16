@@ -5,6 +5,8 @@ const productosRouter = require ("./routers/productosRouter");
 const routerIndex = require ("./routers/routerIndex");
 const methodOverride =  require('method-override');
 
+app.use(express.urlencoded({extended:false}))
+
 app.use(methodOverride('_method'))
  
 app.set("view engine", "ejs");

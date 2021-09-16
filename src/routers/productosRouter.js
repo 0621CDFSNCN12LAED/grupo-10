@@ -28,15 +28,11 @@ router.get("/detalle/:id", productosController.detalle);
 /***Creación de un producto ***/
 router.get("/nuevoProducto", productosController.nuevoProducto);
 
-router.post(
-    "/nuevoProducto",
-    uploader.single("img"),
-    productosController.guardarProducto
-);
+router.post("/nuevoProducto",uploader.single("img"),productosController.guardarProducto);
 /*** Editar un producto ***/
 router.get("/edicionProductos/:id", productosController.editarProducto);
 
-router.put("/:id", productosController.modificarProducto);
+router.put("/:id", uploader.single("img"), productosController.modificarProducto);
 
 /***Eliminar un producto ***/
 router.delete("/:id", productosController.eliminarProducto);
