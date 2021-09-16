@@ -67,7 +67,7 @@ const functionService = {
 
     eliminar() {
         const product = this.buscarProductoid(id);
-        product.delete = true;
+        product.pull(products)
     },
 };
 

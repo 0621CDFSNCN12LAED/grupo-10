@@ -106,5 +106,13 @@
         "precio": 60000,
         "img": "/img/sillon-gris.jpg",
         "color": "verde"
+    },
+    {
+        "id": 13,
+        "category": "muebles",
+        "nombre": "RWERW",
+        "desc": "WERWER",
+        "precio": 7783,
+        "img": "1631806555046.png"
     }
 ]
