@@ -27,3 +27,15 @@ SPRINT 2
 
 5) Dejar de hacer:
     Más allá de lo mencionado en los puntos anteriores y cómo valoramos los puntos de encuentro, es importante también avanzar en espacios individuales e ir logrando independencia en el proceso de aprendizaje y desarrollo. 
+
+SPRINT 3
+
+1) Comenzar a hacer: Al avanzar la complejidad de las tareas a realizar nos encontramos con la necesidad de mantener mayor comunicación en relación a los cambios que vamos realizando sobre el proyecto.
+
+2) Hacer más: Utilizar trello. 
+
+3) Continuar haciendo: División de tareas.
+
+4) Hacer menos: tratar de focalizarnos más en lo solicitado dentro del sprint y evitar desviarnos con temas que aún no abordamos en clases o bien, no son requeridos. 
+
+5) Dejar de hacer: Nada para agregar en este punto.
