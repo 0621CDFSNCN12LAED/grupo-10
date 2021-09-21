@@ -6,9 +6,9 @@ const path = require("path");
 const multer = require("multer");
 
 const storage = multer.diskStorage({
-    destination: path.join(__dirname, "../../public/img"),
+    destination: path.join(__dirname, "../../public/"),
     filename: (req, file, cb) => {
-        cb(null, Date.now() + path.extname(file.originalname));
+        cb(null,  "/img/" + Date.now() + path.extname(file.originalname));
     },
 });
 
@@ -36,6 +36,8 @@ router.put("/:id", uploader.single("img"), productosController.modificarProducto
 
 /***Eliminar un producto ***/
 router.delete("/:id", productosController.eliminarProducto);
+
+
 
 router.get("/Decoracion", productosController.decoracion);
 

@@ -35,6 +35,7 @@ const functionService = {
             return productoIndividual.id == id;
         });
         return buscarProducto;
+        
     },
 
     crear(cargarPrecio, img) {
@@ -65,10 +66,19 @@ const functionService = {
         fs.writeFileSync(productsFilePath, jsonString);
     },
 
-    eliminar() {
-        const product = this.buscarProductoid(id);
-        product.pull(products)
+    eliminar(id) {
+        const product = functionService.buscarProductoid(id);
+        const index = products.indexOf(product)
+        products.splice (index , 1);
+        functionService.guardarJson();
+        
     },
+
+    guardarJson() {
+        const jsonString = JSON.stringify(products, null, 4);
+        fs.writeFileSync(productsFilePath, jsonString);
+    },
+    
 };
 
 module.exports = functionService;

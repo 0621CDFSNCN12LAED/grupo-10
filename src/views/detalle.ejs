@@ -23,10 +23,10 @@
                 >
             </div>
             <div class="style-button">
-                <form  action="<%= product.id %>?_method=DELETE"
-                    method="POST" enctype="multipart/form-data">             
-                <button type = "submit">
-                <a href="/index">ELIMINAR</a>
+                <form  action="/productos/<%= productoIndividual.id %>?_method=DELETE"
+                    method="POST" >             
+                <button type = "submit" >
+                    ELIMINAR
                 </button>
             </form>
             </div>
