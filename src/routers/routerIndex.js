@@ -27,6 +27,9 @@ router.get("/login", indexController.login);
 router.get("/registro", indexController.registro);
 router.post("/registro", uploader.single("img"), indexController.crearUsuario)
 
+router.get("/edicionUsuario/:id", indexController.editarUsuario);
+router.put("/:id", uploader.single("img"), indexController.modificarUsuario)
+
 router.get("/carrito", indexController.carrito);
 
 

@@ -18,8 +18,16 @@ const indexController = {
     crearUsuario: (req, res) =>{
         functionUser.crearUsuario(req.body, req.file)
         res.redirect ("/index")
-    }
-  
+    },
+    modificarUsuario: (req, res) =>{
+        functionUser.modificarUsuario(req.params.id, req.body, req.file);
+        res.redirect ("/index")
+    },
+    editarUsuario:(req, res) => {
+        const user = functionUser.buscarUserid(req.params.id);
+        res.render("edicionUsuario", { user });
+    },
+
 };
 
 module.exports = indexController;

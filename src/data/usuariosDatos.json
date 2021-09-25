@@ -9,7 +9,7 @@
         "category": "",
         "img": "",
         "contraseña": "",
-        "Repetir contraseña": ""
+        "repetirContraseña": ""
     },
     {
         "id": 2,
@@ -19,7 +19,7 @@
         "Edad": "",
         "Email": "vanina.baldassarre@hotmail.com",
         "contraseña": "",
-        "Repetir contraseña": "",
+        "repetirContraseña": "",
         "img": "default-image.png"
     }
 ]

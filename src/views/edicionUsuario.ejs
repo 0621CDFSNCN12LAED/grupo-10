@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Editar Usuario</title>
+        <link rel="stylesheet" href="/css/normalize.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/editProductos.css" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <header><%- include("./partials/header.ejs") %></header>
+        <main>
+            <section>
+                <h1>Editar Usuario</h1>
+                <form
+                    action="/edicionUsuario/<%= user.id %>?_method=PUT"
+                    method="POST" enctype="multipart/form-data"
+                >   
+                    <div class="bloque">
+                        <label for="Nombre" class="label-edit">nombre</label>
+                        <input
+                            name="Nombre"
+                            type="text"
+                            id="Nombre"
+                            placeholder="Nombre del Usuario"
+                            value="<%= user.Nombre %>"
+                        />
+                    </div>
+                    <div class="bloque">
+                        <label for="Apellido" class="label-edit">Apellido</label>
+                        <input
+                            name="Apellido"
+                            type="text"
+                            id="Apellido"
+                            placeholder="Apellido del Usuario"
+                            value="<%= user.Apellido %>"
+                        />
+                    </div>
+                    <div class="bloque">
+                        <label for="Dirección" class="label-edit">Dirección</label>
+                        <input
+                            name="Dirección"
+                            type="text"
+                            id="Dirección"
+                            placeholder="Dirección del Usuario"
+                            value="<%= user.Dirección %>"
+                        />
+                    </div>
+                    <div class="bloque">
+                        <label for="Edad" class="label-edit">Edad</label>
+                        <input
+                            name="Edad"
+                            type="text"
+                            id="Edad"
+                            placeholder="Edad del Usuario"
+                            value="<%= user.Edad %>"
+                        />
+                    </div>
+                    <div class="bloque">
+                        <label for="Email" class="label-edit">Email</label>
+                        <input
+                            name="Email"
+                            type="text"
+                            id="Email"
+                            placeholder="Email del Usuario"
+                            value="<%= user.Email %>"
+                        />
+                    </div>
+                    <div>
+                        <h3>Categoría</h3>
+                        <div class="bloque-cat">
+                            <input
+                                name="category"
+                                type="radio"
+                                id="Administrador"
+                                value="<%= user.category ="Administrador" %>"
+                            /><label>Administrador</label>
+                        </div>
+                        <div class="bloque-cat">
+                            <input
+                                name="category"
+                                type="radio"
+                                id="Usuario"
+                                value="<%= user.category = "Usuario" %>"
+                            /><label>Usuario</label>
+                        </div>
+                    </div>
+                    <div class="bloque">
+                        <label class="label-boton" for="img"
+                            >Foto del usuario</label
+                        >
+                        <input
+                            name="img"
+                            type="file"
+                            id="img"
+                            accept="image/png, image/jpeg"
+                            value="<%= user.img %>"
+                        />
+                    </div>
+                    <div class="bloque">
+                        <label for="contraseña" class="label-edit">Contraseña</label>
+                        <input
+                            name="contraseña"
+                            type="password"
+                            id="contraseña"
+                            placeholder="contraseña"
+                            value="<%= user.contraseña %>"
+                        />
+                    </div>
+                    <div class="bloque">
+                        <label for="repetirContraseña" class="label-edit">Repetir contraseña</label>
+                        <input
+                            name="repetirContraseña"
+                            type="password"
+                            id="repetirContraseña"
+                            placeholder="Repetir contraseña"
+                            value="<%= user.repetirContraseña %>"
+                        />
+                    </div>
+               
+                <button type="submit" class="boton">GUARDAR</button>
+             </form>
+            </section>
+        </main>
+
+        <footer><%- include("./partials/footer.ejs") %></footer>
+    </body>
+</html>
