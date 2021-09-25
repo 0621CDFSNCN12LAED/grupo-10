@@ -31,14 +31,14 @@
     <main>
         <section class="section-style">
             <h2>Completá tus datos</h2>
-            <form method="POST">
+            <form action= "" method="POST" enctype="multipart/form-data">
                 <div class="div-style">
                     <label for="Nombre"></label>
                     <input name="Nombre" type="text" id="Nombre" placeholder="Nombres">
                 </div>
                 <div class="div-style">
-                    <label for="apellido"></label>
-                    <input name="apellido" type="text" id="apellido" placeholder="Apellido">
+                    <label for="Apellido"></label>
+                    <input name="Apellido" type="text" id="Apellido" placeholder="Apellido">
                 </div>
                 <div class="div-style">
                     <label for="Dirección"></label>
@@ -49,8 +49,31 @@
                     <input name="Edad" type="number" id="Edad" placeholder="Edad">
                 </div>
                 <div class="div-style">
-                    <label for="email"></label>
-                    <input name="email" type="email" id="email" placeholder="Email">
+                    <label for="Email"></label>
+                    <input name="Email" type="email" id="Email" placeholder="Email">
+                </div>
+                 <div class="terminosYCondiciones">  
+                     <h3>Categoría</h3>
+                    <div class="bloque-cat">
+                        <input name="category" type="radio" id="Administrador"
+                        value ="Administrador"><label>Administrador</label>
+                    </div>
+                    <div class="bloque-cat">
+                        <input name="category" type="radio" id="Usuario"
+                        value ="Usuario"><label>Usuario</label>
+                    </div>
+                </div>
+                <div class="div-style">
+                    <label class="div-style"for="img">Mi foto de perfil</label>
+                    <input name="img" type="file" id="img" accept="image/png, image/jpeg">
+                </div>
+                <div class="div-style">
+                    <label for="contraseña"></label>
+                    <input name="contraseña" type="password" id="contraseña" placeholder="Contraseña">
+                </div>
+                <div class="div-style">
+                    <label for="Repetir contraseña"></label>
+                    <input name="Repetir contraseña" type="password" id="Repetir contraseña" placeholder="Repetir contraseña">
                 </div>
                 <div class="terminosYCondiciones">
                     <input type="checkbox" name="term" id="term" class="label-term">

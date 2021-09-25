@@ -1,11 +1,10 @@
 const fs = require("fs");   
 const path = require("path");
-const functionService = require ("../services/functionService.js")
+const functionUser = require ("../services/functionUser.js")
 
 const indexController = {
     index: function (req, res) {
         res.render("index")
-
     },
     login:function (req, res) {
         res.render("login")
@@ -16,6 +15,10 @@ const indexController = {
     carrito:function (req, res) {
         res.render("carrito")
     },
+    crearUsuario: (req, res) =>{
+        functionUser.crearUsuario(req.body, req.file)
+        res.redirect ("/index")
+    }
   
 };
 

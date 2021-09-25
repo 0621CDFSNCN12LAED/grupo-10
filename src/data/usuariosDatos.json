@@ -1,21 +1,25 @@
-[{
-    "id": 1,
-    "Nombre": "Carlos" ,
-    "Apellido": "Alvarez",
-    "Email": "carlos@gmail.com",
-    "Contraseña":"" ,
-    "Categoria": "" ,
-    "Imagen": ""    
-},
-
- {
-    "id": 2,
-    "Nombre": "María" ,
-    "Apellido": "Perez",
-    "Email": "maria@gmail.com",
-    "Contraseña": "",
-    "Categoria":  "",
-    "Imagen": ""    
-}
-
+[
+    {
+        "id": 1,
+        "Nombre": "Carlos",
+        "Apellido": "Alvarez",
+        "Dirección": "",
+        "Edad": "",
+        "Email": "carlos@gmail.com",
+        "category": "",
+        "img": "",
+        "contraseña": "",
+        "Repetir contraseña": ""
+    },
+    {
+        "id": 2,
+        "Nombre": "Vanina",
+        "Apellido": "Baldassarre",
+        "Dirección": "Pasaje arce 1179",
+        "Edad": "",
+        "Email": "vanina.baldassarre@hotmail.com",
+        "contraseña": "",
+        "Repetir contraseña": "",
+        "img": "default-image.png"
+    }
 ]
