@@ -28,7 +28,7 @@ const functionService = {
     },
 
     buscarProductoid(id) {
-        //preguntar por que va id ahi en la funcion
+       
         const buscarProducto = products.find(function (productoIndividual) {
             return productoIndividual.id == id;
         });
@@ -65,12 +65,15 @@ const functionService = {
     },
 
     eliminar(id) {
+        
         const product = functionService.buscarProductoid(id);
         const index = products.indexOf(product)
         products.splice (index , 1);
+
+        if (product.img){
+        fs.unlinkSync(path.join(__dirname, "../../public/" + product.img ))};
         functionService.guardarJson();
-        
-    },
+        },
 
     guardarJson() {
         const jsonString = JSON.stringify(products, null, 4);

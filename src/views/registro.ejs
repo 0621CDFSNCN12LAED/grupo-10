@@ -30,27 +30,49 @@
     </header>
     <main>
         <section class="section-style">
+            
             <h2>Completá tus datos</h2>
+
             <form action= "" method="POST" enctype="multipart/form-data">
                 <div class="div-style">
                     <label for="Nombre"></label>
-                    <input name="Nombre" type="text" id="Nombre" placeholder="Nombres">
+                    <input name="Nombre" type="text" id="Nombre" placeholder="Nombres"
+                    value = <%= locals.oldData ? oldData.Nombre : null %> >
+                    <% if (locals.errors && errors.Nombre) { %> 
+                        <div> <%= errors.Nombre.msg %> </div>
+                        <% } %> 
                 </div>
                 <div class="div-style">
                     <label for="Apellido"></label>
-                    <input name="Apellido" type="text" id="Apellido" placeholder="Apellido">
+                    <input name="Apellido" type="text" id="Apellido" placeholder="Apellido"
+                    value = <%= locals.oldData ? oldData.Apellido : null %>>
+                    <% if (locals.errors && errors.Apellido) { %> 
+                        <div> <%= errors.Apellido.msg %> </div>
+                        <% } %> 
                 </div>
                 <div class="div-style">
                     <label for="Dirección"></label>
-                    <input name="Dirección" type="text" id="Dirección" placeholder="Dirección">
+                    <input name="Dirección" type="text" id="Dirección" placeholder="Dirección"
+                    value = <%= locals.oldData ? oldData.Dirección : null %>>
+                    <% if (locals.errors && errors.Dirección) { %> 
+                        <div> <%= errors.Dirección.msg %> </div>
+                        <% } %> 
                 </div>
                 <div class="div-style">
                     <label for="Edad"></label>
-                    <input name="Edad" type="number" id="Edad" placeholder="Edad">
+                    <input name="Edad" type="number" id="Edad" placeholder="Edad"
+                    value = <%= locals.oldData ? oldData.Edad : null %>>
+                    <% if (locals.errors && errors.Edad) { %> 
+                        <div> <%= errors.Edad.msg %> </div>
+                        <% } %> 
                 </div>
                 <div class="div-style">
                     <label for="Email"></label>
-                    <input name="Email" type="email" id="Email" placeholder="Email">
+                    <input name="Email" type="email" id="Email" placeholder="Email"
+                    value = <%= locals.oldData ? oldData.Email : null %>>
+                    <% if (locals.errors && errors.Email) { %> 
+                        <div> <%= errors.Email.msg %> </div>
+                        <% } %> 
                 </div>
                  <div class="terminosYCondiciones">  
                      <h3>Categoría</h3>
@@ -66,14 +88,23 @@
                 <div class="div-style">
                     <label class="div-style"for="img">Mi foto de perfil</label>
                     <input name="img" type="file" id="img" accept="image/png, image/jpeg">
+                    <% if (locals.errors && errors.img) { %> 
+                        <div> <%= errors.img.msg %> </div>
+                        <% } %> 
                 </div>
                 <div class="div-style">
                     <label for="contraseña"></label>
                     <input name="contraseña" type="password" id="contraseña" placeholder="Contraseña">
+                    <% if (locals.errors && errors.contraseña) { %> 
+                        <div> <%= errors.contraseña.msg %> </div>
+                        <% } %> 
                 </div>
                 <div class="div-style">
                     <label for="repetirContraseña"></label>
                     <input name="repetirContraseña" type="password" id="repetirContraseña" placeholder="Repetir contraseña">
+                    <% if (locals.errors && errors.repetirContraseña) { %> 
+                        <div> <%= errors.repetirContraseña.msg %> </div>
+                        <% } %> 
                 </div>
                 <div class="terminosYCondiciones">
                     <input type="checkbox" name="term" id="term" class="label-term">

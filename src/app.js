@@ -8,12 +8,13 @@ const methodOverride =  require('method-override');
 app.use(express.urlencoded({extended:false}))
 
 app.use(methodOverride('_method'))
+
+app.use(express.static("../public"));
  
 app.set("view engine", "ejs");
 
 app.listen(3001, console.log("Servidor Funcionando"));
 
-app.use(express.static("../public"));
 
 app.use("/", routerIndex);
 

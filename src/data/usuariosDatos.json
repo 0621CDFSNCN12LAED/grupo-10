@@ -1,25 +1,14 @@
 [
     {
-        "id": 1,
-        "Nombre": "Carlos",
-        "Apellido": "Alvarez",
-        "Dirección": "",
-        "Edad": "",
-        "Email": "carlos@gmail.com",
-        "category": "",
-        "img": "",
-        "contraseña": "",
-        "repetirContraseña": ""
-    },
-    {
         "id": 2,
-        "Nombre": "Vanina",
-        "Apellido": "Baldassarre",
-        "Dirección": "Pasaje arce 1179",
-        "Edad": "",
-        "Email": "vanina.baldassarre@hotmail.com",
-        "contraseña": "",
-        "repetirContraseña": "",
-        "img": "default-image.png"
+        "Nombre": "juez",
+        "Apellido": "manuel",
+        "Dirección": "no",
+        "Edad": "45",
+        "Email": "juan@manuel.com",
+        "category": "Usuario",
+        "contraseña": "123456123",
+        "repetirContraseña": "123456123",
+        "img": "/users/1633800695850.jpg"
     }
 ]

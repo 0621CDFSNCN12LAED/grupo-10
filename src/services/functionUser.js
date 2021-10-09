@@ -19,11 +19,8 @@ const functionUser = {
         const user = {
             id: biggestUserId + 1,
             ...datosUsuarios,
-            img: img ? img.filename : "default-image.png",
     
         };
-
-        console.log(user)
 
         users.push(user);
         const jsonString = JSON.stringify(users, null, 4);
@@ -45,6 +42,21 @@ const functionUser = {
         fs.writeFileSync(userFilePath, jsonString);
     },
 
+    eliminar(id) {
+    const user = functionUser.buscarUserid(id);
+    const index = users.indexOf(user)
+        users.splice (index , 1);
+
+        if (user.img){
+        fs.unlinkSync(path.join(__dirname, "../../public/img/" + user.img )) }
+
+        functionUser.guardarJson();
+        },
+
+    guardarJson() {
+        const jsonString = JSON.stringify(users, null, 4);
+        fs.writeFileSync(userFilePath, jsonString);
+    },
 
 }
 
