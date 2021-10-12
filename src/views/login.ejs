@@ -30,14 +30,22 @@
     <main>
         <section class="section-style">
             <h2>¡Bienvenido!</h2>
+            
             <form method="POST">
                 <div class="div-style">
                     <label for="email"></label>
-                    <input name="email" type="text" id="email" placeholder="Email">
+                    <input name="email" type="text" id="email" placeholder="Email"
+                    value = <%= locals.oldData ? oldData.email : null %>>
+                    <% if (locals.errors && errors.email) { %> 
+                        <div> <%= errors.email.msg %> </div>
+                        <% } %> 
                 </div>
                 <div class="div-style">
                     <label for="contraseña"></label>
                     <input name="contraseña" type="password" id="contraseña" placeholder="Contraseña">
+                    <% if (locals.errors && errors.contraseña) { %> 
+                        <div> <%= errors.contraseña.msg %> </div>
+                        <% } %> 
                 </div>
                 <div class="terminosYCondiciones">
                     <input type="checkbox" name="term" id="term" class="label-term">
@@ -49,7 +57,6 @@
             </form>
             <h5><a href="#">¿Olvidaste tu usuario o contraseña?</a></h5>
             <h4><a href="/registro">REGISTRATE</a></h4>
-            <h4><a href="/edicionUsuario">MODIFICAR USUARIO</a></h4>
         </section>
     </main>  
     <footer>

@@ -1,0 +1,20 @@
+const { body } = require("express-validator");
+
+const ValidacionUsuario = [
+    body("Nombre").notEmpty().withMessage("Debes completar el campo Nombre"),
+    body("Apellido").notEmpty().withMessage("Debes completar el campo apellido"),
+    body("Dirección").notEmpty().withMessage("Debes completar el campo Dirección"),
+    body("Edad").notEmpty().withMessage("Debes completar el campo Edad").isLength({max:2}),
+    body("Email").isEmail().withMessage("Debes completar el campo Email"),
+    body("contraseña").isLength({min:8}).withMessage ("La Contraseña debe tener un minimo de 8 caracteres"),
+    body("repetirContraseña").isLength({min:8}).withMessage("La Contraseña debe ser identica al campo 'Contraseña' "),
+    body("img").custom (function(value, { req }){
+        const file = req.file;
+        
+        if (!file) {
+            throw new Error ("tienes que subir una imagen");
+        }
+        return true
+    }),
+];
+module.exports = ValidacionUsuario;

@@ -4,8 +4,19 @@ const path = require("path");
 const userFilePath = path.join(__dirname, "../data/usuariosDatos.json");
 const users = JSON.parse(fs.readFileSync(userFilePath, "utf-8"));
 
+const bcryptjs = require ("bcryptjs");
+
 const functionUser = {
 
+    
+    buscarCampoEspecifico: function(Email) {
+        const buscarEmail = users.find(function (user) {
+            return user.Email == Email;
+        });
+        return buscarEmail;
+        
+    },
+    
     buscarUserid(id) {
         const buscarUser = users.find(function (user) {
             return user.id == id;
@@ -13,19 +24,22 @@ const functionUser = {
         return buscarUser;
         
     },
-    crearUsuario(datosUsuarios, img) {
+    crearUsuario(datosUsuarios) {
         const lastUser = users[users.length - 1];
         const biggestUserId = users.length > 0 ? lastUser.id : 1;
         const user = {
             id: biggestUserId + 1,
             ...datosUsuarios,
-    
+        contraseña: bcryptjs.hashSync(datosUsuarios.contraseña, 10),
+        repetirContraseña: bcryptjs.hashSync(datosUsuarios.repetirContraseña, 10), 
+        
         };
-
+        
         users.push(user);
-        const jsonString = JSON.stringify(users, null, 4);
-        fs.writeFileSync(userFilePath, jsonString);
+        functionUser.guardarJson();
+
     },
+
     modificarUsuario(id, cargar, img) {
         const user = functionUser.buscarUserid(id);
         user.Nombre = cargar.Nombre;
@@ -38,8 +52,7 @@ const functionUser = {
         user.contraseña = cargar.contraseña
         user.repetirContraseña = cargar.repetirContraseña
         
-        const jsonString = JSON.stringify(users, null, 4);
-        fs.writeFileSync(userFilePath, jsonString);
+        functionUser.guardarJson();
     },
 
     eliminar(id) {
@@ -61,3 +74,4 @@ const functionUser = {
 }
 
 module.exports = functionUser;
+

@@ -47,8 +47,7 @@ const functionService = {
     
         };
         products.push(product);
-        const jsonString = JSON.stringify(products, null, 4);
-        fs.writeFileSync(productsFilePath, jsonString);
+        functionService.guardarJson();
     },
 
     modificar(id, cargar, img) {
@@ -60,8 +59,7 @@ const functionService = {
         product.img =  img ? img.filename : product.img;
 
         
-        const jsonString = JSON.stringify(products, null, 4);
-        fs.writeFileSync(productsFilePath, jsonString);
+        functionService.guardarJson();
     },
 
     eliminar(id) {

@@ -1,7 +1,8 @@
 const fs = require("fs");   
 const path = require("path");
-const functionUser = require ("../services/functionUser.js")
-const { validationResult } = require ("express-validator")
+const bcryptjs = require ("bcryptjs")
+const functionUser = require ("../services/functionUser.js");
+const { validationResult } = require ("express-validator");
 
 
 const indexController = {
@@ -9,26 +10,79 @@ const indexController = {
         res.render("index")
     },
 
+
     login:function (req, res) {
         res.render("login")
     },
 
 
-    registro:function (req, res) {
-        res.render("registro")
+    iniciarSesion:function (req, res) {
+        
+        // const validacionCampos = validationResult(req);
+        // if(validacionCampos.errors.length > 0) {
+        //     return res.render ("login", {
+        //         errors: validacionCampos.mapped(),
+        //     })};
+        
+        const usuarioLogin = functionUser.buscarCampoEspecifico (req.body.email);
+             if(usuarioLogin){ 
+                 const contraseñaOK = bcryptjs.compareSync(req.body.contraseña,usuarioLogin.contraseña );
+                 if (contraseñaOK){
+                     delete usuarioLogin.contraseña
+                     delete usuarioLogin.repetirContraseña
+                     req.session.user = usuarioLogin;
+                     return res.render ("profile", {user: req.session.user})
+                 }
+                 return res.render ("login", {
+                    errors:{
+                        email:{msg: "las credenciales no corresponde al usuario"}
+                    }});
+                
+             };
+
+        return res.render ("login", {
+            errors:{
+                email:{msg: "el mail no coincide con ningun usuario"}
+            }});
+            
     },
 
+    profile: function (req, res){
+        res.render ("profile");
+    },
+
+    logout: function (req, res ) {
+        req.session.destroy();
+        return res.redirect ("/index")
+    },
+
+    registro:function (req, res) {
+        
+        res.render("registro");
+    },
+
+
     crearUsuario: (req, res) =>{
+
         const validacionCampos = validationResult(req);
         if(validacionCampos.errors.length > 0) {
             return res.render ("registro", {
-                error: validacionCampos.mapped(),
-                oldData: req.body, })
-            }else {
-                    functionUser.crearUsuario(req.body)
-                        res.redirect ("/index")
-                    };
+                errors: validacionCampos.mapped(),
+            })};
 
+        const noRepetirEmail = functionUser.buscarCampoEspecifico (req.body.Email);
+        if(noRepetirEmail){
+            return res.render ("registro", {
+                errors:{
+                    Email:{msg: "este Email ya esta registrado"}
+                },
+                oldData: req.body
+            })
+        }else {
+            functionUser.crearUsuario(req.body, req.file)
+        res.redirect ("login")
+        };
+        
     },
 
 
@@ -37,6 +91,7 @@ const indexController = {
         res.render("edicionUsuario", { user });
     },
     
+
     modificarUsuario: (req, res) =>{
         functionUser.modificarUsuario(req.params.id, req.body, req.file);
         res.redirect ("/index")
@@ -48,6 +103,7 @@ const indexController = {
         res.redirect("/index");
 
     },
+
 
     carrito:function (req, res) {
         res.render("carrito")
