@@ -24,14 +24,15 @@ const functionUser = {
         return buscarUser;
         
     },
-    crearUsuario(datosUsuarios) {
+    crearUsuario(datosUsuarios, file) {
         const lastUser = users[users.length - 1];
         const biggestUserId = users.length > 0 ? lastUser.id : 1;
         const user = {
             id: biggestUserId + 1,
             ...datosUsuarios,
-        contraseña: bcryptjs.hashSync(datosUsuarios.contraseña, 10),
-        repetirContraseña: bcryptjs.hashSync(datosUsuarios.repetirContraseña, 10), 
+            img: file ? file.filename : "default-image.png",
+            contraseña: bcryptjs.hashSync(datosUsuarios.contraseña, 10),
+            repetirContraseña: bcryptjs.hashSync(datosUsuarios.repetirContraseña, 10), 
         
         };
         

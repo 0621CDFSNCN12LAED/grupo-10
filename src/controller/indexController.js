@@ -12,6 +12,7 @@ const indexController = {
 
 
     login:function (req, res) {
+
         res.render("login")
     },
 
@@ -31,6 +32,9 @@ const indexController = {
                      delete usuarioLogin.contraseña
                      delete usuarioLogin.repetirContraseña
                      req.session.user = usuarioLogin;
+
+                    
+
                      return res.render ("profile", {user: req.session.user})
                  }
                  return res.render ("login", {
@@ -57,7 +61,7 @@ const indexController = {
     },
 
     registro:function (req, res) {
-        
+       
         res.render("registro");
     },
 
@@ -88,6 +92,9 @@ const indexController = {
 
     editarUsuario:(req, res) => {
         const user = functionUser.buscarUserid(req.params.id);
+        console.log(user);
+        return res.send(user);
+    
         res.render("edicionUsuario", { user });
     },
     

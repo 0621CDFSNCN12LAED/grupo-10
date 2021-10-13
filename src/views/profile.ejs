@@ -34,11 +34,10 @@
             <img src="/img/users/"<%= user.img %>>
         </div>
         <div>
-            <ul>
-                <li><a href="/index"> PAGINA DE INICIO </a></li>
-                <li><a href="/edicionUsuario"> EDICION DE USUARIO </a></li>
-                
-            </ul>
+            <button> <a href="/index"> PAGINA DE INICIO </a></button>
+        </div>
+        <div>
+             <button> <a href="/edicionUsuario/:id<% user.id %>"> EDICION DE USUARIO </a></button>
         </div>
     <footer>
         <%- include("./partials/footer.ejs") %>

@@ -21,7 +21,7 @@
     </head>
 
     <body>
-        <header><%- include("./partials/header.ejs") %></header>
+        <header><%- include("./partials/header.ejs", {user}) %></header> 
         <main>
             <section>
                 <h1>Editar Usuario</h1>
@@ -86,7 +86,7 @@
                                 name="category"
                                 type="radio"
                                 id="Administrador"
-                                value="<%= user.category ="Administrador" %>"
+                                value="<%= user.category = "Administrador" %>"
                             /><label>Administrador</label>
                         </div>
                         <div class="bloque-cat">
@@ -107,7 +107,7 @@
                             type="file"
                             id="img"
                             accept="image/png, image/jpeg"
-                            value="<%= user.img %>"
+                           
                         />
                     </div>
                     <div class="bloque">

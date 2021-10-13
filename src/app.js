@@ -6,6 +6,7 @@ const routerIndex = require ("./routers/routerIndex");
 const methodOverride =  require('method-override');
 const session = require ("express-session")
 const usuarioLogeado = require("./middleware/usuarioLogeado")
+const cookie = require("cookie-parser")
 
 app.use(express.urlencoded({extended:false}))
 
@@ -16,6 +17,7 @@ app.use(session({
     resave:false,
     saveUninitialized:false,
 }));
+app.use(cookie());
 
 app.use(usuarioLogeado);
 

@@ -1,26 +1,15 @@
 [
     {
         "id": 2,
-        "Nombre": "juan",
-        "Apellido": "manuel",
-        "Dirección": "fui a cualquier lado",
-        "Edad": "21",
-        "Email": "juan@manuel.net",
-        "category": "Usuario",
-        "contraseña": "$2a$10$Tdt/.ZAtCLo0gPfbxrqtgeuLOYoeApVKY4Pm8Fg8SOIeLpyb9Hfy2",
-        "repetirContraseña": "$2a$10$OH/o4UVU0S9TTrPAnjR9j.1BFIfMB/KCWtW1hdOaYgN54tse5cmFC",
-        "term": "on"
-    },
-    {
-        "id": 3,
         "Nombre": "juez ",
-        "Apellido": "manolo",
+        "Apellido": "manuel",
         "Dirección": "fui a cualquier lado",
         "Edad": "45",
         "Email": "juez@manolo.com",
         "category": "Usuario",
-        "contraseña": "$2a$10$vUXFYoUrLRLz991m.p8QQ.RqTAXJMX7tkz0CeYmNGKAJJiu/AtbAC",
-        "repetirContraseña": "$2a$10$VqK4giuNN/.JqbvMk44.reoCgTLqt/WJo/m9kcHkPxhFVo/kcMR8y",
-        "term": "on"
+        "contraseña": "$2a$10$MvodSdfkru31RNQxqrB08OyI8/o/6qqXmCM83dzTSubQhdGUpD3v2",
+        "repetirContraseña": "$2a$10$RgBI1nZj4oZqz.sR1z9af.SmLxdNIoXI.mUFuctpQojh1JdfsFQ0y",
+        "term": "on",
+        "img": "/users/1634083181914.jpg"
     }
 ]
