@@ -32,7 +32,6 @@ const functionUser = {
             ...datosUsuarios,
             img: file ? file.filename : "default-image.png",
             contraseña: bcryptjs.hashSync(datosUsuarios.contraseña, 10),
-            repetirContraseña: bcryptjs.hashSync(datosUsuarios.repetirContraseña, 10), 
         
         };
         
@@ -51,7 +50,6 @@ const functionUser = {
         user.category = cargar.category
         user.img =  img ? img.filename : user.img;
         user.contraseña = cargar.contraseña
-        user.repetirContraseña = cargar.repetirContraseña
         
         functionUser.guardarJson();
     },

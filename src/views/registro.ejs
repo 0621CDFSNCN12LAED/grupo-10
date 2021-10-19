@@ -16,18 +16,7 @@
 </head> 
 
 <body>
-    <header>
-        <div class= "header-flex"> 
-            <img class="logo" src= "/img/logodecoar.jpg" alt="Logo">
-       
-            <ul>
-                <li>QUIENES SOMOS</li>
-                <li>TERMINOS Y CONDICIONES</li>
-            </ul>
-        </div>
-            <input class="barra" type="text" name="busqueda"><i class="fas fa-search"></i></input>
-           
-    </header>
+    <header><%- include("./partials/header.ejs") %></header>
     <main>
         <section class="section-style">
             
@@ -97,13 +86,6 @@
                     <input name="contraseña" type="password" id="contraseña" placeholder="Contraseña">
                     <% if (locals.errors && errors.contraseña) { %> 
                         <div> <%= errors.contraseña.msg %> </div>
-                        <% } %> 
-                </div>
-                <div class="div-style">
-                    <label for="repetirContraseña"></label>
-                    <input name="repetirContraseña" type="password" id="repetirContraseña" placeholder="Repetir contraseña">
-                    <% if (locals.errors && errors.repetirContraseña) { %> 
-                        <div> <%= errors.repetirContraseña.msg %> </div>
                         <% } %> 
                 </div>
                 <div class="terminosYCondiciones">

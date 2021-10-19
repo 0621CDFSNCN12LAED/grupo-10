@@ -28,7 +28,6 @@ const indexController = {
                  const contraseñaOK = bcryptjs.compareSync(req.body.contraseña,usuarioLogin.contraseña );
                  if (contraseñaOK){
                      delete usuarioLogin.contraseña
-                     delete usuarioLogin.repetirContraseña
                      req.session.user = usuarioLogin;
 
                      /* para recordar usuario en el navegador con cookies (se una el cookie parser en app.js como middleware que cruza toda la aplicacion) */
