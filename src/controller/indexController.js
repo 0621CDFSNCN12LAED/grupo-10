@@ -1,5 +1,4 @@
-const fs = require("fs");   
-const path = require("path");
+
 const bcryptjs = require ("bcryptjs")
 const functionUser = require ("../services/functionUser.js");
 const { validationResult } = require ("express-validator");

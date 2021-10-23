@@ -97,29 +97,5 @@
         "precio": 60000,
         "img": "/img/sillon-gris.jpg",
         "color": "verde"
-    },
-    {
-        "id": 13,
-        "Nombre": "",
-        "Apellido": "",
-        "Dirección": "",
-        "Edad": "",
-        "Email": "",
-        "contraseña": "",
-        "repetirContraseña": "",
-        "precio": null,
-        "img": "default-image.png"
-    },
-    {
-        "id": 14,
-        "Nombre": "",
-        "Apellido": "",
-        "Dirección": "",
-        "Edad": "",
-        "Email": "",
-        "contraseña": "",
-        "repetirContraseña": "",
-        "precio": null,
-        "img": "default-image.png"
     }
 ]
