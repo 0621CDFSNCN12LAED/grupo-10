@@ -29,9 +29,9 @@ const indexController = {
         const usuarioLogin = await Usuario.findOne ({where: {Email:req.body.Email}});
 
              if(usuarioLogin){ 
-                 const contraseñaOK =  bcryptjs.compareSync(req.body.Contraseña,usuarioLogin.Contraseña );
+                 const contraseñaOK =  bcryptjs.compareSync(req.body.contraseña,usuarioLogin.contraseña );
                  if (contraseñaOK){
-                     delete usuarioLogin.Contraseña
+                     delete usuarioLogin.contraseña
                      req.session.usuarioLogeado = usuarioLogin;
 
                     if(req.body.term) {
@@ -77,7 +77,7 @@ const indexController = {
             })};
 
         const noRepetirEmail = await Usuario.findOne ({where: {Email:req.body.Email}})
-        // res.session(noRepetirEmail)
+        //res.session(noRepetirEmail)
         if(noRepetirEmail){
             return res.render ("registro", {
                 errors:{
@@ -86,38 +86,35 @@ const indexController = {
                 oldData: req.body
             })
         }else {
-            const crear = async function (req, res) {
-                await  Usuario.create({
-                    ...req.body,
-                    password: bcryptjs.hashSync(body.password, 12),
-                    
+            await Usuario.create({
+                ...req.body,
+                contraseña: bcryptjs.hashSync(req.body.contraseña, 12),
+                
                 })
                 
             }
            
          return res.redirect ("login")
-        }
+        
         
     },
     //falta de aca para abaja
     editarUsuario: async function (req, res){
-        const Usuario = await Usuario.findByPk({where: {id:req.params.id}});
-        res.render("edicionUsuario", { Usuario });
+        await Usuario.findByPk (req.params.id);
+        
+        res.render("edicionUsuario", { Usuario:Usuario });
     },
     
     modificarUsuario: async function (req, res){
-        await Usuario.Update(req.body, req.file, {
-            
-                where: {
-                  id: req.params.id,
-                },
-        })
+        await Usuario.update(req.body, {
+            where:{id:req.params.id }
+        });
         res.redirect ("/index")
     },
     
     eliminarUsuario: async function (req, res){
-        await  Usuario(req.params.id);//completar
-        res.redirect("/index");
+        await  Usuario.destroy({where: {id:req.params.id}});
+        res.redirect("/index" );
 
     },
 

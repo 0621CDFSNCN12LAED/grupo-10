@@ -47,12 +47,12 @@ const productosController = {
 
 
     editarProducto: async function (req, res) {
-        const Producto = await Producto.findByPk(req.params.id); //no encuentra el id
+         await Producto.findByPk(req.params.id); 
         res.render("edicionProductos", { product : Producto });
     },
 
-    modificarProducto: async function (req, res) {  //NO SE PORQUE EN VES DE MODIFICAR EL PRODUCTO QUIERE MODIFICAR EL USUARIO
-        await Producto.Update(req.body, req.file, {
+    modificarProducto: async function (req, res) { 
+        await Producto.update(req.body, req.file, {
             where: {
           id: req.params.id,
         },

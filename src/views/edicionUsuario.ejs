@@ -21,13 +21,13 @@
     </head>
 
     <body>
-        <header><%- include("./partials/header.ejs", {user}) %></header> 
+        <header><%- include("./partials/header.ejs", { Usuario }) %></header> 
         <main>
             <section>
                 <h1>Editar Usuario</h1>
                 <form
-                    action="/<%= Usuario.id %>?_method=PUT"
-                    method="POST" enctype="multipart/form-data"
+                    action="/:<%= Usuario.id %>?_method=PUT"
+                    method="POST" 
                 >   
                     <div class="bloque">
                         <label for="Nombre" class="label-edit">nombre</label>
@@ -35,7 +35,7 @@
                             name="Nombre"
                             type="text"
                             id="Nombre"
-                            placeholder="Nombre del Usuario"
+                            placeholder="<%= Usuario.Nombre %>"
                             value="<%= Usuario.Nombre %>"
                         />
                     </div>
@@ -45,7 +45,7 @@
                             name="Apellido"
                             type="text"
                             id="Apellido"
-                            placeholder="Apellido del Usuario"
+                            placeholder="<%= Usuario.Apellido %>"
                             value="<%= Usuario.Apellido %>"
                         />
                     </div>
@@ -106,7 +106,7 @@
                
                 <button type="submit" class="boton">GUARDAR</button>
              </form>
-             <form  action="/ <%= user.id %>?_method=DELETE"
+             <form  action="/:<%= Usuario.id %>?_method=DELETE"
                 method="POST" >             
             <button type = "submit" >
                 ELIMINAR
