@@ -21,20 +21,20 @@
     <main> 
         <section>
             <h1>Crear nuevo producto</h1> 
-            <form action ="" method="POST" enctype="multipart/form-data" >
+            <form action ="/productos/nuevoProducto" method="POST" enctype="multipart/form-data" >
                 <div>
                     <h3>Categoría</h3>
                     <div class="bloque-cat">
-                        <input name="category" type="radio" id="Iluminacion"
-                        value ="iluminacion"><label>Iluminación</label>
+                        <input name="categorias" type="radio" id="Iluminacion"
+                        value ="Iluminacion"><label>Iluminación</label>
                     </div>
                     <div class="bloque-cat">
-                        <input name="category" type="radio" id="Muebles"
-                        value ="muebles"><label>Muebles</label>
+                        <input name="categorias" type="radio" id="Muebles"
+                        value ="Muebles"><label>Muebles</label>
                     </div>
                     <div class="bloque-cat">
-                        <input name="category" type="radio" id="Plantas"
-                        value= "plantas"><label>Plantas</label>
+                        <input name="categorias" type="radio" id="Plantas"
+                        value= "Plantas"><label>Plantas</label>
                     </div>
                 </div>
                 <div class="bloque">
@@ -42,8 +42,8 @@
                     <input name="nombre" type="text" id="nombre" placeholder="Nombre del producto" >
                 </div>
                 <div class="bloque">
-                    <label for="desc"></label>
-                    <input name="desc" type="text" id="desc" placeholder="Descripción" >
+                    <label for="descripcion"></label>
+                    <input name="descripcion" type="text" id="descripcion" placeholder="Descripción" >
                 </div>
                 <div class="bloque">
                     <label for="precio"></label>

@@ -16,10 +16,13 @@ app.use(session({
     secret:"Decoar",
     resave:false,
     saveUninitialized:false,
+    // ver cuando van el false o true las propiedades resave y saveUninitialized
 }));
-app.use(cookie());
 
+app.use(cookie());
 app.use(usuarioLogeado);
+
+
 
 app.use(express.static(path.join(__dirname, "../public")));
 

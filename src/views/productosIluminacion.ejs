@@ -18,7 +18,7 @@
 <main id="main-content">
     <section class="style-section">
         <h2 class ="title">ILUMINACION</h2>
-        <% for (let productoIndividual of products) { %>
+        <% for (let productoIndividual of Producto) { %>
             <%- include("./partials/listarProductos.ejs", {productoIndividual: productoIndividual}) %>
         <% } %>
         </section>

@@ -22,11 +22,11 @@
             
             <form method="POST">
                 <div class="div-style">
-                    <label for="email"></label>
-                    <input name="email" type="text" id="email" placeholder="Email"
-                    value = <%= locals.oldData ? oldData.email : null %>>
-                    <% if (locals.errors && errors.email) { %> 
-                        <div> <%= errors.email.msg %> </div>
+                    <label for="Email"></label>
+                    <input name="Email" type="text" id="Email" placeholder="Email"
+                    value = <%= locals.oldData ? oldData.Email : null %>>
+                    <% if (locals.errors && errors.Email) { %> 
+                        <div> <%= errors.Email.msg %> </div>
                         <% } %> 
                 </div>
                 <div class="div-style">

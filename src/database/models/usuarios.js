@@ -1,34 +1,38 @@
 const { DataTypes } = require('Sequelize');
 
 module.exports = function (sequelize) {
-    const usuarios_BD = sequelize.define('usuarios_BD', {
+    const usuarios_BD = sequelize.define('Usuario', {
         id:{
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        nombre: {
+        Nombre: {
             type: DataTypes.STRING,
         },
-        apellidus: {
+        Apellido: {
             type: DataTypes.STRING,
         },
-        direccion: {
+        Direccion: {
             type: DataTypes.STRING,
         },
-        edad: {
+        Edad: {
             type: DataTypes.TINYINT,
         },
-        email: {
+        Email: {
             type: DataTypes.STRING,
         },
-        categoria_usuario_id :{
-            type: DataTypes.INTEGER,
+        img: {
+            type: DataTypes.STRING,
+        },
+        contraseña: {
+            type: DataTypes.STRING,
         }
+
     },
     {
-        tableName: 'usuarios_BD',
-        timestamp: false,
+        tableName: 'usuarios',
+        timestamps: false,
     });
         return usuarios_BD; 
 

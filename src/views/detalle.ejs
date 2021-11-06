@@ -15,8 +15,7 @@
     <body>
         <header><%- include("./partials/header.ejs") %></header>
         <main>
-            <%- include("./partials/listarProductos.ejs",
-            {productoIndividual})%>
+            <%- include("./partials/listarProductos.ejs",{ product : productoIndividual })%>
             <div class="style-button">
                 <a href="/productos/edicionProductos/<%=productoIndividual.id%>"
                     >EDITAR</a

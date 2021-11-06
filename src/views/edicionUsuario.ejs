@@ -26,7 +26,7 @@
             <section>
                 <h1>Editar Usuario</h1>
                 <form
-                    action="/<%= user.id %>?_method=PUT"
+                    action="/<%= Usuario.id %>?_method=PUT"
                     method="POST" enctype="multipart/form-data"
                 >   
                     <div class="bloque">
@@ -36,7 +36,7 @@
                             type="text"
                             id="Nombre"
                             placeholder="Nombre del Usuario"
-                            value="<%= user.Nombre %>"
+                            value="<%= Usuario.Nombre %>"
                         />
                     </div>
                     <div class="bloque">
@@ -46,17 +46,17 @@
                             type="text"
                             id="Apellido"
                             placeholder="Apellido del Usuario"
-                            value="<%= user.Apellido %>"
+                            value="<%= Usuario.Apellido %>"
                         />
                     </div>
                     <div class="bloque">
-                        <label for="Dirección" class="label-edit">Dirección</label>
+                        <label for="Direccion" class="label-edit">Dirección</label>
                         <input
-                            name="Dirección"
+                            name="Direccion"
                             type="text"
-                            id="Dirección"
+                            id="Direccion"
                             placeholder="Dirección del Usuario"
-                            value="<%= user.Dirección %>"
+                            value="<%= Usuario.Direccion %>"
                         />
                     </div>
                     <div class="bloque">
@@ -66,7 +66,7 @@
                             type="text"
                             id="Edad"
                             placeholder="Edad del Usuario"
-                            value="<%= user.Edad %>"
+                            value="<%= Usuario.Edad %>"
                         />
                     </div>
                     <div class="bloque">
@@ -76,28 +76,10 @@
                             type="text"
                             id="Email"
                             placeholder="Email del Usuario"
-                            value="<%= user.Email %>"
+                            value="<%= Usuario.Email %>"
                         />
                     </div>
-                    <div>
-                        <h3>Categoría</h3>
-                        <div class="bloque-cat">
-                            <input
-                                name="category"
-                                type="radio"
-                                id="Administrador"
-                                value="<%= user.category = "Administrador" %>"
-                            /><label>Administrador</label>
-                        </div>
-                        <div class="bloque-cat">
-                            <input
-                                name="category"
-                                type="radio"
-                                id="Usuario"
-                                value="<%= user.category = "Usuario" %>"
-                            /><label>Usuario</label>
-                        </div>
-                    </div>
+                  
                     <div class="bloque">
                         <label class="label-boton" for="img"
                             >Foto del usuario</label
@@ -117,19 +99,10 @@
                             type="password"
                             id="contraseña"
                             placeholder="contraseña"
-                            value="<%= user.contraseña %>"
+                            value="<%= Usuario.contraseña %>"
                         />
                     </div>
-                    <div class="bloque">
-                        <label for="repetirContraseña" class="label-edit">Repetir contraseña</label>
-                        <input
-                            name="repetirContraseña"
-                            type="password"
-                            id="repetirContraseña"
-                            placeholder="Repetir contraseña"
-                            value="<%= user.repetirContraseña %>"
-                        />
-                    </div>
+                 
                
                 <button type="submit" class="boton">GUARDAR</button>
              </form>

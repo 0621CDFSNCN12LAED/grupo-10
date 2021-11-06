@@ -1,29 +1,29 @@
 const { DataTypes } = require('Sequelize');
 
 module.exports = function(sequelize) {
-    const carrito_de_compras_DB = sequelize.define('carrito_de_compras_DB', {
+    const carrito_de_compras = sequelize.define('Compras', {
         id:{
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        cantidad: {
+        usuario_id: {
             type: DataTypes.TINYINT,
         },
-        precio: {
-            type: DataTypes.INTEGER,
-        },
-        usuario_id: {
-            type: DataTypes.INTEGER,
-        },
         productos_id: {
+            type: DataTypes.INTEGER,
+        },
+        carritoProductos_id: {
+            type: DataTypes.INTEGER,
+        },
+        cantidad: {
             type: DataTypes.INTEGER,
         }
     },
     {
-        tableName: 'carrito_de_compras_DB',
+        tableName: 'tablaRelacional',
         timestamp: false,
     });
-    return carrito_de_compras_DB;
+    return carrito_de_compras;
     //associate
 }

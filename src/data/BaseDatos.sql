@@ -1,56 +1,49 @@
-CREATE TABLE categoria_usuario (
-     id INT (10) UNSIGNED NOT NULL AUTO_INCREMENT,
-     categoria VARCHAR (100),
-     CONSTRAINT PKid PRIMARY KEY (id)
-);
-
-CREATE TABLE categorias_productos (
-    id INT (10) UNSIGNED NOT NULL AUTO_INCREMENT,
-    CONSTRAINT PKid PRIMARY KEY (id),
-    categoria VARCHAR (100)
-);
-
-CREATE TABLE Usuarios (
-    id INT (10) UNSIGNED NOT NULL AUTO_INCREMENT,
-    nombre VARCHAR (100),
-    apellido VARCHAR (100),
-    deireccion VARCHAR (100),
-    edad TINYINT (10),
-    email VARCHAR (100),
-    CONSTRAINT PKid PRIMARY KEY (id),
-    categoria_usuario_id INT(10) UNSIGNED NOT NULL,
-    FOREIGN KEY (categoria_usuario_id) REFERENCES categoria_usuario (id)
-);
-
-
 CREATE TABLE productos (
     id INT (10) UNSIGNED NOT NULL AUTO_INCREMENT,
     nombre VARCHAR (100),
     descripcion TEXT,
     precio INT (10),
-    CONSTRAINT PKid PRIMARY KEY (id),
-    categorias_productos_id  INT(10) UNSIGNED NOT NULL,
-    FOREIGN KEY (categorias_productos_id) REFERENCES categorias_productos (id)
-    
+    img VARCHAR (100),
+    categorias  VARCHAR (100),
+    CONSTRAINT PKid PRIMARY KEY (id)
 );
 
-CREATE TABLE carrito_de_compras (
+CREATE TABLE usuarios (
     id INT (10) UNSIGNED NOT NULL AUTO_INCREMENT,
-    cantidad TINYINT (10),
-    precio INT (10),
-    CONSTRAINT PKid PRIMARY KEY (id),
-    usuario_id  INT (10) UNSIGNED NOT NULL,
-    FOREIGN KEY (usuario_id) REFERENCES usuarios (id),
-    productos_id INT(10) UNSIGNED NOT NULL,
-    FOREIGN KEY (productos_id) REFERENCES productos (id)
+    Nombre VARCHAR (100),
+    Apellido VARCHAR (100),
+    Direccion VARCHAR (100),
+    Edad TINYINT (10),
+    Email VARCHAR (100),
+    img VARCHAR (100),
+    contraseña VARCHAR (100),
+    CONSTRAINT PKid PRIMARY KEY (id)
 );
 
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
 
-CREATE TABLE carrito_productos (
+/* tablas a modificar*/
+
+
+CREATE TABLE carritoProductos (
      id INT (10) UNSIGNED NOT NULL AUTO_INCREMENT,
      precio_total INT(10),
-     CONSTRAINT PKid PRIMARY KEY (id),
-     carrito_de_compras_id  INT(10) UNSIGNED NOT NULL,
-     FOREIGN KEY (carrito_de_compras_id) REFERENCES carrito_de_compras (id)
 
-)
+);
+
+
+CREATE TABLE tablaRelacional (
+    id INT (10) UNSIGNED NOT NULL AUTO_INCREMENT,
+    usuario_id INT UNSIGNED (10) NOT NULL,
+    productos_id INT (10) UNSIGNED NOT NULL,
+    carritoProductos_id INT (10) UNSIGNED NOT NULL,
+    cantidad INT (10),
+    CONSTRAINT PKid PRIMARY KEY (usuario_id, productos_id, carrito_productos_id),
+    CONSTRAINT FK_usuario_id FOREIGN KEY (usuario_id) REFERENCES usuarios (id),
+    CONSTRAINT FK_productos_id FOREIGN KEY (productos_id) REFERENCES productos (id),
+    CONSTRAINT FK_carritoProductos_id FOREIGN KEY (carritoProductos_id) REFERENCES carritoProductos (id),
+);
+
+

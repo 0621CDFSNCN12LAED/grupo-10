@@ -6,12 +6,11 @@
     </a>
     <div class="description-container">
         <div>
-            <p class="style-title"><%= productoIndividual.nombre %></p>
-            <p class="style-description">
-                DESCRIPCION <br />
-                <%= productoIndividual.desc %>
+            <p class="style-title">CATEGORIA: <%= productoIndividual.categorias %> </p>
+            <p class="style-title">NOMBRE: <%= productoIndividual.nombre %> </p>
+            <p class="style-description">DESCRIPCION: <%= productoIndividual.descripcion %>
             </p>
-            <p class="style-price"><%= productoIndividual.precio %></p>
+            <p class="style-price">PRECIO: <%= productoIndividual.precio %></p>
         </div>
         <div class="style-button">
             <a href="/productos/carrito">COMPRAR</a>

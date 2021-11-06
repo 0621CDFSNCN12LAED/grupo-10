@@ -1,22 +1,24 @@
-const functionUser = require ("../services/functionUser")
+const  { Usuario } = require('../database/models')
 
-function usuarioLogeado (req, res, next){
+async function  usuarioLogeado (req, res, next){
     res.locals.estaLogeado = false;
+    
+    if(req.cookies.Email){
 
-    const cookieEsEmail = req.body.userEmail;
-    const buscarEmailCookie = functionUser.buscarCampoEspecifico("Email", cookieEsEmail);
+    const EmailCookie = await Usuario.findOne({ where :{Email: req.cookies.Email}}) 
+    if (EmailCookie){
+        req.session.usuarioLogeado = EmailCookie;
 
-    if(buscarEmailCookie){
-        req.session.user = buscarEmailCookie;
-    }
+    }}
 
-
-    if(req.session && req.session.user) {
+     if(req.session.usuarioLogeado) {
         res.locals.estaLogeado = true;
-        res.locals.user = req.session.user
+        res.locals.usuarioLogeado = req.session.usuarioLogeado
 
     };
 
+
+   
     next();
 };
 

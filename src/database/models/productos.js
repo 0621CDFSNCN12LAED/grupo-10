@@ -1,7 +1,7 @@
-const { DataTypes } = require('Sequelize');
+const { DataTypes } = require("Sequelize");
 
 module.exports = function(sequelize) {
-    const productos_DB = sequelize.define('productos_DB', {
+    const productos_DB = sequelize.define('Producto', {
         id:{
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -16,14 +16,21 @@ module.exports = function(sequelize) {
         precio: {
             type: DataTypes.INTEGER,
         },
-        categorias_productos_id: {
-            type: DataTypes.INTEGER,
-        }
+        img: {
+            type: DataTypes.STRING,
+        },
+        categorias: {
+            type: DataTypes.STRING,
+        },
+       
     },
     {
-        tableName: 'productos_DB',
-        timestamp: false,
-    });
+        tableName: 'productos',
+        timestamps: false
+    },
+    
+    );
+   
     return productos_DB;
-    //associate
+    
 }

@@ -1,10 +1,8 @@
 function notSession (req, res, next) {
-    if (!req.session.user) {
+    if (!req.session.usuarioLogeado) {
         return res.redirect ("/registro")
     };
     next();
-
-
 
 };
 

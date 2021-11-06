@@ -25,7 +25,7 @@
             <form action= "" method="POST" enctype="multipart/form-data">
                 <div class="div-style">
                     <label for="Nombre"></label>
-                    <input name="Nombre" type="text" id="Nombre" placeholder="Nombres"
+                    <input name="Nombre" type="text" id="Nombre" placeholder="Nombre"
                     value = <%= locals.oldData ? oldData.Nombre : null %> >
                     <% if (locals.errors && errors.Nombre) { %> 
                         <div> <%= errors.Nombre.msg %> </div>
@@ -40,11 +40,11 @@
                         <% } %> 
                 </div>
                 <div class="div-style">
-                    <label for="Dirección"></label>
-                    <input name="Dirección" type="text" id="Dirección" placeholder="Dirección"
-                    value = <%= locals.oldData ? oldData.Dirección : null %>>
-                    <% if (locals.errors && errors.Dirección) { %> 
-                        <div> <%= errors.Dirección.msg %> </div>
+                    <label for="Direccion"></label>
+                    <input name="Direccion" type="text" id="Direccion" placeholder="Dirección"
+                    value = <%= locals.oldData ? oldData.Direccion : null %>>
+                    <% if (locals.errors && errors.Direccion) { %> 
+                        <div> <%= errors.Direccion.msg %> </div>
                         <% } %> 
                 </div>
                 <div class="div-style">
@@ -62,17 +62,6 @@
                     <% if (locals.errors && errors.Email) { %> 
                         <div> <%= errors.Email.msg %> </div>
                         <% } %> 
-                </div>
-                 <div class="terminosYCondiciones">  
-                     <h3>Categoría</h3>
-                    <div class="bloque-cat">
-                        <input name="category" type="radio" id="Administrador"
-                        value ="Administrador"><label>Administrador</label>
-                    </div>
-                    <div class="bloque-cat">
-                        <input name="category" type="radio" id="Usuario"
-                        value ="Usuario"><label>Usuario</label>
-                    </div>
                 </div>
                 <div class="div-style">
                     <label class="div-style"for="img">Mi foto de perfil</label>

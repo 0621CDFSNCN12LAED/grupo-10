@@ -1,7 +1,7 @@
 const { DataTypes } = require('Sequelize');
 
 module.exports = function(sequelize) {
-    const carrito_productos_DB = sequelize.define('carrito_productos_DB', {
+    const carrito_productos = sequelize.define('carrito', {
         id:{
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -10,14 +10,12 @@ module.exports = function(sequelize) {
         precio_total: {
             type: DataTypes.INTEGER,
         },
-        carrito_de_compras_id: {
-            type: DataTypes.INTEGER,
-        }
+        
     },
     {
-        tableName: 'carrito_productos_DB',
+        tableName: 'carritoProductos',
         timestamp: false,
     });
-    return carrito_productos_DB;
+    return carrito_productos;
     //associate
 }
