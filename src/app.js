@@ -23,7 +23,6 @@ app.use(cookie());
 app.use(usuarioLogeado);
 
 
-
 app.use(express.static(path.join(__dirname, "../public")));
 
 app.set('views', path.resolve(__dirname, './views'));

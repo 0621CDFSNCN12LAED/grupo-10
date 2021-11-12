@@ -65,7 +65,7 @@
                 </div>
                 <div class="div-style">
                     <label class="div-style"for="img">Mi foto de perfil</label>
-                    <input name="img" type="file" id="img" accept="image/png, image/jpeg">
+                    <input name="img" type="file" id="img" >
                     <% if (locals.errors && errors.img) { %> 
                         <div> <%= errors.img.msg %> </div>
                         <% } %> 

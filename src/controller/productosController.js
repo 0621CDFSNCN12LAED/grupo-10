@@ -34,29 +34,34 @@ const productosController = {
       },
 
     nuevoProducto: function (req, res) {
-        res.render("nuevoProducto");
+        res.render("nuevoProducto" );
     },
 
     guardarProducto: async function (req, res) {
-        await Producto.create({
+        await Producto.create(
+            {
             ...req.body,
-             //ver porque no se guarda la ruta de la imgaen en la base de datos
-        }, req.file);
+            img: req.file ? req.file.filename: "default-image.png",
+            });
         res.redirect("/index");
     },
 
 
     editarProducto: async function (req, res) {
-         await Producto.findByPk(req.params.id); 
-        res.render("edicionProductos", { product : Producto });
+        const producto = await Producto.findByPk(req.params.id); 
+        res.render("edicionProductos", { product : producto });
     },
 
     modificarProducto: async function (req, res) { 
-        await Producto.update(req.body, req.file, {
+        await Producto.update({
+            ...req.body,
+            img: req.file ? req.file.filename: "default-image.png",
+        },{
             where: {
           id: req.params.id,
         },
-            })
+            },
+            console.log(req.body))
             res.redirect("/index");
     },
 
@@ -64,7 +69,6 @@ const productosController = {
         await Producto.destroy({
             where: { id: req.params.id },
         }
-           
         );
         res.redirect("/index");
     },

@@ -77,7 +77,7 @@ const indexController = {
             })};
 
         const noRepetirEmail = await Usuario.findOne ({where: {Email:req.body.Email}})
-        //res.session(noRepetirEmail)
+        //res.session(noRepetirEmail);
         if(noRepetirEmail){
             return res.render ("registro", {
                 errors:{
@@ -86,27 +86,31 @@ const indexController = {
                 oldData: req.body
             })
         }else {
-            await Usuario.create({
+            await Usuario.create(
+                {
                 ...req.body,
                 contraseña: bcryptjs.hashSync(req.body.contraseña, 12),
+                img: req.file ? req.file.filename: "default-image.png",
                 
                 })
-                
             }
            
          return res.redirect ("login")
         
         
     },
-    //falta de aca para abaja
+    
     editarUsuario: async function (req, res){
-        await Usuario.findByPk (req.params.id);
+        const usuario = await Usuario.findByPk (req.params.id);
         
-        res.render("edicionUsuario", { Usuario:Usuario });
+        res.render("edicionUsuario", { Usuario: usuario });
     },
     
     modificarUsuario: async function (req, res){
-        await Usuario.update(req.body, {
+        await Usuario.update(
+            {...req.body,
+                img: req.file ? req.file.filename: "default-image.png", 
+            },{
             where:{id:req.params.id }
         });
         res.redirect ("/index")

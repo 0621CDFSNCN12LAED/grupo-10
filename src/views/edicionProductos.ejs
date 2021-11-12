@@ -26,7 +26,7 @@
             <section>
                 <h1>Editar producto</h1>
                 <form
-                    action="/productos/:<%= product.id %>?_method=PUT"
+                    action="/productos/<%= product.id %>?_method=PUT"
                     method="POST" enctype="multipart/form-data"
                 >   
                     <div class="bloque">
@@ -35,7 +35,7 @@
                             name="nombre"
                             type="text"
                             id="nombre"
-                            placeholder="<%= product.nombre %>"
+                            placeholder="Nombre del producto"
                             value="<%= product.nombre %>"
                         />
                     </div>
@@ -43,39 +43,39 @@
                         <h3>Categoría</h3>
                         <div class="bloque-cat">
                             <input
-                                name="category"
+                                name="categorias"
                                 type="radio"
                                 id="iluminacion"
-                                value="<%= product.category ="iluminacion" %>"
+                                value="<%= product.categorias ="iluminacion" %>"
                             /><label>Iluminacion</label>
                         </div>
                         <div class="bloque-cat">
                             <input
-                                name="category"
+                                name="categorias"
                                 type="radio"
                                 id="muebles"
-                                value="<%= product.category = "muebles" %>"
+                                value="<%= product.categorias = "muebles" %>"
                             /><label>Muebles</label>
                         </div>
                         <div class="bloque-cat">
                             <input
-                                name="category"
+                                name="categorias"
                                 type="radio"
                                 id="plantas"
-                                value="<%= product.category ="plantas" %>"
+                                value="<%= product.categorias ="plantas" %>"
                             /><label>Plantas</label>
                         </div>
                     </div>
                     <div class="bloque">
-                        <label for="desc" class="label-edit"
+                        <label for="descripcion" class="label-edit"
                             >Completá la nueva descripción</label
                         >
                         <input
-                            name="desc"
+                            name="descripcion"
                             type="text"
-                            id="desc"
+                            id="descripcion"
                             placeholder="Descripción"
-                            value="<%= product.desc %>"
+                            value="<%= product.descripcion %>"
                         />
                     </div>
                     <div class="bloque">
@@ -98,7 +98,6 @@
                             name="img"
                             type="file"
                             id="img"
-                            accept="image/png, image/jpeg"
                             value="<%= product.img %>"
                         />
                     </div>
