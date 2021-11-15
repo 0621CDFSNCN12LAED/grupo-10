@@ -35,10 +35,10 @@ const indexController = {
                      req.session.usuarioLogeado = usuarioLogin;
 
                     if(req.body.term) {
-                        res.cookie("Email", req.body.Email, {maxAge: null})
+                        res.cookie("Email", req.body.Email, {maxAge: 60000 * 60 * 24})
                     }
-
-                     return res.render ("profile", {usuario: req.session.usuarioLogeado})
+                      return res.redirect ("profile")
+                     //return res.render ("profile", {usuario: req.session.usuarioLogeado})
                  }
                  return res.render ("login", {
                     errors:{
@@ -77,7 +77,7 @@ const indexController = {
             })};
 
         const noRepetirEmail = await Usuario.findOne ({where: {Email:req.body.Email}})
-        //res.session(noRepetirEmail);
+        
         if(noRepetirEmail){
             return res.render ("registro", {
                 errors:{
