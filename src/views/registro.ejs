@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"rel="stylesheet">
+    <script defer src = "/js/validarRegistro.js"></script>
    
 </head> 
 
@@ -65,7 +66,7 @@
                 </div>
                 <div class="div-style">
                     <label class="div-style"for="img">Mi foto de perfil</label>
-                    <input name="img" type="file" id="img" >
+                    <input name="img" type="file" id="img"  >
                     <% if (locals.errors && errors.img) { %> 
                         <div> <%= errors.img.msg %> </div>
                         <% } %> 

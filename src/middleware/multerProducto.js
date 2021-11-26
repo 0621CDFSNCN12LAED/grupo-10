@@ -11,6 +11,8 @@ const storage = multer.diskStorage({
 
 const uploader = multer({
     storage,
+    fileSize: 3000000,
+    mimeType: "image/jpg, image/jpeg, image/png, image/gif"
 });
 
 module.exports = uploader

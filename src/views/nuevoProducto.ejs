@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"rel="stylesheet">
+    <script defer src = "/js/validarProducto.js"></script>
 </head>  
 
 <body>
@@ -39,19 +40,34 @@
                 </div>
                 <div class="bloque">
                     <label for="nombre"></label>
-                    <input name="nombre" type="text" id="nombre" placeholder="Nombre del producto" >
+                    <input name="nombre" type="text" id="nombre" placeholder="Nombre del producto" 
+                    value = <%= locals.oldData ? oldData.nombre : null %>>
+                    <% if (locals.errors && errors.nombre) { %> 
+                        <div> <%= errors.nombre.msg %> </div>
+                        <% } %> 
                 </div>
                 <div class="bloque">
                     <label for="descripcion"></label>
-                    <input name="descripcion" type="text" id="descripcion" placeholder="Descripción" >
+                    <input name="descripcion" type="text" id="descripcion" placeholder="Descripción" 
+                    value = <%= locals.oldData ? oldData.descripcion : null %>>
+                    <% if (locals.errors && errors.descripcion) { %> 
+                        <div> <%= errors.descripcion.msg %> </div>
+                        <% } %> 
                 </div>
                 <div class="bloque">
                     <label for="precio"></label>
-                    <input name="precio" type="number" id="precio" placeholder="Precio">
+                    <input name="precio" type="number" id="precio" placeholder="Precio" 
+                    value = <%= locals.oldData ? oldData.precio : null %>>
+                    <% if (locals.errors && errors.precio) { %> 
+                        <div> <%= errors.precio.msg %> </div>
+                        <% } %> 
                 </div>
                 <div class="bloque">
                     <label class="label-boton" for="img">Imágenes del producto</label>
                     <input name="img" type="file" id="img" >
+                    <% if (locals.errors && errors.img) { %> 
+                        <div> <%= errors.img.msg %> </div>
+                        <% } %> 
                 </div>
                 <div><button type = "submit" class="boton">CARGAR</button></div>
             </form>

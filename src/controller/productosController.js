@@ -1,7 +1,11 @@
-
-
 const baseServiceProducto = require("../services/baseServiceProducto.js");
+
+const { validationResult } = require ("express-validator");
+
+const {Op} = require('sequelize')
+
 const { Producto } = require("../database/models");
+
 
 const productosController = {
     listadoMuebles: async function (req, res) {
@@ -38,6 +42,13 @@ const productosController = {
     },
 
     guardarProducto: async function (req, res) {
+
+        const validacionCampos = validationResult(req);
+        if(validacionCampos.errors.length > 0) {
+            return res.render ("nuevoProducto", {
+                errors: validacionCampos.mapped(),
+            })};
+
         await Producto.create(
             {
             ...req.body,
@@ -53,6 +64,13 @@ const productosController = {
     },
 
     modificarProducto: async function (req, res) { 
+
+        const validacionCampos = validationResult(req);
+        if(validacionCampos.errors.length > 0) {
+            return res.render ("nuevoProducto", {
+                errors: validacionCampos.mapped(),
+            })};
+
         await Producto.update({
             ...req.body,
             img: req.file ? req.file.filename: "default-image.png",

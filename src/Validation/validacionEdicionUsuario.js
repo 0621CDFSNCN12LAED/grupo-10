@@ -1,6 +1,6 @@
 const { body } = require("express-validator");
 
-const ValidacionUsuario = [
+const ValidacionEdicionUsuario = [
     body("Nombre").notEmpty().withMessage("Debes completar el campo Nombre").isLength({min:2}).withMessage("Debes tener almenos 2 letras"),
     body("Apellido").notEmpty().withMessage("Debes completar el campo apellido").isLength({min:2}).withMessage("Debes tener almenos 2 letras"),
     body("Direccion").notEmpty().withMessage("Debes completar el campo Dirección").isLength({min:2}).withMessage("Debes tener almenos 2 letras"),
@@ -16,4 +16,4 @@ const ValidacionUsuario = [
         return true
     }),
 ];
-module.exports = ValidacionUsuario;
+module.exports = ValidacionEdicionUsuario;

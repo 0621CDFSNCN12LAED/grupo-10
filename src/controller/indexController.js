@@ -38,7 +38,7 @@ const indexController = {
                         res.cookie("Email", req.body.Email, {maxAge: 60000 * 60 * 24})
                     }
                       return res.redirect ("profile")
-                     //return res.render ("profile", {usuario: req.session.usuarioLogeado})
+                     
                  }
                  return res.render ("login", {
                     errors:{
@@ -107,8 +107,17 @@ const indexController = {
     },
     
     modificarUsuario: async function (req, res){
+        const validacionCampos = validationResult(req);
+        if(validacionCampos.errors.length > 0) {
+            return res.render ("edicionUsuario", {
+                errors: validacionCampos.mapped(),
+            })};
+        // modificar porque usuario en el html no esta definido
+
+
         await Usuario.update(
             {...req.body,
+                contraseña: bcryptjs.hashSync(req.body.contraseña, 12),
                 img: req.file ? req.file.filename: "default-image.png", 
             },{
             where:{id:req.params.id }
