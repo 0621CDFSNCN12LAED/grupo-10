@@ -9,7 +9,7 @@ const notSession = require("../middleware/notSession")
 
 const validarLogin = require("../Validation/validationLogin");
 const ValidacionUsuario = require("../Validation/validacionRegistro");
-const validacionEdicionUsuario = require("../Validation/validacionEdicionUsuario");
+
 const uploader = require("../middleware/multerUsuario");
 
 router.get("/index", indexController.index);
@@ -27,7 +27,7 @@ router.post("/registro", uploader.single("img"), ValidacionUsuario, indexControl
 
 
 router.get("/edicionUsuario/:id", sessionGuest, indexController.editarUsuario);
-router.put("/:id", uploader.single("img"), validacionEdicionUsuario, indexController.modificarUsuario)
+router.put("/:id", uploader.single("img"), ValidacionUsuario, indexController.modificarUsuario)
 router.delete("/:id", indexController.eliminarUsuario)
 
 

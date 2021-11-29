@@ -33,4 +33,8 @@
 //         contraseña.classList.add('is-invalid')
 //     }else{
 //         contraseña.classList.remove('is-invalid')}
+
+
+//         e.preventDefault();
+              
 // })

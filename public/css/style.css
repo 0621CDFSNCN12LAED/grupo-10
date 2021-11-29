@@ -397,3 +397,7 @@ de los mubles sillones etc*/
     .is-invalid {
         border: solid 2px red;
     }
+
+    .nombre {
+        display: none;
+    }

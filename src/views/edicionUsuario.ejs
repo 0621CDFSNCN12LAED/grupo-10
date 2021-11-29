@@ -23,10 +23,11 @@
     <body>
         <header><%- include("./partials/header.ejs") %></header> 
         <main>
+            
             <section>
                 <h1>Editar Usuario</h1>
                 <form
-                    action="/<%= Usuario.id %>?_method=PUT" enctype="multipart/form-data"
+                    action="/<%= usuario.id %>?_method=PUT" enctype="multipart/form-data"
                     method="POST"  
                 >   
                     <div class="bloque">
@@ -36,7 +37,7 @@
                             type="text"
                             id="Nombre"
                             placeholder="Nombre del usuario"
-                            value="<%= Usuario.Nombre %>"
+                            value="<%= usuario.Nombre %>" 
                         />
                     </div>
                     <div class="bloque">
@@ -46,7 +47,7 @@
                             type="text"
                             id="Apellido"
                             placeholder="Apellido del Usuario"
-                            value="<%= Usuario.Apellido %>"
+                            value="<%= usuario.Apellido %>"
                         />
                     </div>
                     <div class="bloque">
@@ -56,7 +57,7 @@
                             type="text"
                             id="Direccion"
                             placeholder="Dirección del Usuario"
-                            value="<%= Usuario.Direccion %>"
+                            value="<%= usuario.Direccion %>"
                         />
                     </div>
                     <div class="bloque">
@@ -66,7 +67,7 @@
                             type="text"
                             id="Edad"
                             placeholder="Edad del Usuario"
-                            value="<%= Usuario.Edad %>"
+                            value="<%= usuario.Edad %>"
                         />
                     </div>
                     <div class="bloque">
@@ -76,7 +77,7 @@
                             type="text"
                             id="Email"
                             placeholder="Email del Usuario"
-                            value="<%= Usuario.Email %>"
+                            value="<%= usuario.Email %>"
                         />
                     </div>
                   
@@ -88,6 +89,7 @@
                             name="img"
                             type="file"
                             id="img"
+                            value="<%= usuario.img %>"
                             
                         />
                     </div>
@@ -98,6 +100,7 @@
                             type="password"
                             id="contraseña"
                             placeholder="contraseña"
+                            value="<%= usuario.contraseña %>"
                             
                         />
                     </div>
@@ -105,7 +108,7 @@
                
                 <button type="submit" class="boton">GUARDAR</button>
              </form>
-             <form  action="/<%= Usuario.id %>?_method=DELETE" method="POST" >             
+             <form  action="/<%= usuario.id %>?_method=DELETE" method="POST" >             
                 <button type = "submit" >
                     ELIMINAR
                 </button>

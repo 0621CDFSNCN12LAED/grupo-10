@@ -103,17 +103,16 @@ const indexController = {
     editarUsuario: async function (req, res){
         const usuario = await Usuario.findByPk (req.params.id);
         
-        res.render("edicionUsuario", { Usuario: usuario });
+        res.render("edicionUsuario", { usuario });
     },
     
     modificarUsuario: async function (req, res){
+
         const validacionCampos = validationResult(req);
         if(validacionCampos.errors.length > 0) {
             return res.render ("edicionUsuario", {
                 errors: validacionCampos.mapped(),
-            })};
-        // modificar porque usuario en el html no esta definido
-
+            })}
 
         await Usuario.update(
             {...req.body,
