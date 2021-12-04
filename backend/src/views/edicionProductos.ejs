@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Editar Producto</title>
+        <link rel="stylesheet" href="/css/normalize.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/editProductos.css" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <header><%- include("./partials/header.ejs") %></header>
+        <main>
+            <section>
+                <h1>Editar producto</h1>
+                <form
+                    action="/productos/<%= product.id %>?_method=PUT"
+                    method="POST" enctype="multipart/form-data"
+                >   
+                    <div>
+                        <h3>Categoría</h3>
+                        <div class="bloque-cat">
+                            <input
+                                name="categorias"
+                                type="radio"
+                                id="iluminacion"
+                                value="<%= product.categorias ="iluminacion" %>"
+                            /><label>Iluminacion</label>
+                        </div>
+                        <div class="bloque-cat">
+                            <input
+                                name="categorias"
+                                type="radio"
+                                id="muebles"
+                                value="<%= product.categorias = "muebles" %>"
+                            /><label>Muebles</label>
+                        </div>
+                        <div class="bloque-cat">
+                            <input
+                                name="categorias"
+                                type="radio"
+                                id="plantas"
+                                value="<%= product.categorias ="plantas" %>"
+                            /><label>Plantas</label>
+                        </div>
+                    </div>
+                    <div class="bloque">
+                        <label for="nombre" class="label-edit">nombre</label>
+                        <input
+                            name="nombre"
+                            type="text"
+                            id="nombre"
+                            placeholder="Nombre del producto"
+                            value="<%= product.nombre %>"
+                        />
+                    </div>
+                    <div class="bloque">
+                        <label for="descripcion" class="label-edit"
+                            >Completá la nueva descripción</label
+                        >
+                        <input
+                            name="descripcion"
+                            type="text"
+                            id="descripcion"
+                            placeholder="Descripción"
+                            value="<%= product.descripcion %>"
+                        />
+                    </div>
+                    <div class="bloque">
+                        <label for="precio" class="label-edit"
+                            >¿Cuál es el precio?</label
+                        >
+                        <input
+                            name="precio"
+                            type="number"
+                            id="precio"
+                            placeholder="Precio"
+                            value="<%= product.precio %>"
+                        />
+                    </div>
+                    <div class="bloque">
+                        <label class="label-boton" for="img"
+                            >Imágenes del producto</label
+                        >
+                        <input
+                            name="img"
+                            type="file"
+                            id="img"
+                            value="<%= product.img %>"
+                        />
+                    </div>
+               
+                <button type="submit" class="boton">CARGAR</button>
+             </form>
+            </section>
+        </main>
+
+        <footer><%- include("./partials/footer.ejs") %></footer>
+    </body>
+</html>

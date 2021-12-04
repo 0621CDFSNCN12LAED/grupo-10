@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Editar Usuario</title>
+        <link rel="stylesheet" href="/css/normalize.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/editProductos.css" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+            rel="stylesheet"
+        />
+        <script defer src = "/js/validarRegistro.js"></script>
+    </head>
+
+    <body>
+        <header><%- include("./partials/header.ejs") %></header> 
+        <main>
+            
+            <section>
+                <h1>Editar Usuario</h1>
+                <form
+                    action="/<%= Usuario.id %>?_method=PUT" enctype="multipart/form-data"
+                    method="POST"  
+                > 
+           
+                    <div class="bloque" class = "lpm">
+                        <label for="Nombre" class="label-edit">nombre</label>
+                        <input
+                            name="Nombre"
+                            type="text"
+                            id="Nombre"
+                            placeholder="Nombre del usuario"
+                            value="<%= Usuario.Nombre %>" 
+                        />
+                    </div>
+                    <p class=""> </p>
+                    <div class="bloque">
+                        <label for="Apellido" class="label-edit">Apellido</label>
+                        <input
+                            name="Apellido"
+                            type="text"
+                            id="Apellido"
+                            placeholder="Apellido del Usuario"
+                            value="<%= Usuario.Apellido %>"
+                        />
+                    </div>
+                    <div class="bloque">
+                        <label for="Direccion" class="label-edit">Dirección</label>
+                        <input
+                            name="Direccion"
+                            type="text"
+                            id="Direccion"
+                            placeholder="Dirección del Usuario"
+                            value="<%= Usuario.Direccion %>"
+                        />
+                    </div>
+                    <div class="bloque">
+                        <label for="Edad" class="label-edit">Edad</label>
+                        <input
+                            name="Edad"
+                            type="text"
+                            id="Edad"
+                            placeholder="Edad del Usuario"
+                            value="<%= Usuario.Edad %>"
+                        />
+                    </div>
+                    <div class="bloque">
+                        <label for="Email" class="label-edit">Email</label>
+                        <input
+                            name="Email"
+                            type="text"
+                            id="Email"
+                            placeholder="Email del Usuario"
+                            value="<%= Usuario.Email %>"
+                        />
+                    </div>
+                  
+                    <div class="bloque">
+                        <label class="label-boton" for="img"
+                            >Foto del usuario</label
+                        >
+                        <input
+                            name="img"
+                            type="file"
+                            id="img"
+                            value="<%= Usuario.img %>"
+                            
+                        />
+                    </div>
+                    <div class="bloque">
+                        <label for="contraseña" class="label-edit">Contraseña</label>
+                        <input
+                            name="contraseña"
+                            type="password"
+                            id="contraseña"
+                            placeholder="contraseña"
+                            value="<%= Usuario.contraseña %>"
+                            
+                        />
+                    </div>
+                 
+               
+                <button type="submit" class="boton">GUARDAR</button>
+             </form>
+             <form  action="/<%= Usuario.id %>?_method=DELETE" method="POST" >             
+                <button type = "submit" >
+                    ELIMINAR
+                </button>
+            </form>
+            </section>
+        </main>
+
+        <footer><%- include("./partials/footer.ejs") %></footer>
+    </body>
+</html>
