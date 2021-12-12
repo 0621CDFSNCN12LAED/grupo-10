@@ -31,13 +31,13 @@ HTML{
     flex-direction: column;
 }
 .style-img{
-    height: 100%;
-    width: 100%;
-    border-radius: 360px;
+    height: 80%;
+    width: 80%;
+    border-radius: 8px;
 }
 .image-container{
-    height: 100%;
-    width: 40%;
+    height: 450px;
+    width: 350px;
     background-color: transparent;
 
 }
@@ -45,7 +45,7 @@ HTML{
     padding-left: 13px;
     align-self: unset;
     height: 100%;
-    width: 60%;
+    width: 50%;
     background-color: transparent;
 }
 .product-wrapper {
@@ -64,14 +64,15 @@ HTML{
 
 }
 .style-title{
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: 20px ;
     background-color: transparent;
+    font-weight: bold;
 
 }
 .style-price{
     margin-top: 20px;
-    font-size: 35px;
+    font-size: 25px;
     background-color: transparent;
 }
 .style-button{
