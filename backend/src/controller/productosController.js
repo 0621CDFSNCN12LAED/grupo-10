@@ -68,8 +68,9 @@ const productosController = {
         const validacionCampos = validationResult(req);
         const producto = await Producto.findByPk(req.params.id); 
         if(validacionCampos.errors.length > 0) {
-            return res.render ("edicionProductos", { product : producto }, {
+            return res.render ("edicionProductos", {
                 errors: validacionCampos.mapped(),
+                product : producto,
             })};
 
         await Producto.update({

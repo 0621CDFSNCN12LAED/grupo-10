@@ -1,13 +1,10 @@
 import React from 'react';
-import Content from './components/content';
+import ContentWrapper from './components/ContentWrapper/ContentWrapper';
+
 function App() {
   return (
-    <div >
-    
-      <Content />
-
-    </div>
-  );
+    <ContentWrapper/>
+  )
 }
 
 export default App;

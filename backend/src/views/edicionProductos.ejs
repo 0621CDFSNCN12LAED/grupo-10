@@ -18,6 +18,7 @@
             href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
             rel="stylesheet"
         />
+        <script defer src = "/js/validarProducto.js"></script>
     </head>
 
     <body>
@@ -65,6 +66,10 @@
                             placeholder="Nombre del producto"
                             value="<%= product.nombre %>"
                         />
+                        <p></p>
+                        <% if (locals.errors && errors.nombre) { %> 
+                            <div> <%= errors.nombre.msg %> </div>
+                            <% } %> 
                     </div>
                     <div class="bloque">
                         <label for="descripcion" class="label-edit"
@@ -77,6 +82,10 @@
                             placeholder="Descripción"
                             value="<%= product.descripcion %>"
                         />
+                        <p></p>
+                        <% if (locals.errors && errors.descripcion) { %> 
+                            <div> <%= errors.descripcion.msg %> </div>
+                            <% } %> 
                     </div>
                     <div class="bloque">
                         <label for="precio" class="label-edit"
@@ -89,6 +98,10 @@
                             placeholder="Precio"
                             value="<%= product.precio %>"
                         />
+                        <p></p>
+                        <% if (locals.errors && errors.precio) { %> 
+                            <div> <%= errors.precio.msg %> </div>
+                            <% } %>
                     </div>
                     <div class="bloque">
                         <label class="label-boton" for="img"
@@ -100,6 +113,10 @@
                             id="img"
                             value="<%= product.img %>"
                         />
+                        <p></p>
+                        <% if (locals.errors && errors.img) { %> 
+                            <div> <%= errors.img.msg %> </div>
+                            <% } %>
                     </div>
                
                 <button type="submit" class="boton">CARGAR</button>

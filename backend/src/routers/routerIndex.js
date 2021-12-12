@@ -27,14 +27,16 @@ router.get("/registro", sessionGuest, indexController.registro);
 
 router.post("/registro", uploader.single("img"), ValidacionUsuario, indexController.crearUsuario)
 
+router.get("/carrito", notSession, indexController.carrito);
 
 router.get("/edicionUsuario/:id", sessionGuest, indexController.editarUsuario);
+
 router.put("/:id", uploader.single("img"), ValidacionUsuario, indexController.modificarUsuario)
 
 router.delete("/:id", indexController.eliminarUsuario)
 
 
-router.get("/carrito", notSession, indexController.carrito);
+
 
 
 

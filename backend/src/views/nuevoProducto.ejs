@@ -27,7 +27,8 @@
                     <h3>Categoría</h3>
                     <div class="bloque-cat">
                         <input name="categorias" type="radio" id="Iluminacion"
-                        value ="Iluminacion"><label>Iluminación</label>
+                        value ="Iluminacion">
+                        <label>Iluminación</label>
                     </div>
                     <div class="bloque-cat">
                         <input name="categorias" type="radio" id="Muebles"
@@ -42,6 +43,7 @@
                     <label for="nombre"></label>
                     <input name="nombre" type="text" id="nombre" placeholder="Nombre del producto" 
                     value = <%= locals.oldData ? oldData.nombre : null %>>
+                    <p></p>
                     <% if (locals.errors && errors.nombre) { %> 
                         <div> <%= errors.nombre.msg %> </div>
                         <% } %> 
@@ -50,6 +52,7 @@
                     <label for="descripcion"></label>
                     <input name="descripcion" type="text" id="descripcion" placeholder="Descripción" 
                     value = <%= locals.oldData ? oldData.descripcion : null %>>
+                    <p></p>
                     <% if (locals.errors && errors.descripcion) { %> 
                         <div> <%= errors.descripcion.msg %> </div>
                         <% } %> 
@@ -58,6 +61,7 @@
                     <label for="precio"></label>
                     <input name="precio" type="number" id="precio" placeholder="Precio" 
                     value = <%= locals.oldData ? oldData.precio : null %>>
+                    <p></p>
                     <% if (locals.errors && errors.precio) { %> 
                         <div> <%= errors.precio.msg %> </div>
                         <% } %> 
@@ -65,6 +69,7 @@
                 <div class="bloque">
                     <label class="label-boton" for="img">Imágenes del producto</label>
                     <input name="img" type="file" id="img" >
+                    <p></p>
                     <% if (locals.errors && errors.img) { %> 
                         <div> <%= errors.img.msg %> </div>
                         <% } %> 

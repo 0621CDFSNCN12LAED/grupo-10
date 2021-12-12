@@ -108,10 +108,12 @@ const indexController = {
     modificarUsuario: async function (req, res){
 
         const validacionCampos = validationResult(req);
+        console.log (validacionCampos)
         const usuario = await Usuario.findByPk (req.params.id);
         if(validacionCampos.errors.length > 0) {
-            return res.render ("edicionUsuario",{ Usuario : usuario }, {
+            return res.render ("edicionUsuario", {
                 errors: validacionCampos.mapped(),
+                Usuario : usuario
             })};
 
         await Usuario.update(

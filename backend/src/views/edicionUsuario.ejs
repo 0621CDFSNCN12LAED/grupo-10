@@ -41,6 +41,10 @@
                             placeholder="Nombre del usuario"
                             value="<%= Usuario.Nombre %>" 
                         />
+                        <p></p>
+                        <% if (locals.errors && errors.Nombre) { %> 
+                            <div> <%= errors.Nombre.msg %> </div>
+                            <% } %> 
                     </div>
                     <p class=""> </p>
                     <div class="bloque">
@@ -52,6 +56,11 @@
                             placeholder="Apellido del Usuario"
                             value="<%= Usuario.Apellido %>"
                         />
+                        <p></p>
+                        <% if (locals.errors && errors.Apellido) { %> 
+                            <div> <%= errors.Apellido.msg %> </div>
+                            <% } %> 
+                        
                     </div>
                     <div class="bloque">
                         <label for="Direccion" class="label-edit">Dirección</label>
@@ -62,6 +71,10 @@
                             placeholder="Dirección del Usuario"
                             value="<%= Usuario.Direccion %>"
                         />
+                        <p></p>
+                        <% if (locals.errors && errors.Direccion) { %> 
+                            <div> <%= errors.Direccion.msg %> </div>
+                            <% } %> 
                     </div>
                     <div class="bloque">
                         <label for="Edad" class="label-edit">Edad</label>
@@ -72,6 +85,10 @@
                             placeholder="Edad del Usuario"
                             value="<%= Usuario.Edad %>"
                         />
+                        <p></p>
+                        <% if (locals.errors && errors.Edad) { %> 
+                            <div> <%= errors.Edad.msg %> </div>
+                            <% } %> 
                     </div>
                     <div class="bloque">
                         <label for="Email" class="label-edit">Email</label>
@@ -82,6 +99,10 @@
                             placeholder="Email del Usuario"
                             value="<%= Usuario.Email %>"
                         />
+                        <p></p>
+                        <% if (locals.errors && errors.Email) { %> 
+                            <div> <%= errors.Email.msg %> </div>
+                            <% } %> 
                     </div>
                   
                     <div class="bloque">
@@ -93,8 +114,11 @@
                             type="file"
                             id="img"
                             value="<%= Usuario.img %>"
-                            
                         />
+                        <p></p>
+                        <% if (locals.errors && errors.img) { %> 
+                            <div> <%= errors.img.msg %> </div>
+                            <% } %> 
                     </div>
                     <div class="bloque">
                         <label for="contraseña" class="label-edit">Contraseña</label>
@@ -103,9 +127,12 @@
                             type="password"
                             id="contraseña"
                             placeholder="contraseña"
-                            value="<%= Usuario.contraseña %>"
-                            
+                            value="<%= Usuario.contraseña %>"  
                         />
+                        <p></p>
+                        <% if (locals.errors && errors.contraseña) { %> 
+                            <div> <%= errors.contraseña.msg %> </div>
+                            <% } %> 
                     </div>
                  
                

@@ -4,15 +4,25 @@ const { Usuario } = require("../../database/models");
 
 const controllerUsuario = {
     lista: (req, res) => {
-        Usuario.findAll({}).then((Usuario) => {
+        Usuario.findAll({}).then((Usuarios) => {
+            const nuevoUsuario = Usuarios.map((usuario)=>{
+                return {
+                    Nombre: usuario.Nombre,
+                    Apellido: usuario.Apellido,
+                    Direccion: usuario.Direccion,
+                    Edad: usuario.Edad,
+                    Email: usuario.Email,
+                    img: usuario.img,
+                }
+            })
             let respuesta = {
                 
                 meta: {
                     status: 200,
-                    total: Usuario.length,
+                    total: Usuarios.length,
                     url: "api/usuarios/",
                 },
-                data: Usuario, 
+                data: nuevoUsuario, 
                 
             };
             res.json(respuesta);
@@ -22,7 +32,8 @@ const controllerUsuario = {
     idUsers: function (req, res) {
         Usuario.findByPk(req.params.id)
         .then(function (usuario){
-            res.json({data:usuario,
+            res.json({
+                data:usuario,
                 meta:{
                     status: 200,
                     url: "api/usuarios/:id" + req.params.id,
