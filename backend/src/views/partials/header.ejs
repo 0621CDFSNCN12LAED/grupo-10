@@ -1,13 +1,11 @@
 <header>
     <div class= "header-flex"> 
-        <img class="logo" src= "/img/logodecoar.jpg" alt="Logo">
-   
-        <ul>
-            <li>QUIENES SOMOS</li>
-            <li>TERMINOS Y CONDICIONES</li>
-        </ul>
+        <img class="logo" src= "/img/logo2.jpg" alt="Logo">
     </div>
-
+    <ul>
+        <li>Nuestra Historia</li>
+        <li>Terminos y condiciones</li>
+    </ul>
         <%  if (locals.estaLogeado) {%> 
 
     <div class= "header-flex">
@@ -20,14 +18,20 @@
         </ul>
     </div>
     <% } else { %> 
+
+    <div class= "linea">
         <input class="barra" type="text" name="busqueda"><i class="fas fa-search"></i></input>
-        <nav class= "linea">
+        <nav >
             <ul class="lista-header">
                 <li><i class="fas fa-user-check"></i><a href="../login">LOGIN</a></li>
                 <li class= "iconHeader"><i class="fas fa-user-check"></i><a href="../registro">REGISTRO</a></li>
                
             </ul>
         </nav>
+    
+    </div>
+
+    
         <% } %> 
     
     
