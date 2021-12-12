@@ -3,16 +3,16 @@
 }
 
 header{
-    background-image: linear-gradient(to right top, #f0e3d8, #f0cfb5, #eebb92, #eba772, #e79252);
+    background-image: linear-gradient(to right top, #f0ece9, #8d7d6d, #9e8f79, #a89f98, #d6cfc6);
 }
 footer{
-    background-image: linear-gradient(to right top, #f0e3d8, #f0cfb5, #eebb92, #eba772, #e79252);
+    background-image: linear-gradient(to right top, #f0ece9, #8d7d6d, #9e8f79, #a89f98, #d6cfc6);
 }
 
 main{
     height: 100%;
     padding: 10px;
-    background-image: url(/img/carrucel-jardin.jpg);
+    background-image: url(/img/carruselv4.jpeg);
     background-size: cover;
     color: rgb(24, 24, 24);
     background-color: #f0dbcb;
@@ -44,6 +44,7 @@ input{
     border-right: none;
     border-top: none;
     border-left: none; 
+    border-radius: 8px;
 }
 
 .button-style{
