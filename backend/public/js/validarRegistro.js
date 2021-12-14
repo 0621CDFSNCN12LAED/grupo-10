@@ -10,17 +10,21 @@ const formulario = document.querySelector('form');
 
 
 formulario.addEventListener('submit', function(e){
-    e.preventDefault();
+
+    let errores = true;
     
     if(nombre.value == "" || nombre.value.length < 2){
+        errores = false;
         nombre.classList.add('is-invalid');
         nombre.nextElementSibling.innerHTML = "debes completar el campo con mas de 2 caracteres"
     }else{
+        
         nombre.classList.remove('is-invalid')
         nombre.nextElementSibling.innerHTML = ""
     }
       
     if(apellido.value == "" || apellido.value.length < 2){
+        errores = false;
         apellido.classList.add('is-invalid')
         apellido.nextElementSibling.innerHTML = "debes completar el campo con mas de 2 caracteres"
     }else{
@@ -29,6 +33,7 @@ formulario.addEventListener('submit', function(e){
     }
 
     if(direccion.value == "" || direccion.value.length < 5){
+        errores = false;
         direccion.classList.add('is-invalid')
         direccion.nextElementSibling.innerHTML = "debes completar el campo con mas de 5 caracteres"
     }else{
@@ -37,6 +42,7 @@ formulario.addEventListener('submit', function(e){
     }
 
     if(edad.value == "" || edad.value <= 17){
+        errores = false;
         edad.classList.add('is-invalid')
         edad.nextElementSibling.innerHTML = "debes tener mas de 18 años"
     }else{
@@ -44,7 +50,7 @@ formulario.addEventListener('submit', function(e){
         edad.nextElementSibling.innerHTML = ""
     }
     if(email.value == "" || !email.value.match(/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i)){
-        // validar el campo mail con formato mail
+        errores = false;
         email.classList.add('is-invalid')
         email.nextElementSibling.innerHTML = "debes completar el campo email con un mail valido"
     }else{
@@ -52,9 +58,11 @@ formulario.addEventListener('submit', function(e){
         email.nextElementSibling.innerHTML = ""
     }
 
-    const formatos =  ['jpg','jpeg','png'];
-    const extenciones = img.value.split('.').pop();
-    if(!extenciones.includes(formatos)){ 
+    
+    let isCharImg = /(.jpg|.jpeg|.png|.gif)$/i
+    console.log (img.value)
+    if(!isCharImg.test(img.value)){ 
+        errores = false;
         img.classList.add('is-invalid')
     }else{
         img.classList.remove('is-invalid')
@@ -62,6 +70,7 @@ formulario.addEventListener('submit', function(e){
 
         
     if(contraseña.value == "" || contraseña.value.length < 8){
+        errores = false;
         contraseña.classList.add('is-invalid')
         contraseña.nextElementSibling.innerHTML = "debes completar la contraseña con con al menos a 8 caracteres"
     }else{
@@ -69,6 +78,10 @@ formulario.addEventListener('submit', function(e){
         contraseña.nextElementSibling.innerHTML = ""
     }
     
-    
+    if(!errores){
+        e.preventDefault();
+    }else{
+        this.submit()
+    }
 
 })

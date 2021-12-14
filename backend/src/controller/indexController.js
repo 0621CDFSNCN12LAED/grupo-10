@@ -25,11 +25,13 @@ const indexController = {
             return res.render ("login", {
                 errors: validacionCampos.mapped(),
             })};
+            
         
         const usuarioLogin = await Usuario.findOne ({where: {Email:req.body.Email}});
-
+            
              if(usuarioLogin){ 
                  const contraseñaOK =  bcryptjs.compareSync(req.body.contraseña,usuarioLogin.contraseña );
+                 console.log (contraseñaOK);
                  if (contraseñaOK){
                      delete usuarioLogin.contraseña
                      req.session.usuarioLogeado = usuarioLogin;
