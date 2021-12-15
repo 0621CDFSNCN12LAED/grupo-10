@@ -19,7 +19,7 @@ section{
 
 .bloque {
     padding: 15px;
-
+    border-radius: 15px;
     padding-left: 25%;
 }
 
@@ -27,6 +27,7 @@ section{
     display: block;
     padding-left: 25%;
     padding-top: 10px;
+    border-radius: 8px;
 }
 
 h1{
@@ -63,4 +64,5 @@ h3{
 .label-edit{
     font-weight: bold;
     font-size:small;
+    border-radius: 10px;
 }

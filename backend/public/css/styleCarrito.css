@@ -1,7 +1,8 @@
 .style-img-carr {
-    border-radius: 360px;
+    border-radius: 10px;
     margin-left: 20px;
     width: 90%;
+    height: 60%;
 }
 .logo-carrito {
     justify-content: center;

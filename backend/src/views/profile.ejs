@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/styleforms.css">
+    <link rel="stylesheet" href="/css/styleProductos.css"> 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,13 +21,13 @@
         <div>
             <p>Hola <%= usuario.Nombre %> </p>
             <p>Tu Usuario es: <%= usuario.Email%> </p>
-            <img src= "/img/<%= usuario.img %>">
+            <img class="style-img" src= "/img/<%= usuario.img %>">
         </div>
         <div>
-            <button> <a href="/index"> PAGINA DE INICIO </a></button>
+            <button class="style-button"> <a href="/index"> PAGINA DE INICIO </a></button>
         </div>
         <div>
-             <button> <a href="/edicionUsuario/<%= usuario.id %>"> EDICION DE USUARIO </a></button>
+             <button class="style-button"> <a href="/edicionUsuario/<%= usuario.id %>"> EDICION DE USUARIO </a></button>
         </div>
     <footer>
         <%- include("./partials/footer.ejs") %>
