@@ -8,8 +8,11 @@ const formulario = document.querySelector('form');
 
 formulario.addEventListener('submit', function(e){
 
+    let errores = true;
+
 
     if(nombre.value == "" || nombre.value.length < 5){
+        errores = false;
         nombre.classList.add('is-invalid');
         nombre.nextElementSibling.innerHTML = "debes completar el campo con mas de 5 caracteres"
     }else{
@@ -18,6 +21,7 @@ formulario.addEventListener('submit', function(e){
     }
 
     if(descripcion.value == "" || descripcion.value.length < 30){
+        errores = false;
         descripcion.classList.add('is-invalid');
         descripcion.nextElementSibling.innerHTML = "debes completar el campo con mas de 30 caracteres"
     }else{
@@ -25,7 +29,8 @@ formulario.addEventListener('submit', function(e){
         descripcion.nextElementSibling.innerHTML = ""
     }
 
-    if(precio.value == "" || nombre.value.length < 3){
+    if(precio.value == "" || precio.value.length <= 3){
+        errores = false;
         precio.classList.add('is-invalid');
         precio.nextElementSibling.innerHTML = "el precio debe tener al menos 3 digitos"
     }else{
@@ -33,15 +38,21 @@ formulario.addEventListener('submit', function(e){
         precio.nextElementSibling.innerHTML = ""
     }
 
-    // const formatos =  ['jpg','jpeg','png'];
-    // const extenciones = img.value.split('.').pop();
-    // if(!extenciones.includes(formatos)){ 
-    //     img.classList.add('is-invalid')
-    // }else{
-    //     img.classList.remove('is-invalid')
-    // }
+    let isCharImg = /(.jpg|.jpeg|.png|.gif)$/i
+    console.log (img.value)
+    if(!isCharImg.test(img.value)){ 
+        errores = false;
+        img.classList.add('is-invalid')
+    }else{
+        img.classList.remove('is-invalid')
+    }
 
-    e.preventDefault();
+
+    if(!errores){
+        e.preventDefault();
+    }else{
+        this.submit()
+    }
         
               
 })

@@ -45,7 +45,7 @@ body{
 }
 .categorias{
     margin-left: 15px;
-    margin-bottom: ;
+    
 }
 
 li{
@@ -244,8 +244,9 @@ de los mubles sillones etc*/
 
 .iconFooter {
     display: flex;
-    margin-top: 6%;
+    margin-top: 5%;
     justify-content:space-evenly;
+    font-size: 50px;
 } 
 .footer-contacto {
     margin: 6% 0;
@@ -320,6 +321,7 @@ de los mubles sillones etc*/
         font-size: larger;
     }
     .Desmostracion{
+        margin-top: -200px;
         display: block;
         border-top:  #75665b solid 7px;
        

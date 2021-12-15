@@ -14,6 +14,8 @@ router.get("/productosPlantas", productosController.listadoPlantas);
 
 router.get("/productosIluminacion", productosController.listadoIluminacion);
 
+router.get("/demoDecoracion", productosController.demostracion);
+
 router.get("/detalle/:id", notSession, productosController.detalle);
 
 router.get("/nuevoProducto", notSession, productosController.nuevoProducto);
