@@ -30,6 +30,10 @@ const productosController = {
         res.render("productosIluminacion", { Producto: Iluminacion });
     },
 
+    demostracion: function (req, res) {
+        res.render("demoDecoracion" );
+    },
+
 
     detalle: async function (req, res) {
         const id = req.params.id;
