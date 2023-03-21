@@ -50,23 +50,23 @@ VALUES(DEFAULT,'Sillon',X'53696c6c6f6e2064652064697365c3b16f2e2054616d61c3b16f3a
 /* tablas a modificar*/
 
 
-CREATE TABLE carritoProductos (
-     id INT (10) UNSIGNED NOT NULL AUTO_INCREMENT,
-     precio_total INT(10),
+-- CREATE TABLE carritoProductos (
+--      id INT (10) UNSIGNED NOT NULL AUTO_INCREMENT,
+--      precio_total INT(10),
 
-);
+-- );
 
 
-CREATE TABLE tablaRelacional (
-    id INT (10) UNSIGNED NOT NULL AUTO_INCREMENT,
-    usuario_id INT UNSIGNED (10) NOT NULL,
-    productos_id INT (10) UNSIGNED NOT NULL,
-    carritoProductos_id INT (10) UNSIGNED NOT NULL,
-    cantidad INT (10),
-    CONSTRAINT PKid PRIMARY KEY (usuario_id, productos_id, carrito_productos_id),
-    CONSTRAINT FK_usuario_id FOREIGN KEY (usuario_id) REFERENCES usuarios (id),
-    CONSTRAINT FK_productos_id FOREIGN KEY (productos_id) REFERENCES productos (id),
-    CONSTRAINT FK_carritoProductos_id FOREIGN KEY (carritoProductos_id) REFERENCES carritoProductos (id),
-);
+-- CREATE TABLE tablaRelacional (
+--     id INT (10) UNSIGNED NOT NULL AUTO_INCREMENT,
+--     usuario_id INT UNSIGNED (10) NOT NULL,
+--     productos_id INT (10) UNSIGNED NOT NULL,
+--     carritoProductos_id INT (10) UNSIGNED NOT NULL,
+--     cantidad INT (10),
+--     CONSTRAINT PKid PRIMARY KEY (usuario_id, productos_id, carrito_productos_id),
+--     CONSTRAINT FK_usuario_id FOREIGN KEY (usuario_id) REFERENCES usuarios (id),
+--     CONSTRAINT FK_productos_id FOREIGN KEY (productos_id) REFERENCES productos (id),
+--     CONSTRAINT FK_carritoProductos_id FOREIGN KEY (carritoProductos_id) REFERENCES carritoProductos (id),
+-- );
 
 
